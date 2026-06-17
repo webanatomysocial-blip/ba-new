@@ -1,0 +1,153 @@
+.team {
+  padding: 100px 75px;
+  background-color: white;
+}
+
+.team-heading {
+  padding: 0 0 80px 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 55vh;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.18);
+  background-color: #111;
+}
+
+.team-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: saturate(1.05);
+}
+
+.team-card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 24px 24px 22px;
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: rgba(20, 20, 20, 0.096);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.team-card-info h2,
+.team-card-info p {
+  margin: 0;
+  color: #fff;
+}
+
+
+
+.team-card-info p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 6px;
+}
+
+.team-card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-card-actions button {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.team-card-actions button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.team-card-actions svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 700px) {
+  .team {
+    padding: 60px 20px;
+  }
+
+  .team-heading {
+    padding: 0 0 40px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .team-heading .heading {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .team-card {
+    height: 420px;
+  }
+
+  .team-card-overlay {
+    padding: 16px;
+    margin: 8px;
+  }
+
+  .team-card-info h2 {
+    font-size: 1rem;
+  }
+
+  .team-card-info p {
+    font-size: 0.85rem;
+  }
+
+  .team-card-actions {
+    gap: 8px;
+  }
+
+  .team-card-actions button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .team-card-actions svg {
+    width: 16px;
+    height: 16px;
+  }
+}
