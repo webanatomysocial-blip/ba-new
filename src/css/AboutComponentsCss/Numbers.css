@@ -1,0 +1,71 @@
+.numbers-section {
+  padding: 70px 24px;
+  background: url(../../assets/images/about-page/textLeftRight/1.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.numbers-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 48px;
+}
+
+.numbers-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.numbers-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  text-align: center;
+}
+
+.numbers-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  justify-content: center;
+}
+
+.numbers-value {
+  line-height: 0.9;
+}
+
+.numbers-label {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 720px) {
+  .numbers-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .numbers-item {
+    text-align: left;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .numbers-item {
+    gap: 20px;
+  }
+
+  .numbers-value {
+    font-size: 42px !important;
+  }
+
+  .numbers-label {
+    font-size: 14px;
+  }
+}

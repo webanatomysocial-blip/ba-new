@@ -1,0 +1,119 @@
+.aboutUsBanner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.792);
+    z-index: 1;
+}
+
+.bannerContent {
+    min-height: calc(50vh - 100px);
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    color: white;
+    padding: 0 20px;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bannerContent h1 {
+    font-size: clamp(3rem, 6vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.bannerContent h1 span {
+    display: block;
+
+}
+
+
+
+@media (max-width: 768px) {
+  .aboutUsBanner {
+    min-height: 60vh;
+  }
+
+  .bannerContent {
+    padding: 140px 20px 40px;
+  }
+
+  .bannerContent h1 {
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    line-height: 1;
+  }
+
+  .scrollIndicator {
+    font-size: 14px;
+  }
+
+  .header .logo img,
+  .header-logo img {
+    width: 140px;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+
+  .bannerContent {
+    min-height: calc(100dvh - 80px); /* header height */
+    padding: 0 20px;
+  }
+
+  .bannerContent h1 {
+    font-size: 3rem;
+    line-height: 0.95;
+    max-width: 300px;
+    margin: auto 0;
+  }
+
+  .scrollIndicator {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .scrollIndicator span {
+    font-size: 14px;
+  }
+
+  .header .logo img,
+  .header-logo img {
+    width: 90px;
+    height: auto;
+  }
+
+  .header {
+    padding: 16px 20px;
+  }
+}

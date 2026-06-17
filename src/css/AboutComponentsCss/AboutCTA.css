@@ -1,0 +1,41 @@
+.about-cta-section {
+  background-color: #000000;
+  padding: 120px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-geist), sans-serif;
+}
+
+.about-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 900px;
+}
+
+.about-cta-heading {
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.about-cta-desc {
+  margin: 0;
+  color: #a0a0a0;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
