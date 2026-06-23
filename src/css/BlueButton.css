@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 9px 20px;
   background-color: rgb(81, 37, 148);
   color: #ffffff;
   border: none;
@@ -10,9 +10,10 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 54px; 
+  height: min-content; 
+  width: fit-content;
   font-family: var(--font-geist), sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -58,8 +59,8 @@
 /* --- ICON STYLES --- */
 .blue-button-icon-wrapper {
   margin-left: 15px;
-  width: 42px;
-  height: 42px;
+  width: 29px;
+  height: 29px;
   border-radius: 50%;
   background-color: #ffffff; /* White circle */
   display: flex;

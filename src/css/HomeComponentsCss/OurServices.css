@@ -7,7 +7,7 @@
   position: relative;
   overflow: clip; /* Prevent horizontal scroll from scaling */
 }
-
+ 
 @media (max-width: 1024px) {
   .our-services-container {
     padding: 80px 40px;

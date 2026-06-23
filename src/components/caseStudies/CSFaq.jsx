@@ -74,7 +74,7 @@ export default function CSFaq() {
             <h3>Have a Project in Mind?</h3>
             <p>Let's turn your idea into a refined digital experience. Reach out and let's begin.</p>
             
-            <BlueButton text="Let's Book a Call" href="/contact" icon={true} />
+            <BlueButton text="Let's Book a Call" href="/contact-us" icon={true} />
           </div>
         </div>
       </div>

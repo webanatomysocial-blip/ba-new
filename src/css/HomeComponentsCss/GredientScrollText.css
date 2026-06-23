@@ -59,17 +59,18 @@
 
 .main-title {
   font-weight: 400;
+  font-size: 45px;
 }
 
 .line {
-  line-height: 1.3;
+  line-height: 1.1em;
   display: block;
 }
 
 .char-span {
   display: inline-block;
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 49px;
+  font-weight: 500;
   color: #808080; /* Elegant light grey initial color */
   letter-spacing: -0.02em;
   transition: color 0.15s ease;
@@ -89,7 +90,7 @@
 
 /* Subtitle and Partner Logos bottom row container */
 .sub-content-container {
-  margin-top: 48px;
+  margin-top: 20px;
   opacity: 0;
   transform: translateY(20px);
   display: flex;
@@ -100,42 +101,56 @@
 }
 
 .text-subtitle {
-  font-size: 18px;
-  color: #878787;
+  font-size: 19px;
+  color: #ebebeb;
   max-width: 580px;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 500;
   text-align: center;
 }
 
-.logos-container {
+/* Infinite logo marquee */
+.logos-marquee-wrapper {
+  width: 50%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  margin-top: 10px;
+}
+
+.logos-marquee-track {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 10px;
+  gap: 59px;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.logos-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-10%); }
 }
 
 .partner-logo-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.35;
-  transition: all 0.4s ease;
+  transition: opacity 0.5s ease;
+  flex-shrink: 0;
   cursor: pointer;
 }
-
+/* 
 .partner-logo-wrapper:hover {
   opacity: 0.9;
-  transform: scale(1.08);
-}
+} */
 
 .partner-logo {
   fill: currentColor;
   color: #ffffff;
-  height: 28px;
   width: auto;
 }
 
@@ -393,7 +408,7 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .char-span {
-    font-size: 42px;
+    font-size: 39px;
   }
   .carousel-card {
     flex: 0 0 350px;
@@ -410,7 +425,7 @@
     min-height: 100vh;
   }
   .char-span {
-    font-size: 28px;
+    font-size: 26px;
   }
   .carousel-section {
     padding: 80px 4% 100px 4%;

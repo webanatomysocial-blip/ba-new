@@ -13,7 +13,7 @@ export default function BlueButton({ text, onClick, icon, href, ...props }) {
         <span className="blue-button-text-secondary">{text}</span>
       </span>
       {icon && (
-        <span className="blue-button-icon-wrapper">
+        <span className="blue-button-icon-wrapper" width={12}>
           <FaArrowRight size={14} className="blue-button-icon" />
         </span>
       )}

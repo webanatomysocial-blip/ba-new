@@ -11,6 +11,8 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import Blogs from "@/components/HomeComponents/Blogs";
 import LetBaSpark from "@/components/HomeComponents/LetBaSpark";
+import GetInTouch from "@/components/HomeComponents/GetInTouch";
+import GlobalReach from "@/components/HomeComponents/GlobalReach";
 
 import "@/app/globals.css";
 
@@ -31,6 +33,8 @@ export default function Home() {
       <Faq />
       <Blogs />
       <LetBaSpark />
+      <GetInTouch />
+      <GlobalReach />
     </>
   );
 }

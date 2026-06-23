@@ -4,14 +4,15 @@ import { gsap } from "gsap/gsap-core";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/ServicesHomeBoxes.css";
+import WhiteButton from '../WhiteButton';
 
 const servicesData = [
-    { num: '01', letter: 'D', title: 'Digital Marketing' },
-    { num: '02', letter: 'B', title: 'Brand Strategy' },
-    { num: '03', letter: 'U', title: 'UI/UX Design' },
-    { num: '04', letter: 'W', title: 'Web Development' },
-    { num: '05', letter: 'C', title: 'Content Creation' },
-    { num: '06', letter: 'S', title: 'SEO Optimization' },
+    { num: '01', letter: 'B', title: 'Brand Strategy' },
+    { num: '02', letter: 'C', title: 'Content Creation' },
+    { num: '03', letter: 'D', title: 'Digital Marketing' },
+    { num: '04', letter: 'S', title: 'SEO Optimization' },
+    { num: '05', letter: 'U', title: 'UI/UX Design' },
+    { num: '06', letter: 'W', title: 'Web Development' },
 ];
 
 export default function ServicesHomeBoxes() {
@@ -101,6 +102,10 @@ export default function ServicesHomeBoxes() {
                         </div>
                     </div>
                 ))}
+
+                <div className="servies-button">
+                    <WhiteButton text="Explore Our Services" href="/services" />
+                </div>
             </div>
         </section>
     );

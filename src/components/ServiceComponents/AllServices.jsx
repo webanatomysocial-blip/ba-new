@@ -1,15 +1,16 @@
 "use client";
 
 import React from 'react';
+import WhiteButton from '../WhiteButton';
 import '@/css/ServiceComponentsCss/AllServices.css';
 
 const services = [
-  { id: "01", icon: "D", title: "Digital Marketing" },
+  { id: "01", icon: "AI", title: "AI Automation" },
   { id: "02", icon: "B", title: "Branding" },
-  { id: "03", icon: "WD", title: "Web Development" },
-  { id: "04", icon: "AI", title: "AI Automation" },
-  { id: "05", icon: "BC", title: "Business Development Consultant" },
-  { id: "06", icon: "L", title: "Logistics" },
+  { id: "03", icon: "BC", title: "Business Development Consultant"},
+  { id: "04", icon: "D", title: "Digital Marketing" },
+  { id: "05", icon: "L", title: "Logistics" },
+  { id: "06", icon: "WD", title: "Web Development" },
 ];
 
 export default function AllServices() {

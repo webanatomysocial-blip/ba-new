@@ -66,9 +66,9 @@ export default function Faq() {
   return (
     <section ref={ref} className="faq fade-in">
       <div className="faqHeader">
-        <div className="faq-header">
-          <span className="clients-bullet">
-            <FaSquare size={10} style={{ marginRight: '10px' }} />
+        <div className="faq-header" >
+          <span className="clients-bullet" style={{ color: 'black' }}>
+            <FaSquare size={10} style={{ marginRight: '10px'}} />
             KNOW US BETTER
           </span> 
           <h2 className="head-text">FAQ.</h2>
@@ -84,7 +84,7 @@ export default function Faq() {
             </p>
           </div>
           <div className="faq-bottom-right">                    
-            <BlueButton text="Ask anything." />
+            <BlueButton text="Ask anything" />
             <p className="sub-para-text">No bots, we promise. Ask us anything or tell us your idea.</p>
           </div>
         </div>

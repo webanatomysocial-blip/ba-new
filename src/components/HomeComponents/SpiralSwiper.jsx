@@ -26,6 +26,8 @@ export default function SpiralSwiper() {
     const outerRef = useRef(null);
     const wrapperRef = useRef(null);
     const rafId = useRef(null);
+    const scrollPrevY = useRef(window.scrollY);
+    const scrollTimeout = useRef(null);
 
     // Physics and interaction state kept outside of React rendering cycle
     const state = useRef({
@@ -36,7 +38,13 @@ export default function SpiralSwiper() {
         rotAtDragStart: 0,
         velocity: 0,
         prevX: 0,
-        prevTime: 0
+        prevTime: 0,
+        // flag for one‑time scroll animation when section becomes visible
+        hasAnimated: false,
+        // target rotation for the 180° scroll animation
+        targetRotation: null,
+        // flag indicating scroll interaction ongoing
+        isScrolling: false
     });
 
     useEffect(() => {
@@ -66,21 +74,14 @@ export default function SpiralSwiper() {
                     state.current.velocity *= 0.93;
                     render();
                 } else {
-                    // Spring snap to nearest
-                    state.current.velocity = 0;
-                    const target = -(state.current.activeIndex * ANGLE_STEP);
-                    let diff = target - state.current.wrapperRotation;
-                    diff = ((((diff + 180) % 360) + 360) % 360) - 180;
-
-                    if (Math.abs(diff) > 0.01) {
-                        state.current.wrapperRotation += diff * 0.13;
-                        render();
-                    } else {
-                        state.current.wrapperRotation = target;
+                    // Preserve rotation after scroll; no automatic snapping
+                    if (!state.current.isScrolling) {
+                        // Ensure visual consistency
                         render();
                     }
                 }
             }
+
             rafId.current = requestAnimationFrame(loop);
         };
 
@@ -115,12 +116,12 @@ export default function SpiralSwiper() {
             const now = performance.now();
             const dt = now - state.current.prevTime || 1;
 
-            state.current.wrapperRotation = state.current.rotAtDragStart - dx * 0.25;
-            state.current.velocity = -((x - state.current.prevX) * 0.25) / (dt / 16.667);
-            
+            state.current.wrapperRotation = state.current.rotAtDragStart + dx * 0.25;
+            state.current.velocity = ((x - state.current.prevX) * 0.25) / (dt / 16.667);
+
             state.current.prevX = x;
             state.current.prevTime = now;
-            
+
             if (wrapperRef.current) {
                 wrapperRef.current.style.transform = `rotateY(${state.current.wrapperRotation.toFixed(4)}deg)`;
             }
@@ -152,22 +153,64 @@ export default function SpiralSwiper() {
         };
     }, []);
 
-    return (
-        <div className="swiper-outer-container" ref={outerRef}>
-            <div className="images-wrapper" ref={wrapperRef}>
-                {ARTWORKS.map((src, i) => {
-                    const angle = START_ANGLE + i * ANGLE_STEP;
-                    return (
-                        <div
-                            key={i}
-                            className="spiral-slide"
-                            style={{ transform: `rotateY(${angle}deg)` }}
-                        >
-                            <img src={src} alt={`Artwork ${i + 1}`} draggable={false} loading="lazy" />
-                        </div>
-                    );
-                })}
+        // Scroll‑linked rotation effect (delta based)
+        useEffect(() => {
+            const handleScroll = () => {
+                if (state.current.isDragging) return;
+                const currentY = window.scrollY;
+                const delta = currentY - scrollPrevY.current;
+                // Apply rotation based on scroll delta
+                const rotationDelta = delta * 0.07; // same speed factor
+                state.current.wrapperRotation += rotationDelta;
+                scrollPrevY.current = currentY;
+                // Mark scrolling state
+                state.current.isScrolling = true;
+                if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+                scrollTimeout.current = setTimeout(() => { state.current.isScrolling = false; }, 200);
+                if (wrapperRef.current) {
+                    wrapperRef.current.style.transform = `rotateY(${state.current.wrapperRotation.toFixed(4)}deg)`;
+                }
+            };
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+        }, []);
+
+
+        // Trigger one‑time 180° rotation when section becomes visible
+        useEffect(() => {
+            const outer = outerRef.current;
+            if (!outer) return;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Start a new 180° rotation from current rotation
+                        state.current.targetRotation = state.current.wrapperRotation + 180;
+                    } else {
+                        // Reset target when leaving viewport to allow next entry
+                        state.current.targetRotation = null;
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(outer);
+            return () => observer.disconnect();
+        }, []);
+
+        return (
+            <div className="swiper-outer-container" ref={outerRef}>
+                <div className="images-wrapper" ref={wrapperRef}>
+                    {ARTWORKS.map((src, i) => {
+                        const angle = START_ANGLE + i * ANGLE_STEP;
+                        return (
+                            <div
+                                key={i}
+                                className="spiral-slide"
+                                style={{ transform: `rotateY(${angle}deg)` }}
+                            >
+                                <img src={src} alt={`Artwork ${i + 1}`} draggable={false} loading="lazy" />
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
-        </div>
-    );
-}
+        );
+    }

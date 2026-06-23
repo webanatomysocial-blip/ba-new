@@ -8,19 +8,11 @@ import SpiralSwiper from './SpiralSwiper';
 export default function LetBaSpark() {
     return (
         <section className="let-ba-spark-section">
-            <h2 className="let-ba-spark-title">
-                <span style={{ color: 'var(--black)' }}>LET BA</span><br/>
-                <span className="text-gradient-primary">
+            y<h2 className="let-ba-spark-title">
+                LET <span style={{ color: '#512594' }}>BA </span>
                     SPARK YOUR<br/>
                     NEXT BIG MOVE.
-                </span>
-            </h2>
-            
-            <BlueButton 
-                text="Get In Touch" 
-                icon={true} 
-                onClick={() => console.log('Get in touch clicked')} 
-            />
+            </h2> 
 
             <SpiralSwiper />
         </section>

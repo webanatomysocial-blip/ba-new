@@ -1,0 +1,329 @@
+.cf-wrap {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 80px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cf-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 0.5px solid #2a2a2a;
+}
+
+.cf-row--last {
+  border-bottom: none;
+}
+
+.cf-num {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+.cf-label {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.cf-label-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-sublabel {
+  font-size: 17px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.cf-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  font-size: 21px;
+  font-family: inherit;
+  padding: 4px 0;
+  outline: none;
+  width: 100%;
+  caret-color: #4ade80;
+  transition: border-color 0.2s;
+}
+
+.cf-input::placeholder {
+  color: #555;
+}
+
+.cf-input:focus {
+  border-bottom-color: #888;
+}
+
+.cf-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 0.5px solid #222;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cf-radio-item:last-child {
+  border-bottom: none;
+}
+
+.cf-radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #555;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+}
+
+.cf-radio-item:hover .cf-radio-circle {
+  border-color: #999;
+}
+
+.cf-radio-item.selected .cf-radio-circle {
+  border-color: #fff;
+}
+
+.cf-radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.cf-radio-item.selected .cf-radio-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cf-radio-label {
+  font-size: 21px;
+  color: #fff;
+}
+
+.cf-textarea-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.cf-textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  padding: 4px 0;
+  outline: none;
+  width: 100%;
+  resize: none;
+  min-height: 60px;
+  caret-color: #4ade80;
+  transition: border-color 0.2s;
+}
+
+.cf-textarea::placeholder {
+  color: #555;
+}
+
+.cf-textarea:focus {
+  border-bottom-color: #888;
+}
+
+.rollBtn {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  font-size: medium;
+
+  transition: background 0.4s ease;
+}
+
+.cf-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+}
+
+.textWrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.text {
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.top {
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.rollBtn:hover {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.rollBtn:hover .top {
+  transform: translateY(-100%);
+}
+
+.rollBtn:hover .bottom {
+  transform: translateY(-100%);
+}
+.rollBtn:hover .cf-arrow {
+  background-color: white;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .cf-wrap {
+    padding: 3rem 2rem;
+  }
+
+  .cf-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .cf-num {
+    font-size: 18px;
+  }
+
+  .cf-label {
+    font-size: 20px;
+  }
+
+  .cf-sublabel {
+    font-size: 14px;
+  }
+
+  .cf-input,
+  .cf-radio-label {
+    font-size: 18px;
+  }
+
+  .cf-radio-item {
+    padding: 14px 0;
+  }
+
+  .cf-textarea {
+    font-size: 16px;
+    min-height: 100px;
+  }
+
+  .cf-textarea-block {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .rollBtn {
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .top,
+  .bottom {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cf-wrap {
+    padding: 2rem;
+  }
+
+  .cf-label {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .cf-num {
+    font-size: 16px;
+  }
+
+  .cf-input,
+  .cf-radio-label {
+    font-size: 16px;
+  }
+
+  .cf-sublabel {
+    font-size: 13px;
+  }
+
+  .cf-radio-circle {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cf-radio-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .cf-arrow {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}

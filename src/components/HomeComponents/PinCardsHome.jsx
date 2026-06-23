@@ -4,6 +4,8 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/PinCardsHome.css";
+import { FaSquare } from 'react-icons/fa';
+
 
 const projects = [
   {
@@ -98,6 +100,15 @@ export default function PinCardsHome() {
 
   return (
     <section className="pin-cards-container" ref={containerRef}>
+      <div className="overview-header">
+        <span className="clients-bullet">
+          <FaSquare size={10} style={{ marginRight: '10px' }} />
+          REAL RESULTS. REAL GROWTH.
+        </span>
+        <h2 className="head-text-white"><span>CASE</span> <span>STUDIES</span></h2>
+      </div>
+
+
       {projects.map((project, i) => (
         <div
           key={project.id} 

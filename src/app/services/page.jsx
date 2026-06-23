@@ -2,6 +2,7 @@ import Banner from "@/components/AboutComponents/Banner";
 import AboutCTA from "@/components/AboutComponents/AboutCTA";
 import AllServices from "@/components/ServiceComponents/AllServices";
 import bannerimage from '@/assets/images/servicesImages/servicesBanner.png';
+import OurServices from "@/components/HomeComponents/OurServices";
 
 export const metadata = {
   title: "Services | BA",
@@ -15,7 +16,8 @@ export default function ServicesPage() {
                 topHeading={<> Our <br /> Services. </>}       
                 background={bannerimage} 
             />
-            <AllServices />
+            {/* <AllServices /> */}
+            <OurServices />
             <AboutCTA />
         </>
     );
