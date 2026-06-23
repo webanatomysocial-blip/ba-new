@@ -68,3 +68,14 @@
     z-index: 1;
 
 }
+
+.servies-button{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}

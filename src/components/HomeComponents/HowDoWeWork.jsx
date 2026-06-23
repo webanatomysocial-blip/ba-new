@@ -8,6 +8,7 @@ import '../../css/HomeComponentsCss/HowDoWeWork.css';
 import image1 from "../../assets/images/HomeImages/howdowework/1.avif";
 import image2 from "../../assets/images/HomeImages/howdowework/2.avif";
 import image3 from "../../assets/images/HomeImages/howdowework/3.avif";
+import arrowIcon from "../../assets/images/HomeImages/howdowework/howWeWorkArrow.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -99,16 +100,21 @@ export default function HowDoWeWork() {
                                 <h3 className="process-title">{step.title}</h3>
                             </div>
 
-                            {/* Bottom Panel: Description + Image */}
+                            {/* Bottom Panel: Description + Image + Arrow */}
                             <div className="process-card-bottom">
                                 <p className="process-desc">{step.desc}</p>
                                 <div className="process-card-bottom-row">
                                     <div className="process-image-wrapper">
                                         <Image src={step.imgUrl} alt={step.title} fill className="process-image" />
                                     </div>
-                                    <div className="process-image-label">
-                                        <span>Lorem Ipsum</span>
-                                        <span>Lorem Ipsum</span>
+                                    <div className="process-card-arrow">
+                                        <Image
+                                            src={arrowIcon}
+                                            alt="next step"
+                                            width={132}
+                                            height={176}
+                                            className="process-arrow-icon"
+                                        />
                                     </div>
                                 </div>
                             </div>

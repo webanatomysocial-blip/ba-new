@@ -8,12 +8,17 @@
     justify-content: center;
     overflow: hidden;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .overview-header {
-    padding: 0 5%;
-    margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #222222  ;
+  border-top: none;
+  padding: 50px;
 }
 
 .overview-subtitle {
@@ -137,18 +142,16 @@
     object-fit: cover;
 }
 
-.process-image-label {
+.process-card-arrow {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
-.process-image-label span {
-    font-size: 13px;
-    color: rgba(255, 255, 255);
-    font-weight: 300;
-    line-height: 1.4;
+.process-arrow-icon {
+    object-fit: contain;
+    opacity: 0.95;
 }
 
 /* ── 5th CTA Card ─────────────────────────────────────── */

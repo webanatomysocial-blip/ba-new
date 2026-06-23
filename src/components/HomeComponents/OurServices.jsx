@@ -6,9 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/OurServices.css";
 import BlueButton from "@/components/BlueButton";
 
-
-
-
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -60,6 +57,7 @@ const OurServices = () => {
     }
   };
 
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
@@ -92,7 +90,7 @@ const OurServices = () => {
       ctx.revert();
     };
   }, []);
-
+ 
   return (
     <div className="our-services-container" ref={containerRef}>
       <div className="services-cards-wrapper">
@@ -127,7 +125,7 @@ const OurServices = () => {
                   </div>
 
                   <div className="sc-btn-wrapper">
-                    <BlueButton text="Explore Now." href={service.link} icon={true} />
+                    <BlueButton text="Explore Now" href={service.link} icon={true} />
                   </div>
                 </div>
               </div>

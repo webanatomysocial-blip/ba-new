@@ -92,12 +92,6 @@
   margin-bottom: 15px; /* Space between pill and dot */
 }
 
-.pin-flag {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .pin-country {
   font-family: var(--font-geist), sans-serif;

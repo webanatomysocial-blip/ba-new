@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import logo from "@/assets/images/logo.svg";
+// import logo from "@/assets/images/logo.svg";
+import ba_new_logo from '@/assets/images/ba_new_logo.png'
 import "@/css/Header.css";
 import { LenisContext } from "./LenisContext";
 
@@ -98,8 +99,8 @@ export default function Header() {
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
     { name: "SERVICES", href: "/services" },
-    { name: "CASE STUDIES", href: "/cases" },
-    { name: "CONTACT", href: "/contact" }
+    { name: "CASE STUDIES", href: "/case-studies" },
+    { name: "CONTACT", href: "/contact-us" }
   ];
 
   const bgColors = [
@@ -112,15 +113,23 @@ export default function Header() {
   const defaultBg = "rgba(81, 37, 148, 1)";
   const currentBg = hoveredIndex !== null ? bgColors[hoveredIndex] : defaultBg;
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 50);
+    });
+  }, []);
+
   return (
-    <header className={`site-header ${isVisible ? "" : "header-hidden"}`}>
+    <header className={`site-header ${isVisible ? "" : "header-hidden"}`} style={{background: scrolled ? "transparent" : "transparent"}}>
       <div className="header-container">
-        <a href="#" className="header-logo-link">
+        <a href="/" className="header-logo-link">
           <Image
-            src={logo}
+            src={ba_new_logo}
             alt="Business Anatomy Logo"
             className="header-logo"
-            height={38}
+            height={60}
             priority
           />
         </a>

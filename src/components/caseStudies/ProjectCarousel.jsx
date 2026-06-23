@@ -1,52 +1,36 @@
 "use client";
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay } from 'swiper/modules';
 
+import React, { useState, useRef, useEffect } from "react";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/autoplay';
 
 import '../../css/caseStudiesCss/ProjectCarousel.css';
 import img1 from '@/assets/images/caseStudies/kaa.avif';
 import img2 from '@/assets/images/caseStudies/pearl.avif';
 import img3 from '@/assets/images/caseStudies/prugens.avif';
-import img4 from '@/assets/images/caseStudies/theart.avif';
 
 const images = [
-  img1, img2, img3, img4
+  img1, img2, img3
 ];
 
 export default function ProjectCarousel() {
+
+  const [positions, setPositions] = useState([0, 1, 2]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPositions((prev) => [(prev[0] + 1) % 3, (prev[1] + 1) % 3, (prev[2] + 1) % 3]);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="project-carousel-container">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,     // optional but nice
-        }}
-        coverflowEffect={{
-          rotate: 45,
-          stretch: 0,
-          depth: 200,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow, Autoplay]}
-        className="mySwiper"
-      >
-        {images.map((img, index) => (
-          <SwiperSlide key={index} className="swiper-slide-item">
-            <img src={img.src} alt={`Project ${index + 1}`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="faq-top">
+        <img className={`carousal-img pos-${positions[0]}`} src={img1.src} alt="Carousal 1" />
+        <img className={`carousal-img pos-${positions[1]}`} src={img2.src} alt="Carousal 2" />
+        <img className={`carousal-img pos-${positions[2]}`} src={img3.src} alt="Carousal 3" />
+      </div>
     </div>
   );
 }

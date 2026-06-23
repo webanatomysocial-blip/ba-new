@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 32px;
+  padding: 9px 20px;
   background-color: #ffffff;
   color: #000000;
   border: none;
@@ -10,9 +10,10 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 54px; 
+  height: min-content; 
+  width: fit-content; 
   font-family: var(--font-geist), sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);

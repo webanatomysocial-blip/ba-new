@@ -9,6 +9,7 @@ import bg4 from '@/assets/images/caseStudies/theart.avif'
 
 import { FaArrowRight, FaSquare } from "react-icons/fa";
 import BlueButton from "@/components/BlueButton";
+import Link from "next/link";
 
 export default function Projects() {
   const projectData = [

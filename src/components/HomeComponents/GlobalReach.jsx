@@ -1,8 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import React from 'react';
 import '../../css/HomeComponentsCss/GlobalReach.css';
 import mapImg from '../../assets/images/globalmap/map.svg';
+import india from '../../assets/images/HomeImages/globalReachImages/india.png';
+import southAfrica from '../../assets/images/HomeImages/globalReachImages/south_africa.png';
+import uk from '../../assets/images/HomeImages/globalReachImages/london.png';
 
 export default function GlobalReach() {
   return (
@@ -24,7 +28,7 @@ export default function GlobalReach() {
         {/* London Pin */}
         <div className="location-pin-group pin-london">
           <div className="pin-pill">
-            <span className="pin-flag">🇬🇧</span>
+            <span><Image src={uk} alt="Uk" width={30}/></span>
             <span className="pin-country">LONDON</span>
           </div>
           <div className="pin-dot"></div>
@@ -33,7 +37,7 @@ export default function GlobalReach() {
         {/* India Pin */}
         <div className="location-pin-group pin-india">
           <div className="pin-pill">
-            <span className="pin-flag">🇮🇳</span>
+            <span><Image src={india} alt="India" width={30} /></span>
             <span className="pin-country">INDIA</span>
           </div>
           <div className="pin-dot"></div>
@@ -42,7 +46,7 @@ export default function GlobalReach() {
         {/* South Africa Pin */}
         <div className="location-pin-group pin-south-africa">
           <div className="pin-pill">
-            <span className="pin-flag">🇿🇦</span>
+            <span><Image src={southAfrica} alt="South Africa" width={30} /></span>
             <span className="pin-country">SOUTH AFRICA</span>
           </div>
           <div className="pin-dot"></div>
