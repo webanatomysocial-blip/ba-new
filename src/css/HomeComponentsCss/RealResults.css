@@ -1,6 +1,6 @@
 .realResultsSection {
   background-color: var(--white);
-  padding: 100px 75px;
+  padding: 60px 20px;
 }
 
 .realResultsHeader {
@@ -22,7 +22,7 @@
 
 .realResultsBrandRow {
   display: flex;
-  gap: 40px;
+  gap: 15px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -115,7 +115,6 @@
   .realResultsHeader {
     flex-direction: column;
     gap: 20px;
-    padding: 40px;
   }
   .realResultsBrandSection {
     flex-direction: column;

@@ -3,7 +3,7 @@
 .site-footer {
   background-color: #000000;
   color: #ffffff;
-  padding: 100px 75px; /* Add padding-bottom to separate content columns from floor */
+  padding: 100px 20px; /* Add padding-bottom to separate content columns from floor */
   font-family: var(--font-geist), sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;

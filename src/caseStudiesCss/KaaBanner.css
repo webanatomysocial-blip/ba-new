@@ -1,0 +1,61 @@
+.case-studies-inner-page {
+  background: black;
+
+  padding: 60px;
+  position: relative;
+
+  margin-bottom: 30px;
+
+  border-bottom: 2px solid #8181811f;
+}
+
+.case-studies-inner-page-header {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 30px;
+}
+
+.head-text {
+  color: white;
+}
+
+.inner-page-banner-image {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/images/caseStudies/kaa.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.811) 70%, transparent 100%);
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .inner-page-banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+
+}

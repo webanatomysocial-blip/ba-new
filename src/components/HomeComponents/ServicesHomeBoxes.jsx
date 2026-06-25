@@ -7,12 +7,12 @@ import "@/css/HomeComponentsCss/ServicesHomeBoxes.css";
 import WhiteButton from '../WhiteButton';
 
 const servicesData = [
-    { num: '01', letter: 'B', title: 'Brand Strategy' },
-    { num: '02', letter: 'C', title: 'Content Creation' },
-    { num: '03', letter: 'D', title: 'Digital Marketing' },
-    { num: '04', letter: 'S', title: 'SEO Optimization' },
-    { num: '05', letter: 'U', title: 'UI/UX Design' },
-    { num: '06', letter: 'W', title: 'Web Development' },
+    { num: '01', letter: 'AI', title: 'AI Automation' },
+    { num: '02', letter: 'B', title: 'Branding' },
+    { num: '03', letter: 'BC', title: 'Business Development Consultant' },
+    { num: '04', letter: 'D', title: 'Digital Marketing' },
+    { num: '05', letter: 'L', title: 'Logistics' },
+    { num: '06', letter: 'WD', title: 'Web Development' },
 ];
 
 export default function ServicesHomeBoxes() {
@@ -27,6 +27,7 @@ export default function ServicesHomeBoxes() {
     };
 
     useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
         gsap.registerPlugin(ScrollTrigger);
 
         let ctx = gsap.context(() => {

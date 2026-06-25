@@ -14,24 +14,29 @@ import Link from "next/link";
 export default function Projects() {
   const projectData = [
     { img: bg1, title: 'KAA Dentals', tags: 'End-End Marketing' },
-    { img: bg2, title: 'Pearl', tags: 'End-End Marketing' },
+    { img: bg2, title: 'Pearl', tags: 'Brand Identity, Web Design' },
     { img: bg3, title: 'Prugens', tags: 'End-End Marketing' },
-    { img: bg4, title: 'The Art', tags: 'End-End Marketing' },
+    { img: bg4, title: 'ThreatSense AI', tags: 'Ads' },
   ];
 
   return (
     <section className='projects'>
-      <div className="projects-heading">
-        <p className='project-side-heading clients-bullet sub-para-text-white'>
-          <FaSquare size={10} />
+      <div className="overview-header">
+        <span className="clients-bullet">
+          <FaSquare size={10} style={{ marginRight: '10px' }} />
           PROJECTS
-        </p>
-        <h1 className="head-text-white">PROJECTS.</h1>
+        </span>
+        <h2 className="head-text-white">PROJECTS.</h2>
       </div>
 
       <div className="projects-container">
         {projectData.map((proj, idx) => (
-          <div className="project-card" key={idx}>
+          <Link 
+            href={proj.title === 'KAA Dentals' ? '/case-studies/kaa' : '#'} 
+            className="project-card" 
+            key={idx}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <div style={{ overflow: 'hidden', borderRadius: '20px' }}>
               <img className='project-main-img' src={proj.img.src} alt={proj.title} />
             </div>
@@ -44,7 +49,7 @@ export default function Projects() {
                 <span className='arrow'><FaArrowRight size={14} /></span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

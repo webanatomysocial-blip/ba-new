@@ -1,10 +1,9 @@
 .overview-section {
-  padding: 100px 75px ;
+  padding: 60px 20px;
   background-color: var(--black);
   color: var(--white);
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 
 .overview-header {
@@ -12,8 +11,9 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  border: 1px solid #222222  ;
+  border: 1px solid #222222;
   border-top: none;
+  margin: 0px 0px 50px 0px;
   padding: 50px;
 }
 
@@ -34,7 +34,8 @@
 
 .overview-title {
   text-align: right;
-  margin-top: -10px; /* slight adjustment to align with subtitle visually */
+  margin-top: -10px;
+  /* slight adjustment to align with subtitle visually */
 
 }
 
@@ -71,40 +72,25 @@
   opacity: 0.9;
 }
 
-@media (max-width: 1200px) {
-  .overview-card {
-    min-height: 340px;
-    padding: 30px 24px;
-  }
-}
 
-@media (max-width: 1024px) {
-  .overview-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  .overview-section {
-    gap: 60px;
-    padding: 80px 5%;
-  }
-}
 
 @media (max-width: 768px) {
   .overview-header {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    padding: 60px 0px;
     gap: 24px;
   }
-  
+
   .overview-title {
     text-align: left;
     margin-top: 0;
   }
-  
+
   .overview-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .overview-card {
-    min-height: 280px;
+    min-height: 220px;
   }
 }

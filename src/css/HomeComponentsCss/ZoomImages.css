@@ -49,34 +49,26 @@
     object-fit: cover;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+
     .zoom-wrapper {
-        height: auto;
+        height: 620vh;
     }
 
     .zoom-sticky {
-        position: relative;
-        height: auto;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
     }
 
-    .zoom-bg-static,
-    .zoom-layer,
     .zoom-layer--square {
-        position: relative;
-        transform: none;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .zoom-layer--square .zoom-image {
         width: 100%;
-        height: auto;
-    }
-
-    .zoom-layer--square {
-        top: auto;
-        left: auto;
-        aspect-ratio: unset;
-    }
-}
-
-@media (max-width: 520px) {
-    .zoom-sticky {
-        overflow: visible;
+        height: 100%;
     }
 }

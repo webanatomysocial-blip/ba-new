@@ -9,7 +9,7 @@
 .services-home-section{
     width: 100%;
     height: 200vh;
-    padding: 50px;
+    padding: 60px 20px;
     position: relative;
     display: flex;
     justify-content: start;
@@ -21,13 +21,13 @@
     width: 100%;
     height: 100vh;
     position: sticky;
-        background-color: var(--black);
-        border-radius: 20px;
+    background-color: var(--black);
+    border-radius: 20px;
 
     top: 0;
     left: 0;
 
-       perspective: 1200px;
+    perspective: 1200px;
 
 }
 .service-home-box-1{
@@ -36,18 +36,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
- border-radius: 20px;
- position: absolute;
- transform: translate(-5% , -60%);
- box-shadow:0px 20px 30px rgba(0, 0, 0, 1);
- top: 60%;
- left: 5%;
+    border-radius: 20px;
+    position: absolute;
+    transform: translate(-5% , -60%);
+    box-shadow:0px 20px 30px rgba(0, 0, 0, 1);
+    top: 60%;
+    left: 5%;
     background: linear-gradient(180deg, #512594 100%, #000000 80%);
     z-index: 10;
-        transform-style: preserve-3d;
-        padding: 20px;
-        
-
+    transform-style: preserve-3d;
+    padding: 20px;
 }
 .service-home-box-1 h3{
     font-family: Rechteck;
@@ -78,4 +76,68 @@
     justify-content: center;
     align-items: center;
     z-index: 20;
+}
+
+/* ======================
+   MOBILE VERSION
+====================== */
+@media (max-width: 768px) {
+
+    .services-home-section {
+        height: auto;
+        padding: 60px 20px;
+    }    
+
+    .service-home-box-parent {
+        position: relative;
+        height: auto;
+        min-height: auto;
+        padding: 40px 20px;
+        display: flex;
+
+        gap: 20px;
+        perspective: none;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-heading-middle {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sub-heading-text {
+        text-align: center;
+    }
+
+    .service-home-box-1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none !important;
+        width: 80%;
+        height: 250px;
+        padding: 25px;
+    }
+
+    .service-home-box-1 h3 {
+        font-size: 80px;
+    }
+
+    .service-box-number {
+        top: 15px;
+        right: 15px;
+    }
+
+    .servies-button {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 30px;
+    }
 }

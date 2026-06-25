@@ -47,9 +47,9 @@ const GredientScrollText = () => {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    const isMobile = window.innerWidth <= 768;
 
-
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isMobile) {
       gsap.set(plainChars, { color: "#ffffff" });
       gsap.set(gradientChars, { color: "transparent" });
       gsap.set(subContent, { opacity: 1, y: 0 });
@@ -203,7 +203,7 @@ const GredientScrollText = () => {
             {/* Subtitle and Partner Logos Row */}
             <div className="sub-content-container">
               <p className="text-subtitle">
-                Turning bold visions into brands that inspire<br/>and thrive in the
+                Turning bold visions into brands that inspire<br className="desktop-break" />and thrive in the
                 digital age.
               </p>
 

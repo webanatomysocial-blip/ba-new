@@ -6,35 +6,41 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/PinCardsHome.css";
 import { FaSquare } from 'react-icons/fa';
 
+import kaa from '@/assets/images/caseStudies/kaa.avif';
+import pearl from '@/assets/images/caseStudies/pearl.avif';
+import prugens from '@/assets/images/caseStudies/prugens.avif';
+import cognitude from '@/assets/images/caseStudies/cognitude.jpg';
+
 
 const projects = [
   {
     id: "01",
     total: "03",
-    title: "Pearl",
+    title: "KAA Dentals",
     year: "2024",
-    services: ["Website Design", "Product Design"],
-    image: "https://i.pinimg.com/1200x/6d/c1/51/6dc151fccad84848851615bf7fd5273e.jpg",
-    desc: "We've helped businesses across industries achieve their goals. Here are some of our selected works."
+    services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing", "Paid advertising"],
+    image: kaa,
+    desc: "KAA Dental represents a full-service partnership where strategy, design, marketing, and performance work together to support measurable growth."
   },
   {
     id: "02",
     total: "03",
-    title: "Prugens consultin",
+    title: "Pearl Dental Surgery",
     year: "2024",
-    services: ["Website Design", "Product Design", "Branding", "Development"],
-    image: "https://i.pinimg.com/1200x/83/a0/61/83a0611b7dffe9a845b371161da4a6ca.jpg",
-    desc: "We've helped businesses across industries achieve their goals. Here are some of our selected works."
+    services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing"],
+    image: pearl,
+    desc: "Strengthening a trusted dental practice through website development, search visibility, and ongoing digital marketing."
   },
   {
     id: "03",
     total: "03",
-    title: "The Last Of Us",
+    title: "Cognitude",
     year: "2024",
-    services: ["Marketing", "SEO Optimization"],
-    image: "https://i.pinimg.com/1200x/6f/4a/73/6f4a73124e676232f7790afc347aa7cf.jpg",
-    desc: "We've helped businesses across industries achieve their goals. Here are some of our selected works."
-  }
+    services: ["Website Design", "Website Development", "UX/UI Design","Digital Experience Design"],
+    image: cognitude,
+    desc: "Designing a digital experience that showcases innovation across neuroscience, artificial intelligence, and human-centred research."
+  },
+
 ];
 
 export default function PinCardsHome() {
@@ -49,6 +55,7 @@ export default function PinCardsHome() {
   };
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
     gsap.registerPlugin(ScrollTrigger);
 
     let ctx = gsap.context(() => {
@@ -87,10 +94,10 @@ export default function PinCardsHome() {
           });
         }
       });
-      
+
       // Wait a frame and refresh for accurate pinning size calculation
       requestAnimationFrame(() => {
-          ScrollTrigger.refresh();
+        ScrollTrigger.refresh();
       });
 
     }, containerRef);
@@ -111,23 +118,23 @@ export default function PinCardsHome() {
 
       {projects.map((project, i) => (
         <div
-          key={project.id} 
-          className="pin-card-wrapper" 
+          key={project.id}
+          className="pin-card-wrapper"
           ref={addToRefs}
           style={{ zIndex: i + 10 }} // Ensure proper stacking
         >
           <div className="pin-card-inner">
             {/* Blurred Background inherits image */}
-            <div 
-              className="pin-card-bg" 
-              style={{ backgroundImage: `url(${project.image})` }}
+            <div
+              className="pin-card-bg"
+              style={{ backgroundImage: `url(${project.image.src})` }}
             />
             {/* Dark Overlay animated by GSAP */}
             <div className="pin-card-overlay" />
 
             {/* Foreground Content */}
             <div className="pin-card-content">
-              
+
               <div className="pc-left">
                 <p className="pc-desc para-text-white">{project.desc}</p>
                 <div className="pc-left-bottom">
@@ -137,7 +144,7 @@ export default function PinCardsHome() {
               </div>
 
               <div className="pc-center">
-                <img src={project.image} alt={project.title} className="pc-center-image" />
+                <img src={project.image.src} alt={project.title} className="pc-center-image" />
               </div>
 
               <div className="pc-right">

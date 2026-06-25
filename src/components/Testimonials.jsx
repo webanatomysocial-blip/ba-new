@@ -38,6 +38,7 @@ export default function Testimonials() {
                 </span>
                 <h2 className="head-text-white">TESTIMONIALS.</h2>
             </div>
+            
             <div className="video-grid">
                 {testimonialVideos.map((testimonial) => (
                     <div key={testimonial.id} className="video-item">

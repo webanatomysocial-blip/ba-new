@@ -3,7 +3,7 @@
     background-color: var(--black);
     overflow-x: hidden;
     position: relative;
-    padding: 100px 45px;
+    padding: 60px 20px;
 }
 
 .pin-card-wrapper {
@@ -150,24 +150,67 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+
+    .pin-cards-container {
+        padding: 60px 20px;
+    }
+
+    .pin-card-wrapper {
+        height: auto;
+        min-height: auto;
+        margin-bottom: 30px;
+        perspective: none;
+    }
+
+    .pin-card-inner {
+        position: relative;
+        height: auto;
+        min-height: 700px;
+        transform: none !important;
+        border-radius: 24px;
+    }
+
     .pin-card-content {
         flex-direction: column;
-        justify-content: center;
+        padding: 30px 20px;
+        gap: 30px;
         align-items: center;
-        padding: 50px;
+        text-align: center;
     }
 
     .pc-left,
+    .pc-center,
     .pc-right {
         width: 100%;
-        text-align: center;
-        padding: 20px 0;
+        padding: 0;
+    }
+
+    .pc-left {
+        gap: 20px;
+    }
+
+    .pc-right {
+        gap: 25px;
     }
 
     .pc-center {
+        height: auto;
+    }
+
+    .pc-center-image {
         width: 100%;
-        height: 40%;
+        max-width: 400px;
+        height: 300px;
+        border-radius: 16px;
+    }
+
+    .pc-title {
+        font-size: 2rem !important;
+    }
+
+    .pc-left-bottom .pc-count {
+        margin: 0 auto 15px;
     }
 
     .pc-left-bottom .pc-count::after {
@@ -175,7 +218,27 @@
         transform: translateX(-50%);
     }
 
-    .pc-left-bottom .pc-count {
-        margin: 0 auto 20px;
+    .pc-year,
+    .pc-services {
+        text-align: center;
+    }
+
+    .pc-services ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .pc-services li {
+        margin-bottom: 0;
+    }
+
+    .pin-card-bg {
+        filter: blur(25px) brightness(0.5);
+    }
+
+    .pin-card-overlay {
+        opacity: 0.4 !important;
     }
 }

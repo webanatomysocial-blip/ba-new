@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/OurServices.css";
 import BlueButton from "@/components/BlueButton";
 
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -13,36 +14,36 @@ if (typeof window !== "undefined") {
 const services = [
   {
     id: "01",
-    title: "Digital Marketing\nStrategies",
-    desc: "Campaigns that convert: content strategy, ads, funnels, SEO, and digital positioning tailored to growth.",
-    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
+    title: "Digital Marketing",
+    desc: "Intuitive interfaces and seamless user journeys for websites, apps, and digital products.",
+    tags: ["User Flows", "Wireframes", "High-Fidelity"],
     video: "/videos/services/digitalMarketing.mp4",
     link: "/services/digital-marketing"
-  },
+  }, 
   {
     id: "02",
-    title: "Web\nDevelopment",
-    desc: "Building scalable, high-performance web applications tailored to your business needs.",
-    tags: ["Frontend", "Backend", "Performance"],
+    title: "Web Development",
+    desc: "We craft identities that stand out: logos, visual systems, tone, and brand worlds built for recognition and trust.",
+    tags: ["Logo & Visual", "Typography", "Brand"],
     video: "/videos/services/web.mp4",
     link: "/services/web-development"
   },
   {
     id: "03",
-    title: "AI\nAutomation",
-    desc: "Leveraging artificial intelligence to streamline operations, enhance productivity, and automate complex workflows.",
-    tags: ["Machine Learning", "Workflow", "Integration"],
+    title: "AI Automation",
+    desc: "High-performance websites built with clarity, speed, and strong storytelling  from landing pages to full ecosystems.",
+    tags: ["Responsive", "Animations", "SEO-Ready"],
     video: "/videos/services/aiAutomation.mp4",
     link: "/services/ai-automation"
   },
   {
     id: "04",
-    title: "Business Development\nConsultant",
-    desc: "Strategic consulting to drive growth, expand markets, and optimize business processes for long-term success.",
-    tags: ["Strategy", "Consulting", "Growth"],
+    title: "Business Development Consultant",
+    desc: "Campaigns that convert content strategy, ads, funnels, SEO, and digital positioning tailored to growth.",
+    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
     video: "/videos/services/Business.mp4",
     link: "/services/business-development"
-  }
+  } 
 ];
 
 const OurServices = () => {

@@ -20,7 +20,7 @@
   width: 100%;
   
   margin: 0 auto;
-  padding: 0 75px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -270,31 +270,60 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1024px) {
-  .nav-item {
-    font-size: 44px;
-    height: 64px;
-  }
-}
-
 @media (max-width: 768px) {
+
   .site-header {
     height: 70px;
   }
+
+  .header-container {
+    padding: 0 20px;
+  }
+
   .header-logo {
-    height: 30px;
+    width: 120px;
   }
+
+  .menu-toggle {
+    width: 24px;
+    height: 16px;
+  }
+
+  .line-top,
+  .line-bottom {
+    width: 16px;
+  }
+
+  .line-middle {
+    width: 24px;
+  }
+
   .overlay-close-btn {
-    top: 36px;
+    top: 20px;
   }
+
+  .overlay-close-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .overlay-nav-links {
+    gap: 10px;
+    padding: 0 20px;
+  }
+
   .nav-item {
-    font-size: 34px;
-    height: 52px;
+    font-size: 32px;
+    height: 46px;
+    line-height: 1;
   }
+
   .overlay-footer {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     text-align: center;
-    bottom: 24px;
+    bottom: 20px;
+    font-size: 10px;
+    padding: 0 20px;
   }
 }

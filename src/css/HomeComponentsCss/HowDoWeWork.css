@@ -7,8 +7,10 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 200px;
 }
 
 .overview-header {
@@ -16,9 +18,9 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  border: 1px solid #222222  ;
+  border: 1px solid #222222;
   border-top: none;
-  padding: 50px;
+  margin: 0px 0px 50px 20px;
 }
 
 .overview-subtitle {
@@ -26,7 +28,7 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 16px;
-    color: #a3a3a3;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -57,7 +59,7 @@
 
 /* ── Outer Card ───────────────────────────────────────── */
 .process-card {
-    width: 496px;;
+    width: 496px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -186,33 +188,80 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 1024px) {
-    .process-card,
-    .cta-card {
-        width: 360px;
-    }
-    .process-title {
-        font-size: 34px;
-    }
-    .process-image-wrapper {
-        width: 180px;
-        height: 150px;
-    }
-}
-
 @media (max-width: 768px) {
-    .overview-title {
-        font-size: 42px;
+
+    .how-do-we-work-section {
+        min-height: auto;
+        padding: 60px 20px;
     }
+
+    .overview-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 0px;
+    }
+
+    .how-do-we-work-process-wrapper {
+        width: 100%;
+    }
+
+    .how-do-we-work-process-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
     .process-card,
     .cta-card {
-        width: 300px;
+        width: 100%;
+        min-height: auto;
     }
+
+    .process-card-top {
+        padding: 20px;
+    }
+
+    .process-card-bottom {
+        padding: 20px;
+        gap: 20px;
+    }
+
     .process-title {
         font-size: 28px;
     }
+
+    .process-desc {
+        font-size: 15px;
+    }
+
+    .process-card-bottom-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
     .process-image-wrapper {
-        width: 140px;
-        height: 120px;
+        width: 100%;
+        height: 220px;
+    }
+
+    .process-card-arrow {
+        display: none;
+    }
+
+    .process-arrow-icon {
+        width: 80px;
+        height: auto;
+    }
+
+    .cta-card {
+        padding: 50px 20px;
+        height: 60vh;
+    }
+
+    .cta-text {
+        font-size: 20px;
     }
 }

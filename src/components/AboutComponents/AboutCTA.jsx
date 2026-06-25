@@ -18,7 +18,7 @@ export default function AboutCTA() {
         <h2 className="get-in-touch-title">
             <span style={{ color: 'var(--white)' }}>WE’RE OVERJOYED</span>
             <span className="text-gradient-primary">
-                TO DESIGN YOUR NEXT<br />
+                TO DESIGN YOUR<br />
                 NEXT MASTERPIECE
             </span> 
         </h2>

@@ -23,7 +23,6 @@ export default function AboutPage() {
             <Mission />
             <WhyUs />
             <Numbers />
-            
             <Team />
             <AboutCTA />
         </>
