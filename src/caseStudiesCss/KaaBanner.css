@@ -59,3 +59,54 @@
 
 
 }
+
+.inner-page-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 24px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.left p {
+  margin: 0;
+  color: white;
+}
+
+.banner-arrow {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border-radius: 8px;
+
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+
+  transition: all 0.3s ease;
+}
+
+.banner-arrow:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+}

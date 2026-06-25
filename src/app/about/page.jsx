@@ -23,7 +23,7 @@ export default function AboutPage() {
             <Mission />
             <WhyUs />
             <Numbers />
-            <Team />
+            {/* <Team /> */}
             <AboutCTA />
         </>
     );

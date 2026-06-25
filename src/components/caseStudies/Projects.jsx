@@ -13,10 +13,10 @@ import Link from "next/link";
 
 export default function Projects() {
   const projectData = [
-    { img: bg1, title: 'KAA Dentals', tags: 'End-End Marketing' },
-    { img: bg2, title: 'Pearl', tags: 'Brand Identity, Web Design' },
-    { img: bg3, title: 'Prugens', tags: 'End-End Marketing' },
-    { img: bg4, title: 'ThreatSense AI', tags: 'Ads' },
+    { img: bg1, title: 'KAA Dentals', tags: 'End-End Marketing', href: '/case-studies/kaa' },
+    { img: bg2, title: 'Pearl', tags: 'Brand Identity, Web Design', href: '/case-studies/pearl' },
+    { img: bg3, title: 'Cognitude', tags: 'End-End Marketing', href: '/case-studies/cognitude' },
+    // { img: bg4, title: 'ThreatSense AI', tags: 'Ads', href: '/case-studies/threatsense' },
   ];
 
   return (
@@ -31,9 +31,9 @@ export default function Projects() {
 
       <div className="projects-container">
         {projectData.map((proj, idx) => (
-          <Link 
-            href={proj.title === 'KAA Dentals' ? '/case-studies/kaa' : '#'} 
-            className="project-card" 
+          <Link
+            href={proj.href}
+            className="project-card"
             key={idx}
             style={{ textDecoration: 'none', color: 'inherit' }}
           >
@@ -53,9 +53,9 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="view-more-container">
+      {/* <div className="view-more-container">
         <BlueButton text="View More" href="/case-studies" icon={true} />
-      </div>
+      </div> */}
     </section>
   )
 }

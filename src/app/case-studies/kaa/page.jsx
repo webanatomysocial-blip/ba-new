@@ -16,9 +16,9 @@ export default function InnerPage() {
             />
 
             <Overview
-                mainTitle=''
-                mainSubHead=''
-                mainPara=''
+                // mainTitle='KAA DENTAL'
+                // mainSubHead='INFORMATION'
+                // mainPara="Got something in mind? Let's clear it up before we start."
                 aboutProject='KAA Dental was established with a vision to create a modern and patient-focused dental practice. We partnered with the brand from the ground up, delivering a complete digital and marketing ecosystem designed to support long-term growth.'
                 sector='Healthcare'
                 year='2024'
