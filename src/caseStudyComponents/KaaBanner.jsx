@@ -22,7 +22,11 @@ export default function KaaBanner({title, subtitle, subPara, image}) {
                 <div className="left">
                     <p className='paragraph-text-white'>KAA Dental</p>
                     <p>Click Banner to Visit Link</p>
-                </div> 
+                </div>
+
+                <div className="banner-arrow">
+                    ↗
+                </div>
             </div>
         </div>
     </div>

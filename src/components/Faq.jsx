@@ -78,14 +78,11 @@ export default function Faq() {
       <div className="faq-bottom">
         <div className="faq-content">
           <div className="faq-top">
-            {/* <h2 className="sub-big-heading">Got Questions?<br />We've Got Answers.</h2> */}
-            <h2 className="sub-big-heading">Lorem Ipsum</h2>
+            <h2 className="sub-big-heading">Got Questions?<br />We've Got Answers.</h2>
+            
             <p className="paragraph-text" style={{ marginTop: '16px' }}>
-              Lorem Ipsum
+              Explore our frequently asked questions to learn<br/>how we help businesses grow, structure, and scale with confidence.
             </p>
-            {/* <p className="paragraph-text" style={{ marginTop: '16px' }}>
-              Explore our frequently asked questions to learn how we help businesses grow, structure, and scale with confidence.
-            </p> */}
           </div>
           <div className="faq-bottom-right">                    
             <BlueButton text="Ask anything" />

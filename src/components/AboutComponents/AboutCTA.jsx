@@ -28,9 +28,11 @@ export default function AboutCTA() {
         <div className="about-cta-buttons">
         <BlueButton
             text="Start a Project"
+            href="/contact-us"
         />
         <WhiteButton
             text="Our Works"
+            href="/case-studies"
         />
       </div>
       </div>

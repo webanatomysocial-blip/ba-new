@@ -74,9 +74,9 @@ export default function WhyUs() {
       <div className="overview-header">
         <span className="clients-bullet">
           <FaSquare size={10} style={{ marginRight: '10px' }} />
-          WHY CHOOSE US
+          Extraordinary Creativity for Digital Success
         </span>
-        <h2 className="head-text">LOREM IPSUM.</h2>
+        <h2 className="head-text">WHY CHOOSE US.</h2>
       </div> 
 
       <div className="why-us-content">
