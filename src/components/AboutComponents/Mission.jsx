@@ -8,21 +8,19 @@ const tabs = [
   {
     id: 'mission',
     label: 'OUR MISSION',
-    title: 'Our mission is to provide reliable, high-quality, and customized cleaning solutions for homes, offices, and commercial spaces.',
     description:
-      'With a team of skilled and dedicated cleaning professionals, we strive to create spotless, healthy, and welcoming environments through routine cleaning, deep cleaning, and specialized services.',
+      'Our mission is to provide reliable, high-quality, and customized cleaning solutions for homes, offices, and commercial spaces. With a team of skilled and dedicated cleaning professionals, we strive to create spotless, healthy, and welcoming environments through routine cleaning, deep cleaning, and specialized services.',
     additional:
       'We are committed to using eco-friendly products and advanced cleaning techniques to ensure every space is fresh, hygienic, and safe. At Cleanix, our goal is to deliver exceptional cleaning experiences that bring comfort, convenience, and peace of mind to every client.',
     image: mission,
   },
-  {
+  { 
     id: 'vision',
     label: 'OUR VISION',
-    title: 'Our vision is to become the most trusted cleaning partner for modern homes and businesses seeking sustainable, consistent, and premium care.',
     description:
-      'We envision a future where every interior feels healthier, more productive, and more inviting through smarter cleaning systems, responsive service, and a focus on lasting customer trust.',
+      'Our vision is to become a trusted leader in delivering professional, high-quality, and customized cleaning services for homes, offices, and commercial spaces. With a team of skilled and passionate cleaning experts, we aim to create cleaner, healthier, and comfortable environments through reliable maintenance, deep cleaning, and specialized cleaning solutions.',
     additional:
-      'By combining advanced cleaning technology with a highly trained team, we aim to set a new standard for quality, reliability, and environmental responsibility in every space we serve.',
+      'We strive to set new standards in the cleaning industry by using eco-friendly products and innovative cleaning techniques to maintain fresh, hygienic, and safe spaces. At Cleanix, our vision is to build lasting relationships through dependable service, customer satisfaction, and exceptional cleaning experiences that improve living.',
     image:  vision,
   },
 ]

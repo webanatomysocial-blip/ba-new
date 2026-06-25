@@ -126,23 +126,66 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .global-reach-section {
+    height: auto;
+    padding: 60px 0;
+  }
+
   .global-reach-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .global-reach-title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .map-container {
     padding: 0 20px;
   }
-  
-  .global-reach-title {
-    text-align: left;
-    font-size: 40px;
+
+  .world-map-img {
+    max-height: none;
+    width: 100%;
   }
 
   .pin-pill {
-    padding: 6px 12px;
+    padding: 5px 10px;
+    gap: 6px;
+    margin-bottom: 8px;
   }
-  
+
+  .pin-pill img {
+    width: 18px !important;
+    height: auto;
+  }
+
   .pin-country {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .pin-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Reposition pins for mobile */
+  .pin-london {
+    top: 30%;
+    left: 48%;
+  }
+
+  .pin-india {
+    top: 50%;
+    left: 67%;
+  }
+
+  .pin-south-africa {
+    top: 72%;
+    left: 54%;
   }
 }

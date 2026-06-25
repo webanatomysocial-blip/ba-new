@@ -9,7 +9,7 @@
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-top: 0;
   border-radius: 10px 10px 0 0;
-  margin-bottom: 20px;
+  margin: 20px 20px 0px 20px;
 }
 
 .clients-bullet {
@@ -34,7 +34,7 @@
     grid-template-rows: repeat(2, auto);   /* 2 rows */
     border-radius: 0 0 10px 10px;
     overflow: hidden;
-      padding: 0px 75px;
+    padding: 30px 75px;
 }
 
 .client-item {
@@ -86,42 +86,33 @@
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+
     .clients-header {
         flex-direction: column;
-        align-items: stretch;
-        padding: 36px 18px;
-        gap: 18px;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 60px 20px;
     }
 
-    .clients-title {
-        text-align: left;
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px 30px;
+        gap: 20px;
     }
 
-    .clients-row {
-        gap: 18px;
-    }
-
-    .client-item img {
-        width: 180px;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 520px) {
-    .ourClientsContainer {
-        padding: 18px 14px;
-    }
-
-    .clients-header {
-        padding: 28px 16px;
-    }
-
-    .clients-title {
-        font-size: 34px;
+    .client-item {
+        padding: 20px;
     }
 
     .client-item img {
-        width: 140px;
+        width: 100%;
+        max-width: 140px;
+    }
+
+    /* remove desktop border logic */
+    .client-item:nth-child(5n),
+    .client-item:nth-child(n+6) {
+        border: none;
     }
 }

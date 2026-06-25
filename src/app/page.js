@@ -21,20 +21,20 @@ export default function Home() {
   return (
     <>
     <HomeBanner />
-      <GredientScrollText />
-      <OverviewHome />
-      <ServicesHomeBoxes />
-      <PinCardsHome />
-      <HowDoWeWork />
-      <ZoomImages />
-      <OurClients />
-      <RealResults />
-      <Testimonials />
-      <Faq />
-      <Blogs />
-      <LetBaSpark />
-      <GetInTouch />
-      <GlobalReach />
+    <GredientScrollText />
+    <OverviewHome />
+    <ServicesHomeBoxes />
+    <PinCardsHome />
+    <HowDoWeWork />
+    <ZoomImages />
+    <OurClients />
+    {/* <RealResults />
+    <Testimonials /> */}
+    <Faq />
+    {/* <Blogs /> */}
+    <LetBaSpark />
+    <GetInTouch />
+    <GlobalReach /> 
     </>
   );
 }

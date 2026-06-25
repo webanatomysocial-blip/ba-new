@@ -20,6 +20,7 @@ export default function Blogs() {
     useEffect(() => {
         const grid = gridRef.current;
         if (!grid) return;
+        if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
 
         const cards = grid.querySelectorAll('.blog-image-wrapper');
 
@@ -77,7 +78,9 @@ export default function Blogs() {
                         <div className="blog-image-wrapper">
                             <img src={blog.image.src || blog.image} alt={blog.title} />
                             {/* 4 black overlay strips — stacked top to bottom */}
-                            {Array.from({ length: STRIP_COUNT }).map((_, i) => (
+
+                            {typeof window !== "undefined" && window.innerWidth > 768 &&
+                            Array.from({ length: STRIP_COUNT }).map((_, i) => (
                                 <div
                                     key={i}
                                     className="blog-img-strip"

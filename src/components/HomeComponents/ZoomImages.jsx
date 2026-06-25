@@ -44,9 +44,12 @@ export default function ZoomImages() {
                 layerRefs.current,
                 { scale: 0.001 },
                 { 
-                    scale: (index) => index === ZOOM_IMGS.length - 1 ? 1.1 : 1.5, 
+                    scale: (index) => {
+                        return index === ZOOM_IMGS.length - 1 ? 1.1 : 1.5;
+                    },
+                    
                     duration: 1,
-                    stagger: 0.35, 
+                    stagger: window.innerWidth <= 768 ? 0.45 : 0.35, 
                     ease: 'none' 
                 }
             );

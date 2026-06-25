@@ -114,18 +114,78 @@
     max-width: 400px;
 }
 
-@media (max-width: 1024px) {
-    .cs-faq-body {
-        flex-direction: column;
-        gap: 60px;
-    }
-    .cs-faq-list, .cs-faq-cta-area {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+  .cs-faq-section {
+    padding: 60px 20px;
+  }
+
+  .cs-faq-header {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+
+  .cs-faq-tagline {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .cs-faq-body {
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .cs-faq-list,
+  .cs-faq-cta-area {
+    width: 100%;
+  }
+
+  .cs-faq-item {
+    padding: 0 16px;
+    border-radius: 10px;
+  }
+
+  .cs-faq-question {
+    padding: 18px 0;
+    font-size: 15px;
+    gap: 16px;
+  }
+
+  .plus-icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .cs-faq-answer.active {
+    padding-bottom: 18px;
+  }
+
+  .cs-faq-answer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cs-faq-cta-area {
+    text-align: center;
+  }
+
+  .cs-faq-cta-text h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .cs-faq-cta-text p {
+    font-size: 14px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
 }
 
-@media (max-width: 768px) {
-    .cs-faq-section {
-        padding: 60px 24px;
-    }
+@media (max-width: 480px) {
+  .cs-faq-section {
+    padding: 60px 20px;
+  }
 }

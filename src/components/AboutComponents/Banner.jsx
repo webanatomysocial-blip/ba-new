@@ -2,7 +2,7 @@
 import React from 'react';
 import '@/css/AboutComponentsCss/Banner.css';
 import { IoArrowDown } from "react-icons/io5";
-
+ 
 export default function Banner({topHeading, spanHeading, background}) {
   const bgUrl = background && typeof background === 'object' ? background.src : background;
   return (

@@ -22,6 +22,7 @@ export default function HowDoWeWork() {
         const section = sectionRef.current;
         const track = trackRef.current;
         if (!section || !track) return;
+        if (window.innerWidth <= 768) return;
 
         // Ensure GSAP knows about the dimensions
         const getScrollAmount = () => {
@@ -51,25 +52,25 @@ export default function HowDoWeWork() {
         {
             id: "01",
             title: "Discover",
-            desc: "We start with discovering what truly drives your business and brand vision forward.",
+            desc: "Understanding what drives your business forward.",
             imgUrl: image1
         },
         {
             id: "02",
             title: "Strategize",
-            desc: "We create a customized strategy designed to elevate your digital presence.",
+            desc: "Planning solutions that support your growth.",
             imgUrl: image2
         },
         {
             id: "03",
             title: "Build",
-            desc: "We bring your strategy to life by building innovative and scalable solutions.",
+            desc: "Creating systems that deliver measurable results.",
             imgUrl: image3
         },
         {
             id: "04",
-            title: "Optimize",
-            desc: "We refine and optimize to ensure maximum performance and user engagement.",
+            title: "Elevate",
+            desc: "Helping your business grow and evolve.",
             imgUrl: image1
         }
     ];
@@ -79,7 +80,7 @@ export default function HowDoWeWork() {
             <div className="overview-header">
                 <span className="clients-bullet">
                     <FaSquare size={10} style={{ marginRight: '10px' }} />
-                    PROCESS
+                    LOREM IPSUM
                 </span>
                 <h2 className="head-text-white">HOW DO WE WORK.</h2>
             </div>

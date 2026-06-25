@@ -10,27 +10,27 @@ export default function CSFaq() {
   const faqs = [
     {
       question: "What types of projects do you work on?",
-      answer: "We work on a diverse range of projects including comprehensive digital marketing, custom web design, brand identity systems, and high-performance Framer websites. Every project is tailored to our clients' unique goals.",
+      answer: "I work with startups, product teams, and brands on digital strategy, website design, interaction design, product experiences, and design systems.",
     },
     {
       question: "How long does a typical project take?",
-      answer: "A standard web or branding project generally takes anywhere from 4 to 8 weeks, depending on complexity, deliverables, and revision cycles.",
+      answer: "Project timelines vary by scope, from a few weeks for smaller web interfaces to several months for full product design and system implementation.",
     },
     {
       question: "Do you only design in Framer?",
-      answer: "While Framer is one of our specialty tools for high-quality, animated web experiences, we also utilize robust stacks like Next.js, React, and other modern technologies based on your specific requirements.",
+      answer: "No. While I use Framer when appropriate, my focus is on strategic outcomes, scalable design systems, and high-quality experiences across platforms.", 
     },
     {
       question: "How do you approach digital strategy?",
-      answer: "Our digital strategy is data-driven. We analyze your market, competitors, and target audience to craft custom marketing funnels and branding initiatives that deliver measurable growth.",
+      answer: "I start with research, user analysis, and business goals to create frameworks and roadmaps that guide every design decision, ensuring alignment.",
     },
     {
       question: "Can you help build a design system for my team?",
-      answer: "Absolutely. We specialize in building scalable design systems that maintain visual consistency across all your products while accelerating your team's workflow.",
+      answer: "Yes. I create modular, scalable design systems with components, tokens, and documentation to maintain consistency across products and teams.",
     },
-    {
+    { 
       question: "What is your process for collaboration?",
-      answer: "We maintain close collaboration through weekly updates, structured feedback rounds, and open communication channels. You will be actively involved at key milestones to ensure alignment.",
+      answer: "I work closely with stakeholders, product managers, and developers through workshops, iterative prototyping, and feedback sessions to ensure the final design aligns with business and user needs.",
     },
   ];
 

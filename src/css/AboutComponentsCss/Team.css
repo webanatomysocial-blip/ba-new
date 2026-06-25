@@ -1,5 +1,5 @@
 .team {
-  padding: 100px 75px;
+  padding: 60px 20px;
   background-color: white;
 }
 
@@ -9,6 +9,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #222222  ;
+  border-top: none;
+  padding: 50px;
+  margin-bottom: 30px;
+}
+
+.team .clients-bullet {
+  color: rgb(0, 0, 0);
 }
 
 .team-grid {
@@ -98,43 +113,51 @@
   height: 18px;
 }
 
-@media (max-width: 700px) {
+
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .team {
     padding: 60px 20px;
   }
 
-  .team-heading {
-    padding: 0 0 40px;
+  .overview-header {
+    padding: 36px 0;
     flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .team-heading .heading {
-    font-size: 2rem;
-    line-height: 1;
+    gap: 16px;
   }
 
   .team-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
+    margin-top: 30px;
   }
 
   .team-card {
     height: 420px;
+    border-radius: 16px;
   }
 
   .team-card-overlay {
-    padding: 16px;
     margin: 8px;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .team-card-info {
+    flex: 1;
   }
 
   .team-card-info h2 {
-    font-size: 1rem;
+    font-size: 20px;
   }
 
   .team-card-info p {
-    font-size: 0.85rem;
+    font-size: 14px;
   }
 
   .team-card-actions {
@@ -147,7 +170,7 @@
   }
 
   .team-card-actions svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 }

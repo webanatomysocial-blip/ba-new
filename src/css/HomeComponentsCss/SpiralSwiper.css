@@ -53,3 +53,19 @@
     pointer-events: none;
     display: block;
 }
+
+@media (max-width: 768px) {
+    .swiper-outer-container {
+        height: 250px;
+        perspective: 800px;
+    }
+
+    .spiral-slide {
+        width: 150px;
+        height: 110px;
+        margin-left: 12px;
+        margin-top: -55px;
+        transform-origin: -12px 50% 0;
+        border-radius: 8px;
+    }
+}
