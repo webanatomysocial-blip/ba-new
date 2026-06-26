@@ -16,7 +16,12 @@ export default function KaaBanner({title, subtitle, subPara, image}) {
             <h1 className="head-text">{title}</h1>
             <p>{subPara}</p>
         </div>
-        <div className="inner-page-banner-image">
+        <div className="inner-page-banner-image" style={{
+            backgroundImage : `url(${image.src})`,
+            backgroundSize:"cover",
+            backgroundPosition:"center",
+            backgroundRepeat:"no-repeat"
+        }}>
             <div className="overlay"></div>
             <div className="inner-page-banner-content">
                 <div className="left">

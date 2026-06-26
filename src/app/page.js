@@ -26,8 +26,19 @@ export default function Home() {
     <ServicesHomeBoxes />
     <PinCardsHome />
     <HowDoWeWork />
-    <ZoomImages />
-    <OurClients />
+    {/* <ZoomImages /> */}
+    <div className="home-video-wrapper" style={{ width: "100%", height: "auto" }}>
+      <video 
+        src="/videos/dummy-video.mp4" 
+        autoPlay 
+        muted 
+        loop 
+        playsInline 
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    </div>
+    
+        <OurClients />
     {/* <RealResults />
     <Testimonials /> */}
     <Faq />

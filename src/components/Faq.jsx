@@ -84,10 +84,10 @@ export default function Faq() {
               Explore our frequently asked questions to learn<br/>how we help businesses grow, structure, and scale with confidence.
             </p>
           </div>
-          <div className="faq-bottom-right">                    
+          {/* <div className="faq-bottom-right">                    
             <BlueButton text="Ask anything" />
             <p className="sub-para-text">No bots, we promise. Ask us anything or tell us your idea.</p>
-          </div>
+          </div> */}
         </div>
         
         <div className="faq-list">

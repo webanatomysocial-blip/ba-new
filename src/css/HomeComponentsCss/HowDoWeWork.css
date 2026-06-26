@@ -211,6 +211,7 @@
         flex-direction: column;
         gap: 20px;
         padding: 0;
+        transform: none !important;
     }
 
     .process-card,

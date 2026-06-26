@@ -18,6 +18,9 @@
   .our-services-container {
     padding: 60px 20px;
   }
+  .services-cards-wrapper{
+    gap: 50px;
+  }
 }
 
 .services-cards-wrapper {
@@ -163,10 +166,12 @@
 
 @media (max-width: 768px) {
   .service-card-container {
-    height: auto;
-    min-height: 0;
-    position: relative;
-    top: auto;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
     margin-bottom: 30px;
   }
   .sc-title {

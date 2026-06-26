@@ -1,99 +1,23 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 // import logo from "@/assets/images/logo.svg";
 import ba_new_logo from '@/assets/images/ba_new_logo.png'
 import "@/css/Header.css";
 import { LenisContext } from "./LenisContext";
 
-const MenuItems = () => {
-  return (
-    <>
-    <div className="menu-items-wrapper">
-        {menuItems.map((item, idx) => (
-          <a
-            key={idx}
-            href={item.href}
-            className="nav-item"
-            onClick={() => setMenuOpen(false)}
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {/* Primary text layer (slides up and blurs away on hover) */}
-            <span className="text-layer text-primary">
-              {item.name.split("").map((char, charIdx) => (
-                <span
-                  key={charIdx}
-                  className="char"
-                  style={{ transitionDelay: `${charIdx * 0.02}s` }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </span>
 
-            {/* Secondary text layer (slides up and clarifies from y: 100px on hover) */}
-            <span className="text-layer text-secondary" aria-hidden="true">
-              {item.name.split("").map((char, charIdx) => (
-                <span
-                  key={charIdx}
-                  className="char"
-                  style={{ transitionDelay: `${charIdx * 0.02}s` }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </span>
-          </a>
-        ))}
-      </div>
-      
-    </>
-  );
-};
 
 export default function Header() {
+  const pathname = usePathname();
+  const isCaseStudy = pathname?.startsWith("/case-studies/");
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
   const lenis = useContext(LenisContext);
-
-  useEffect(() => {
-    if (!lenis) {
-      // Fallback native scroll if lenis is not ready
-      let lastScrollY = window.scrollY;
-      const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY <= 0) {
-          setIsVisible(true);
-        } else if (currentScrollY > lastScrollY) {
-          setIsVisible(false);
-        } else {
-          setIsVisible(true);
-        }
-        lastScrollY = currentScrollY;
-      };
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-
-    // Smooth Lenis Scroll implementation
-    let lastScrollY = lenis.scroll;
-    const handleLenisScroll = (e) => {
-      const currentScrollY = e.scroll;
-      if (currentScrollY <= 0) {
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      lastScrollY = currentScrollY;
-    };
-
-    lenis.on('scroll', handleLenisScroll);
-    return () => lenis.off('scroll', handleLenisScroll);
-  }, [lenis]);
 
   const menuItems = [
     { name: "HOME", href: "/" },
@@ -113,16 +37,47 @@ export default function Header() {
   const defaultBg = "rgba(81, 37, 148, 1)";
   const currentBg = hoveredIndex !== null ? bgColors[hoveredIndex] : defaultBg;
 
-  const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrolled(window.scrollY > 50);
-    });
-  }, []);
+    if (!lenis) {
+      // Fallback native scroll if lenis is not ready
+      let lastScrollY = window.scrollY;
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        setScrolled(currentScrollY > 50);
+        if (currentScrollY <= 0) {
+          setIsVisible(true);
+        } else if (currentScrollY > lastScrollY) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+        lastScrollY = currentScrollY;
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+    // Smooth Lenis Scroll implementation
+    let lastScrollY = lenis.scroll;
+    const handleLenisScroll = (e) => {
+      const currentScrollY = e.scroll;
+      setScrolled(currentScrollY > 50);
+      if (currentScrollY <= 0) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    lenis.on('scroll', handleLenisScroll);
+    return () => lenis.off('scroll', handleLenisScroll);
+  }, [lenis]);
 
   return (
-    <header className={`site-header ${isVisible ? "" : "header-hidden"}`} style={{background: scrolled ? "transparent" : "transparent"}}>
+    <header className={`site-header ${isVisible ? "" : "header-hidden"} ${scrolled || isCaseStudy ? "scrolled" : ""}`}>
       <div className="header-container">
         <a href="/" className="header-logo-link">
           <Image

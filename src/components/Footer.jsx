@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "@/css/Footer.css";
 
-
 // Import custom high-res clover logos from assets
 import img0 from "@/assets/images/footerImages/0@4x.png";
 import img1 from "@/assets/images/footerImages/1.1@4x.png";
@@ -18,6 +17,8 @@ export default function Footer() {
   const [physicsActive, setPhysicsActive] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth <= 768) return;
+
     // Scroll Intersection Observer: drop items when scrolled into viewport
     const container = containerRef.current;
     if (!container) return;
@@ -37,6 +38,7 @@ export default function Footer() {
   }, []);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth <= 768) return;
     if (!physicsActive || typeof window === "undefined") return;
 
     // Dynamically load matter-js to guarantee zero SSR issues
@@ -207,44 +209,46 @@ export default function Footer() {
 
   return (
     <footer className="site-footer">
-      <div className="footer-top">
-        {/* Left Column */}
-        <div className="footer-left">
-          <h2 className="footer-title">
-            GROW YOUR <br />
-            <span className="purple-gradient-text">BUSINESS WITH</span> <br />
-            <span className="purple-solid-text">SMART DIGITAL</span> <br />
-            <span className="purple-deep-text">SOLUTIONS.</span>
-          </h2>
-        </div>
-
-        {/* Middle Column */}
-        <div className="footer-middle">
-          <a href="/" className="footer-link">Home</a>
-          <a href="/about" className="footer-link">About</a>
-          <a href="/services" className="footer-link">Services</a>
-          <a href="/case-studies" className="footer-link">Case Studies</a>
-          <a href="/contact-us" className="footer-link">Contact</a>
-        </div>
-
-        {/* Right Column */}
-        <div className="footer-right">
-          {/* Email Subscription Form */}
-          <div className="email-box">
-            <input
-              type="email"
-              placeholder="Your work email"
-              className="email-input"
-              aria-label="Your work email"
-            />
-            <button className="get-started-btn">Get started</button>
+      {/* Desktop Footer Content */}
+      <div className="footer-desktop-content">
+        <div className="footer-top">
+          {/* Left Column */}
+          <div className="footer-left">
+            <h2 className="footer-title">
+              GROW YOUR <br />
+              <span className="purple-gradient-text">BUSINESS WITH</span> <br />
+              <span className="purple-solid-text">SMART DIGITAL</span> <br />
+              <span className="purple-deep-text">SOLUTIONS.</span>
+            </h2>
           </div>
+
+          {/* Middle Column */}
+          <div className="footer-middle">
+            <a href="/" className="footer-link">Home</a>
+            <a href="/about" className="footer-link">About</a>
+            <a href="/services" className="footer-link">Services</a>
+            <a href="/case-studies" className="footer-link">Case Studies</a>
+            <a href="/contact-us" className="footer-link">Contact</a>
+          </div>
+
+          {/* Right Column */}
+          <div className="footer-right">
+            {/* Email Subscription Form */}
+            <div className="email-box">
+              <input
+                type="email"
+                placeholder="Your work email"
+                className="email-input"
+                aria-label="Your work email"
+              />
+              <button className="get-started-btn">Get started</button>
+            </div>
 
           {/* Follow row */}
           <div className="follow-row">
             <span>Follow us:</span>
             <div className="social-squares">
-              <a href="https://www.instagram.com/business_anatomy?igsh=MW9uejRzN2dtMjBoMQ==" className="social-square-link" aria-label="Instagram">
+              <a href="#" className="social-square-link" aria-label="Instagram">
                 <svg className="social-square-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
                 </svg>
@@ -257,45 +261,109 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Location row */}
-          <div className="location-row">
-            <span>Location:</span>
-            <div className="location-details">
-              Admiral House, Cardiff, UK. <br />
-              CF24 0DP
+            {/* Location row */}
+            <div className="location-row">
+              <span>Location:</span>
+              <div className="location-details">
+                Admiral House, Cardiff, UK. <br />
+                CF24 0DP
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Matter-JS Physics falling image playground */}
-      <div
-        ref={containerRef}
-        className="falling-images-wrapper"
-        title="Interactive Clover Physics - Drag or throw them!"
-      >
-        {/* Render canvas injected by Matter-JS */}
-        <div ref={canvasContainerRef} className="falling-images-canvas" />
+        {/* Matter-JS Physics falling image playground */}
+        <div
+          ref={containerRef}
+          className="falling-images-wrapper"
+          title="Interactive Clover Physics - Drag or throw them!"
+        >
+          {/* Render canvas injected by Matter-JS */}
+          <div ref={canvasContainerRef} className="falling-images-canvas" />
 
-        {/* Fallback Static layout before intersection observer triggers canvas */}
-        <div className={`falling-images-static ${physicsActive ? "hidden" : ""}`}>
-          <Image src={img0} alt="Clover Clover 0" className="static-clover" />
-          <Image src={img1} alt="Clover Clover 1" className="static-clover" />
-          <Image src={img2} alt="Clover Clover 2" className="static-clover" />
-          <Image src={img3} alt="Clover Clover 3" className="static-clover" />
-          <Image src={img4} alt="Clover Clover 4" className="static-clover" />
-          <Image src={img5} alt="Clover Clover 5" className="static-clover" />
+          {/* Fallback Static layout before intersection observer triggers canvas */}
+          <div className={`falling-images-static ${physicsActive ? "hidden" : ""}`}>
+            <Image src={img0} alt="Clover Clover 0" className="static-clover" />
+            <Image src={img1} alt="Clover Clover 1" className="static-clover" />
+            <Image src={img2} alt="Clover Clover 2" className="static-clover" />
+            <Image src={img3} alt="Clover Clover 3" className="static-clover" />
+            <Image src={img4} alt="Clover Clover 4" className="static-clover" />
+            <Image src={img5} alt="Clover Clover 5" className="static-clover" />
+          </div>
+        </div>
+
+        {/* Footer bottom bar */}
+        <div className="footer-bottom">
+          <span className="footer-bottom-copy">
+            © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
+          </span>
+          <span className="footer-bottom-design">
+            DESIGNED AND DEVELOPED BY <a href="https://webanatomy.in" style={{color:"#FFFFFF",textDecoration:"none", fontWeight:"600"}} target="_blank"> WEB ANATOMY</a>
+          </span>
         </div>
       </div>
 
-      {/* Footer bottom bar */}
-      <div className="footer-bottom">
-        <span className="footer-bottom-copy">
-          © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
-        </span>
-        <span className="footer-bottom-design">
-          DESIGNED AND DEVELOPED BY WEB ANATOMY
-        </span>
+      {/* Mobile Footer Content (completely clean, static, no canvas) */}
+      <div className="footer-mobile-content">
+        <div className="footer-mobile-top">
+          <h2 className="footer-mobile-title">
+            GROW YOUR BUSINESS WITH <br />
+            <span className="purple-gradient-text">SMART DIGITAL SOLUTIONS.</span>
+          </h2>
+
+          <div className="footer-mobile-links">
+            <a href="/" className="footer-mobile-link">Home</a>
+            <a href="/about" className="footer-mobile-link">About</a>
+            <a href="/services" className="footer-mobile-link">Services</a>
+            <a href="/case-studies" className="footer-mobile-link">Case Studies</a>
+            <a href="/contact-us" className="footer-mobile-link">Contact</a>
+          </div>
+
+          <div className="footer-mobile-interaction">
+            <div className="email-box">
+              <input
+                type="email"
+                placeholder="Your work email"
+                className="email-input"
+                aria-label="Your work email"
+              />
+              <button className="get-started-btn">Get started</button>
+            </div>
+
+            <div className="follow-row">
+              <span>Follow us:</span>
+              <div className="social-squares">
+                <a href="#" className="social-square-link" aria-label="Instagram">
+                  <svg className="social-square-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                  </svg>
+                </a>
+                <a href="#" className="social-square-link" aria-label="LinkedIn">
+                  <svg className="social-square-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="location-row">
+              <span>Location:</span>
+              <div className="location-details">
+                Admiral House, Cardiff, UK. <br />
+                CF24 0DP
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span className="footer-bottom-copy">
+            © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
+          </span>
+          <span className="footer-bottom-design">
+            DESIGNED AND DEVELOPED BY <a href="https://webanatomy.in" style={{color:"#FFFFFF",textDecoration:"none", fontWeight:"600"}} target="_blank"></a> WEB ANATOMY
+          </span>
+        </div>
       </div>
     </footer>
   );
