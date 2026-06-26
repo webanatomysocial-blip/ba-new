@@ -17,6 +17,9 @@ const geist = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={geist.variable}>
+      <head>
+        <link rel="icon" href="/fav.png" />
+      </head>
       <body className={geist.className}>
         <LenisProvider>
           <Header />

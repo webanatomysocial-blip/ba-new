@@ -4,8 +4,8 @@ import React from 'react'
 import '../../css/caseStudiesCss/Projects.css'
 import bg1 from '@/assets/images/caseStudies/kaa.avif'
 import bg2 from '@/assets/images/caseStudies/pearl.avif'
-import bg3 from '@/assets/images/caseStudies/prugens.avif'
-import bg4 from '@/assets/images/caseStudies/theart.avif'
+import bg3 from '@/assets/images/caseStudies/cognitude.jpg'
+// import bg4 from '@/assets/images/caseStudies/theart.avif'
 
 import { FaArrowRight, FaSquare } from "react-icons/fa";
 import BlueButton from "@/components/BlueButton";

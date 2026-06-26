@@ -5,20 +5,20 @@ import "@/css/HomeComponentsCss/OverviewHome.css";
 export default function OverviewHome() {
   const cards = [
     {
-      value: "1500+",
-      label: "Campaigns launched"
+      value: "50+",
+      label: "Global Clients"
     },
     {
-      value: "87%",
-      label: "Conversion boost"
+      value: "100+",
+      label: "Projects Delivered"
     },
     {
-      value: "$30M+",
-      label: "Revenue influenced"
+      value: "6+",
+      label: "Years of Craft"
     },
     {
-      value: "4M",
-      label: "High-intent leads"
+      value: "25+",
+      label: "Expert Team"
     }
   ];
 

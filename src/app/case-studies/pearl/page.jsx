@@ -2,7 +2,7 @@
 import KaaBanner from '@/caseStudyComponents/KaaBanner'
 import React from 'react'
 
-import bannerBg from '@/assets/images/caseStudies/cognitude.jpg';
+import bannerBg from '@/assets/images/caseStudies/pearl.avif';
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 
 export default function InnerPage() {

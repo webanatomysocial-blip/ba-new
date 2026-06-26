@@ -22,30 +22,34 @@ export default function HowDoWeWork() {
         const section = sectionRef.current;
         const track = trackRef.current;
         if (!section || !track) return;
-        if (window.innerWidth <= 768) return;
 
-        // Ensure GSAP knows about the dimensions
-        const getScrollAmount = () => {
-            let trackWidth = track.scrollWidth;
-            return -(trackWidth - window.innerWidth + 150); 
-        };
+        let mm = gsap.matchMedia();
 
-        const tween = gsap.to(track, {
-            x: getScrollAmount,
-            ease: "none",
-            scrollTrigger: {
-                trigger: section,
-                start: "top top",
-                end: () => `+=${Math.abs(getScrollAmount())}`,
-                pin: true,
-                scrub: 1,
-                invalidateOnRefresh: true,
-            }
+        mm.add("(min-width: 769px)", () => {
+            const getScrollAmount = () => {
+                let trackWidth = track.scrollWidth;
+                return -(trackWidth - window.innerWidth + 150); 
+            };
+
+            const tween = gsap.to(track, {
+                x: getScrollAmount,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: () => `+=${Math.abs(getScrollAmount())}`,
+                    pin: true,
+                    scrub: 1,
+                    invalidateOnRefresh: true,
+                }
+            });
+
+            return () => {
+                tween.kill();
+            };
         });
 
-        return () => {
-            tween.kill();
-        };
+        return () => mm.revert();
     }, []);
 
     const processSteps = [
@@ -80,7 +84,7 @@ export default function HowDoWeWork() {
             <div className="overview-header">
                 <span className="clients-bullet">
                     <FaSquare size={10} style={{ marginRight: '10px' }} />
-                    LOREM IPSUM
+                    DISCOVER. STRATEGIZE. BUILD. ELEVATE.
                 </span>
                 <h2 className="head-text-white">HOW DO WE WORK.</h2>
             </div>
