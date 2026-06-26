@@ -1,0 +1,17 @@
+.what-we-do {
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.what-we-do-left{
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.what-we-do-right{
+    width: 50%;
+}
