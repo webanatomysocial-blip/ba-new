@@ -14,7 +14,7 @@ import Link from "next/link";
 export default function Projects() {
   const projectData = [
     { img: bg1, title: 'KAA Dentals', tags: 'End-End Marketing', href: '/case-studies/kaa' },
-    { img: bg2, title: 'Pearl', tags: 'Brand Identity, Web Design', href: '/case-studies/pearl' },
+    { img: bg2, title: 'Pearl Dental Surgeries', tags: 'Brand Identity, Web Design', href: '/case-studies/pearl' },
     { img: bg3, title: 'Cognitude', tags: 'End-End Marketing', href: '/case-studies/cognitude' },
     // { img: bg4, title: 'ThreatSense AI', tags: 'Ads', href: '/case-studies/threatsense' },
   ];
