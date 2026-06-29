@@ -8,10 +8,19 @@
 }
 
 .what-we-do-left{
-    width: 50%;
+    width: 45%;
+    height: 50vh;
     background-color: aliceblue;
+
+    border-radius: 10px;
 }
 
 .what-we-do-right{
-    width: 50%;
+    width: 55%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 60px 0px;
 }

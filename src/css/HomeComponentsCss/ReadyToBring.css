@@ -19,10 +19,25 @@
 .ready-to-bring-title {
   font-family: var(--font-inter), var(--font-geist), sans-serif;
   font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
   margin: 0;
+
+  background: linear-gradient(
+    180deg,
+    #f5f2ff 0%,
+    #e4dbfa 15%,
+    #c6a8f4 35%,
+    #9b6ce4 58%,
+    #6a2fc7 80%,
+    #47148f 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Marquee Container */

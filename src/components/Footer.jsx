@@ -214,11 +214,11 @@ export default function Footer() {
         <div className="footer-top">
           {/* Left Column */}
           <div className="footer-left">
-            <h2 className="footer-title">
+            <h2 className="footer-title footer-gradient">
               GROW YOUR <br />
-              <span className="purple-gradient-text">BUSINESS WITH</span> <br />
-              <span className="purple-solid-text">SMART DIGITAL</span> <br />
-              <span className="purple-deep-text">SOLUTIONS.</span>
+              BUSINESS WITH <br />
+              SMART DIGITAL <br />
+              SOLUTIONS.
             </h2>
           </div>
 

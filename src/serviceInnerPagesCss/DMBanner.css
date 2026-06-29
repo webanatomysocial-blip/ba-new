@@ -41,8 +41,6 @@
   justify-content: center;
   align-items: center;
 
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.811) 70%, transparent 100%);
-
   overflow: hidden;
 
   border-radius: 10px;
