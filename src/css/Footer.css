@@ -33,27 +33,73 @@
 }
 
 .footer-title {
-  font-size: 54px;
-  font-weight: 500;
-  line-height: 1.25;
+  font-size: 64px;
+  line-height: 1.1;
   /* letter-spacing: -0.03em; */
   text-transform: uppercase;
 }
 
-.purple-gradient-text {
-  background: linear-gradient(90deg, #ECE0FE 20%, #a78bfa 100%);
+.footer-gradient {
+  background: linear-gradient(
+    180deg,
+    #f5f2ff 0%,
+    #e4dbfa 15%,
+    #c6a8f4 35%,
+    #9b6ce4 58%,
+    #6a2fc7 90%,
+    #6523c3 100%
+  );
+
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .purple-gradient-text {
+  background: linear-gradient(
+    180deg,
+    #f5f2ff 0%,
+    #e4dbfa 15%,
+    #c6a8f4 35%,
+    #9b6ce4 58%,
+    #6a2fc7 80%,
+    #47148f 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
 .purple-solid-text {
-  color: #a78bfa;
+  background: linear-gradient(
+    180deg,
+    #d9c2fb 0%,
+    #b48cf2 40%,
+    #8a59de 75%,
+    #6230be 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .purple-deep-text {
-  color: #512594;
-}
+  background: linear-gradient(
+    180deg,
+    #8d63e6 0%,
+    #6a33c9 45%,
+    #4b1796 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+} */
 
 /* Middle Column - Menu Links */
 .footer-middle {

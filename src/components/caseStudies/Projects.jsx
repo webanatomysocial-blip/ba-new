@@ -5,7 +5,7 @@ import '../../css/caseStudiesCss/Projects.css'
 import bg1 from '@/assets/images/caseStudies/kaa.avif'
 import bg2 from '@/assets/images/caseStudies/pearl.avif'
 import bg3 from '@/assets/images/caseStudies/cognitude.jpg'
-// import bg4 from '@/assets/images/caseStudies/theart.avif'
+import bg4 from '@/assets/images/caseStudies/theart.avif'
 
 import { FaArrowRight, FaSquare } from "react-icons/fa";
 import BlueButton from "@/components/BlueButton";
@@ -16,7 +16,7 @@ export default function Projects() {
     { img: bg1, title: 'KAA Dentals', tags: 'End-End Marketing', href: '/case-studies/kaa' },
     { img: bg2, title: 'Pearl Dental Surgeries', tags: 'Brand Identity, Web Design', href: '/case-studies/pearl' },
     { img: bg3, title: 'Cognitude', tags: 'End-End Marketing', href: '/case-studies/cognitude' },
-    // { img: bg4, title: 'ThreatSense AI', tags: 'Ads', href: '/case-studies/threatsense' },
+    { img: bg4, title: 'Dentistry for Nervous Patients', tags: 'Brand Identity, Web Design', href: '/case-studies/dentistry-for-nervous-patients' },
   ];
 
   return (

@@ -25,8 +25,11 @@ export default function ReadyToBring() {
   return (
     <section className="ready-to-bring-section">
       <div className="ready-to-bring-header">
-        <h2 className="head-text text-gradient-primary-white">
-          READY TO BRING YOUR<br/> IDEAS TO LIFE? LET'S CREATE<br/> SOMETHING IMPACTFUL<br/> TOGETHER.
+        <h2 className="ready-to-bring-title">
+          READY TO BRING YOUR<br />
+          IDEAS TO LIFE? LET'S CREATE<br />
+          SOMETHING IMPACTFUL<br />
+          TOGETHER.
         </h2>
       </div>
 

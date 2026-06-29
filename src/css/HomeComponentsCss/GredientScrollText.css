@@ -28,11 +28,10 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  opacity: 0.5; /* Slight opacity so text remains readable */
+  opacity: 0.5;
   pointer-events: none;
 }
 
-/* Changed from position: sticky to position: relative to let GSAP handle the pin layout seamlessly without double-pin conflicts/jumping */
 .sticky-wrapper {
   position: relative;
   height: 100vh;
@@ -71,16 +70,18 @@
   display: inline-block;
   font-size: 49px;
   font-weight: 500;
-  color: #808080; /* Elegant light grey initial color */
+  color: #808080;
   letter-spacing: -0.02em;
   transition: color 0.15s ease;
 }
 
 .gradient-char {
-  background: linear-gradient(0deg, #512594 48.9%, #c4a6f0 91.05%);
+  background: linear-gradient(0deg,
+      #512594 48.90730574324324%,
+      #ffffff 91.05433558558559%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: #808080; /* Elegant light grey initial color over the gradient clip */
+  color: #808080;
 }
 
 .space {
@@ -131,8 +132,13 @@
 }
 
 @keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-10%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-10%);
+  }
 }
 
 .partner-logo-wrapper {
@@ -143,6 +149,7 @@
   flex-shrink: 0;
   cursor: pointer;
 }
+
 /* 
 .partner-logo-wrapper:hover {
   opacity: 0.9;
@@ -231,7 +238,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
   z-index: 2;
   transition: opacity 0.4s ease;
 }
@@ -408,57 +415,57 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
 
-  .Text-Section{
+  .Text-Section {
     min-height: 100vh;
-    
+
   }
 
-  .sticky-wrapper{
+  .sticky-wrapper {
     height: auto;
     min-height: 100vh;
     padding: 80px 0;
   }
 
-  .text-container{
+  .text-container {
     width: 95%;
     padding: 60px 20px;
   }
 
-  .main-title{
+  .main-title {
     font-size: 27px;
     line-height: 1;
   }
 
-  .char-span{
+  .char-span {
     font-size: 27px;
     line-height: 1;
   }
 
-  .sub-content-container{
+  .sub-content-container {
     margin-top: 30px;
     gap: 25px;
   }
 
-  .text-subtitle{
+  .text-subtitle {
     font-size: 15px;
     line-height: 1.6;
     max-width: 100%;
     padding: 0 10px;
   }
 
-  .desktop-break{
+  .desktop-break {
     display: none;
   }
 
-  .logos-marquee-wrapper{
+  .logos-marquee-wrapper {
     width: 100%;
   }
 
-  .logos-marquee-track{
+  .logos-marquee-track {
     gap: 35px;
   }
 
-  .partner-logo-wrapper img{
+  .partner-logo-wrapper img {
     width: 100px !important;
     height: auto !important;
   }

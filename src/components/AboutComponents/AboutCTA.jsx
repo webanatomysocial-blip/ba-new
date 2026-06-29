@@ -15,12 +15,12 @@ export default function AboutCTA() {
           GET STARTED
         </span>
 
-        <h2 className="get-in-touch-title">
-            <span style={{ color: 'var(--white)' }}>WE’RE OVERJOYED</span>
-            <span className="text-gradient-primary">
-                TO DESIGN YOUR<br />
-                NEXT MASTERPIECE
-            </span> 
+        <h2 className="get-in-touch-title text-gradient-primary">
+          WE'RE OVERJOYED
+          <br />
+          TO DESIGN YOUR
+          <br />
+          NEXT MASTERPIECE
         </h2>
 
         <p style={{color:'var(--grey-text)', textAlign:'center'}}>Reach out to our team today and start building your<br />creative projects with confidence</p>
