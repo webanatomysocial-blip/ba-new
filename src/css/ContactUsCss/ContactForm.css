@@ -327,3 +327,48 @@
     font-size: 12px;
   }
 }
+
+/* ── Validation & Status ─────────────────────────────── */
+
+.cf-field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-input--error {
+  border-bottom-color: #ef4444 !important;
+}
+
+.cf-error {
+  font-size: 13px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+.cf-status {
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cf-status--success {
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  color: #4ade80;
+}
+
+.cf-status--error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+.rollBtn--loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}

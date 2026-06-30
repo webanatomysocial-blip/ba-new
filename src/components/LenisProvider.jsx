@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function LenisProvider({ children }) {
   const [lenis, setLenis] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const newLenis = new Lenis({
@@ -23,7 +22,6 @@ function LenisProvider({ children }) {
     });
 
     setLenis(newLenis);
-    setIsLoading(false);
 
     // Sync Lenis with GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
@@ -43,10 +41,6 @@ function LenisProvider({ children }) {
       setLenis(null);
     };
   }, []);
-
-  if (isLoading) {
-    return null;
-  }
 
   return (
     <LenisContext.Provider value={lenis}>
