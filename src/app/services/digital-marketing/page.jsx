@@ -1,10 +1,11 @@
 import DMBanner from "@/serviceInnerPages/DMBanner";
-import DMBannerImage from "@/assets/images/servicesImages/digital-marketing/banner.avif";
-import WhatWeDoImage from "@/assets/images/servicesImages/digital-marketing/what-we-do.avif";
+import DMBannerImage from "@/assets/images/servicesImages/inner-service/digital-marketing/digital-marketing.jpg";
+import WhatWeDoImage from "@/assets/images/servicesImages/inner-service/digital-marketing/dm-what-we-do.jpg";
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
 import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";
 import ThreeServices from '@/serviceInnerPages/ThreeServices';
+import AboutCTA from "@/components/AboutComponents/AboutCTA";
 
 import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
 import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
@@ -39,7 +40,7 @@ export default function DigitalMarketingPage() {
                 para={<>
                     Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
                 </>}
-                services= {[
+                services={[
                     {
                         number: '01',
                         title: 'Google SEO',
@@ -54,7 +55,7 @@ export default function DigitalMarketingPage() {
                         number: '03',
                         title: 'Social Media Marketing',
                         text: 'Social media marketing services help businesses build brand awareness, engage audiences, and drive sales through platforms like Facebook, Instagram, LinkedIn, and Twitter.'
-                },
+                    },
                     {
                         number: '04',
                         title: 'Performance Marketing',
@@ -75,7 +76,7 @@ export default function DigitalMarketingPage() {
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
-            <ServiceHowDoWeWork 
+            <ServiceHowDoWeWork
                 subtitle="DISCOVER. STRATEGIZE. BUILD. ELEVATE."
                 title="HOW DO WE WORK."
                 processSteps={[
@@ -109,6 +110,8 @@ export default function DigitalMarketingPage() {
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
             <ThreeServices />
+
+            <AboutCTA />
 
         </>
     );

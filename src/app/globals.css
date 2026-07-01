@@ -28,7 +28,6 @@ body {
   color: var(--white);
   min-height: 100%;
   margin: 0px !important;
-  padding-top: 40px;
 }
 
 h1,
@@ -154,7 +153,7 @@ a {
     #c6a8f4 35%,
     #9b6ce4 58%,
     #6a2fc7 80%,
-    #47148f 100%
+    #5318a6 100%
   );
 
   -webkit-background-clip: text;

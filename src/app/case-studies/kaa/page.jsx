@@ -4,6 +4,8 @@ import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/kaa.avif'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
+import Details from '@/caseStudyComponents/Details';
+
 
 export default function InnerPage() {
     return (
@@ -42,6 +44,8 @@ export default function InnerPage() {
                 howWeHelped2='Our team implemented SEO strategies to improve search visibility while social media management and creative campaigns strengthened brand awareness. Paid advertising campaigns were introduced to generate qualified patient enquiries and support ongoing growth.'
                 results='KAA Dental now benefits from a consistent brand identity, a professional digital presence, and an integrated marketing strategy. The combination of branding, website development, SEO, and advertising has created a strong foundation for sustainable growth and patient engagement.'
             />
+
+            <Details />
         </div>
     )
 }

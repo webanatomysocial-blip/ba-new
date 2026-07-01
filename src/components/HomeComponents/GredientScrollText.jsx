@@ -29,7 +29,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const logosList = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13, logo14,logo15];
+const logosList = [logo1, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13, logo14, logo15];
 
 const GredientScrollText = () => {
   const sectionRef = useRef(null);
@@ -39,8 +39,14 @@ const GredientScrollText = () => {
     const section = sectionRef.current;
     if (!section) return;
 
-    const plainChars = section.querySelectorAll(".char-span:not(.gradient-char)");
-    const gradientChars = section.querySelectorAll(".gradient-char");
+    // const plainChars = section.querySelectorAll(".char-span:not(.gradient-char)");
+    // const gradientChars = section.querySelectorAll(".gradient-char");
+    const plainChars = []; // no plain chars anymore
+
+    const gradientChars = section.querySelectorAll(
+      ".gradient-line-0, .gradient-line-1, .gradient-line-2, .gradient-line-3"
+    );
+
     const subContent = section.querySelector(".sub-content-container");
 
     const prefersReducedMotion = window.matchMedia(
@@ -69,12 +75,12 @@ const GredientScrollText = () => {
       });
 
       // 1. Stagger normal characters to white
-      tl.to(plainChars, {
-        color: "#ffffff",
-        duration: 1.5,
-        stagger: 0.04,
-        ease: "power2.out",
-      });
+      // tl.to(plainChars, {
+      //   color: "#d7c0faff",
+      //   duration: 1.5,
+      //   stagger: 0.04,
+      //   ease: "power2.out",
+      // });
 
       // 2. Reveal gradient characters (color transparent reveals CSS gradient)
       tl.to(
@@ -165,31 +171,62 @@ const GredientScrollText = () => {
     <div className="scroll-text-parent">
       {/* Sticky Text Reveal Section */}
       <section className="Text-Section" ref={sectionRef}>
-        <video 
+        <video
           className="bg-video"
-          src="/videos/textScrollSectionHome/secondSection.mp4" 
-          autoPlay 
-          muted 
-          loop 
+          src="/videos/textScrollSectionHome/secondSection.mp4"
+          autoPlay
+          muted
+          loop
           playsInline
         />
         <div className="sticky-wrapper">
           <div className="text-container">
+
             <h1 className="main-title">
               {textLines.map((line, lineIndex) => {
-                const isGradientLine = lineIndex > 0;
+
+                // const isGradientLine = lineIndex > 0;
+                const getGradientClass = (index) => {
+                  switch (index) {
+                    case 0:
+                      return "gradient-line-0";
+                    case 1:
+                      return "gradient-line-1";
+                    case 2:
+                      return "gradient-line-2";
+                    case 3:
+                      return "gradient-line-3";
+                    default:
+                      return "";
+                  }
+                };
+
                 return (
                   <span key={lineIndex} className="line">
-                    {line.split("").map((char, charIndex) => {
+                    {/* {line.split("").map((char, charIndex) => {
                       if (char === " ") {
                         return <span key={charIndex} className="space" />;
                       }
                       return (
                         <span
                           key={charIndex}
-                          className={`char-span ${
-                            isGradientLine ? "gradient-char" : ""
-                          }`}
+                          className={`char-span ${isGradientLine ? "gradient-char" : ""
+                            }`}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })} */}
+
+                    {line.split("").map((char, charIndex) => {
+                      if (char === " ") {
+                        return <span key={charIndex} className="space" />;
+                      }
+
+                      return (
+                        <span
+                          key={charIndex}
+                          className={`char-span ${getGradientClass(lineIndex)}`}
                         >
                           {char}
                         </span>
@@ -228,7 +265,7 @@ const GredientScrollText = () => {
         </div>
       </section>
 
- 
+
     </div>
   );
 };

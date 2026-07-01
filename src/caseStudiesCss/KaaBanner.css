@@ -110,3 +110,30 @@
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.12);
 }
+
+
+@media (max-width: 768px) {
+    .case-studies-inner-page {
+        padding: 30px 15px;
+    }
+
+    .case-studies-inner-page-header {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .inner-page-banner-image {
+        height: 400px;
+    }
+
+    .inner-page-banner-content {
+        padding: 20px;
+    }
+
+    .banner-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}

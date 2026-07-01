@@ -5,6 +5,7 @@ import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
 import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";
 import ThreeServices from '@/serviceInnerPages/ThreeServices';
+import AboutCTA from '@/components/AboutComponents/AboutCTA';
 
 import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
 import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
@@ -16,7 +17,7 @@ export default function AIAutomationPage() {
             <DMBanner
                 title="AI AUTOMATION."
                 subPara={<>
-                    Our AI Automation services help businesses streamline operations, automate repetitive tasks, and improve efficiency through intelligent solutions. We create smarter workflows that save time, reduce costs, and support business growth.
+                    Our AI Automation services help businesses streamline operations, automate<br />repetitive tasks, and improve efficiency through intelligent solutions.<br /> We create smarter workflows that save time, reduce costs,<br/>and support business growth.
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -25,9 +26,9 @@ export default function AIAutomationPage() {
 
             <WhatWeDo
                 whatWeDoImage={WhatWeDoImage}
-                subtitle='What Is AI Automation?'
+                subtitle='WHAT WE DO'
                 subPara={<>
-                    AI Automation uses intelligent technologies to automate repetitive tasks, improve decision-making, and streamline business operations. It helps businesses work faster, smarter, and more efficiently while allowing teams to focus on higher-value activities.
+                    AI Automation uses intelligent technologies to automate<br/>repetitive tasks, improve decision-making, and streamline<br/>business operations. It helps businesses work faster, smarter,<br/>and more efficiently while allowing teams to focus on<br />higher-value activities.
                 </>}
             />
 
@@ -101,6 +102,8 @@ export default function AIAutomationPage() {
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
             <ThreeServices />
+
+            <AboutCTA />
 
         </>
     );

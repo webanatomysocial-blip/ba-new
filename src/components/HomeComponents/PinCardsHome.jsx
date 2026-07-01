@@ -15,7 +15,7 @@ import cognitude from '@/assets/images/caseStudies/cognitude.jpg';
 const projects = [
   {
     id: "01",
-    total: "03",
+    total: "05",
     title: "KAA Dentals",
     year: "2024",
     services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing", "Paid advertising"],
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     id: "02",
-    total: "03",
+    total: "05",
     title: "Pearl Dental Surgery",
     year: "2024",
     services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing"],
@@ -33,12 +33,30 @@ const projects = [
   },
   {
     id: "03",
-    total: "03",
+    total: "05",
     title: "Cognitude",
     year: "2024",
     services: ["Website Design", "Website Development", "UX/UI Design","Digital Experience Design"],
     image: cognitude,
     desc: "Designing a digital experience that showcases innovation across neuroscience, artificial intelligence, and human-centred research."
+  },
+  {
+    id: "04",
+    total: "05",
+    title: "Soniva Dental",
+    year: "2024",
+    services: ["Branding", "Website Development", "Website Design","SEO","Social Media Marketing"],
+    image: cognitude,
+    desc: "Redefining the visual identity and online presence for Soniva Dental."
+  },
+  {
+    id: "05",
+    total: "05",
+    title: "Dentistry For Nervous Patients",
+    year: "2025",
+    services: ["Website Design", "Website Development", "UX/UI Design","Digital Experience Design"],
+    image: cognitude,
+    desc: "Designing a calming digital experience that helps nervous patients feel reassured and supported."
   },
 
 ];

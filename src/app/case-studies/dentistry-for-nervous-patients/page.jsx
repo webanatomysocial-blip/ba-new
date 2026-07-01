@@ -4,6 +4,7 @@ import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/cognitude.jpg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
+import Details from '@/caseStudyComponents/Details';
 
 export default function DentistryForNervousPatientsPage() {
     return (
@@ -36,6 +37,8 @@ export default function DentistryForNervousPatientsPage() {
                 howWeHelped2="Alongside the website development, we implemented on-page SEO best practices to improve search visibility and establish a strong digital foundation for future growth."
                 results="The new website successfully reflects the practice's compassionate approach to patient care. By prioritising calmness, accessibility, and trust, the digital experience helps nervous patients feel more comfortable before they even step into the clinic"
             />
+
+            <Details />
         </div>
     )
 }
