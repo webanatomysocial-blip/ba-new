@@ -4,6 +4,7 @@ import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/cognitude.jpg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
+import Details from '@/caseStudyComponents/Details'
 
 export default function InnerPage() {
     return (
@@ -40,6 +41,8 @@ export default function InnerPage() {
                 howWeHelped2="Our approach focused on creating a balance between innovation, functionality, and visual storytelling to reflect Cognitude's unique identity."
                 results="The new website provides Cognitude with a distinctive digital presence that effectively communicates its services, expertise, and vision. The platform supports collaboration opportunities while strengthening the organisation's position within neuroscience and AI innovation."
             />
+
+            <Details />
         </div>
     )
 }

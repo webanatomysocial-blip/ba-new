@@ -1,21 +1,34 @@
 "use client";
 
 import React, { useEffect, useRef } from 'react';
-import '../../css/HomeComponentsCss/SpiralSwiper.css';
+import '../../css/HomeComponentsCss/SpiralSwiper.css'; 
+
+import swiper1 from '@/assets/images/HomeImages/spiralSwiper/swiper1.jpg'
+import swiper2 from '@/assets/images/HomeImages/spiralSwiper/swiper2.jpg'
+import swiper3 from '@/assets/images/HomeImages/spiralSwiper/swiper3.jpg'
+import swiper4 from '@/assets/images/HomeImages/spiralSwiper/swiper4.jpg'
+import swiper5 from '@/assets/images/HomeImages/spiralSwiper/swiper5.jpg'
+import swiper6 from '@/assets/images/HomeImages/spiralSwiper/swiper6.jpg'
+import swiper7 from '@/assets/images/HomeImages/spiralSwiper/swiper7.jpg'
+import swiper8 from '@/assets/images/HomeImages/spiralSwiper/swiper8.jpg'
+import swiper9 from '@/assets/images/HomeImages/spiralSwiper/swiper9.png'
+import swiper10 from '@/assets/images/HomeImages/spiralSwiper/swiper10.jpg'
+import swiper11 from '@/assets/images/HomeImages/spiralSwiper/swiper11.jpg'
+import swiper12 from '@/assets/images/HomeImages/spiralSwiper/swiper12.jpg'
 
 const ARTWORKS = [
-    "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?auto=format&fit=crop&w=700&q=80",
-    "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80",
+    swiper1,
+    swiper2,
+    swiper3,
+    swiper4,
+    swiper5,
+    swiper6,
+    swiper7,
+    swiper8,
+    swiper9,
+    swiper10,
+    swiper11,
+    swiper12
 ];
 
 const SLIDE_COUNT = 12;
@@ -26,7 +39,7 @@ export default function SpiralSwiper() {
     const outerRef = useRef(null);
     const wrapperRef = useRef(null);
     const rafId = useRef(null);
-    const scrollPrevY = useRef(window.scrollY);
+    const scrollPrevY = useRef(typeof window !== 'undefined' ? window.scrollY : 0);
     const scrollTimeout = useRef(null);
 
     // Physics and interaction state kept outside of React rendering cycle
@@ -153,64 +166,64 @@ export default function SpiralSwiper() {
         };
     }, []);
 
-        // Scroll‑linked rotation effect (delta based)
-        useEffect(() => {
-            const handleScroll = () => {
-                if (state.current.isDragging) return;
-                const currentY = window.scrollY;
-                const delta = currentY - scrollPrevY.current;
-                // Apply rotation based on scroll delta
-                const rotationDelta = delta * 0.07; // same speed factor
-                state.current.wrapperRotation += rotationDelta;
-                scrollPrevY.current = currentY;
-                // Mark scrolling state
-                state.current.isScrolling = true;
-                if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-                scrollTimeout.current = setTimeout(() => { state.current.isScrolling = false; }, 200);
-                if (wrapperRef.current) {
-                    wrapperRef.current.style.transform = `rotateY(${state.current.wrapperRotation.toFixed(4)}deg)`;
+    // Scroll‑linked rotation effect (delta based)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (state.current.isDragging) return;
+            const currentY = window.scrollY;
+            const delta = currentY - scrollPrevY.current;
+            // Apply rotation based on scroll delta
+            const rotationDelta = delta * 0.07; // same speed factor
+            state.current.wrapperRotation += rotationDelta;
+            scrollPrevY.current = currentY;
+            // Mark scrolling state
+            state.current.isScrolling = true;
+            if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+            scrollTimeout.current = setTimeout(() => { state.current.isScrolling = false; }, 200);
+            if (wrapperRef.current) {
+                wrapperRef.current.style.transform = `rotateY(${state.current.wrapperRotation.toFixed(4)}deg)`;
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+    // Trigger one‑time 180° rotation when section becomes visible
+    useEffect(() => {
+        const outer = outerRef.current;
+        if (!outer) return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start a new 180° rotation from current rotation
+                    state.current.targetRotation = state.current.wrapperRotation + 180;
+                } else {
+                    // Reset target when leaving viewport to allow next entry
+                    state.current.targetRotation = null;
                 }
-            };
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
-        }, []);
+            });
+        }, { threshold: 0.3 });
+        observer.observe(outer);
+        return () => observer.disconnect();
+    }, []);
 
-
-        // Trigger one‑time 180° rotation when section becomes visible
-        useEffect(() => {
-            const outer = outerRef.current;
-            if (!outer) return;
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Start a new 180° rotation from current rotation
-                        state.current.targetRotation = state.current.wrapperRotation + 180;
-                    } else {
-                        // Reset target when leaving viewport to allow next entry
-                        state.current.targetRotation = null;
-                    }
-                });
-            }, { threshold: 0.3 });
-            observer.observe(outer);
-            return () => observer.disconnect();
-        }, []);
-
-        return (
-            <div className="swiper-outer-container" ref={outerRef}>
-                <div className="images-wrapper" ref={wrapperRef}>
-                    {ARTWORKS.map((src, i) => {
-                        const angle = START_ANGLE + i * ANGLE_STEP;
-                        return (
-                            <div
-                                key={i}
-                                className="spiral-slide"
-                                style={{ transform: `rotateY(${angle}deg)` }}
-                            >
-                                <img src={src} alt={`Artwork ${i + 1}`} draggable={false} loading="lazy" />
-                            </div>
-                        );
-                    })}
-                </div>
+    return (
+        <div className="swiper-outer-container" ref={outerRef}>
+            <div className="images-wrapper" ref={wrapperRef}>
+                {ARTWORKS.map((src, i) => {
+                    const angle = START_ANGLE + i * ANGLE_STEP;
+                    return (
+                        <div
+                            key={i}
+                            className="spiral-slide"
+                            style={{ transform: `rotateY(${angle}deg)` }}
+                        >
+                            <img src={src.src || src} alt={`Artwork ${i + 1}`} draggable={false} loading="lazy" />
+                        </div>
+                    );
+                })}
             </div>
-        );
-    }
+        </div>
+    );
+}

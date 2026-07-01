@@ -3,18 +3,23 @@ import DMBannerImage from "@/assets/images/servicesImages/digital-marketing/bann
 import WhatWeDoImage from "@/assets/images/servicesImages/digital-marketing/what-we-do.avif";
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
-import HowDoWeWork from "@/components/HomeComponents/HowDoWeWork";
 import ThreeServices from '@/serviceInnerPages/ThreeServices';
+import AboutCTA from '@/components/AboutComponents/AboutCTA';
+import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";
+
+import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
+import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
+import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
 
 export default function DigitalMarketingPage() {
     return (
         <>
             <DMBanner
-                title="DIGITAL MARKETING."
-                // subPara={<>
-                //     We combine data, creativity, and strategy to help your business reach the right<br />audience — and keep them engaged.
-                // </>}
+                title="WEBSITE DEVELOPMENT."
+                subPara={<>
+                    We create modern, responsive, and user-focused websites that help businesses establish a strong digital<br/>presence. Our websites are designed to engage visitors, build trust, and support long-term business growth.
+                </>}
                 bannerImage={DMBannerImage}
             />
 
@@ -24,7 +29,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Digital marketing promotes brands online using SEO,<br />social media, email, and ads to boost visibility, engagement,<br />and business growth.
+                    Website development is the process of creating digital<br/>platforms that represent your business online. A well-designed<br/>website combines functionality, performance, and user experience to<br/>help businesses attract customers and achieve their goals.
                 </>}
             />
 
@@ -32,50 +37,81 @@ export default function DigitalMarketingPage() {
 
             <ServicesOffered
                 subtitle='SERVICES OFFERED'
-                para={<>
-                    Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
-                </>}
+                // para={<>
+                //     Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
+                // </>}
                 services= {[
                     {
                         number: '01',
-                        title: 'Google SEO',
-                        text: 'Google SEO services are designed to improve your website’s visibility and ranking on search engine results.Boost your online presence with optimized content, effective keywords to rank higher on Google.'
+                        title: 'Business Websites',
+                        text: 'Professional websites designed to showcase your business, services, and brand while creating a strong first impression.'
                     },
                     {
                         number: '02',
-                        title: 'SEO',
-                        text: 'SEO services help businesses improve their online visibility and attract more organic traffic through strategic keyword research, on-page and off-page optimization, and quality content creation.'
+                        title: 'E-Commerce Websites',
+                        text: 'Scalable online stores that provide seamless shopping experiences and support business growth.'
                     },
                     {
                         number: '03',
-                        title: 'Social Media Marketing',
-                        text: 'Social media marketing services help businesses build brand awareness, engage audiences, and drive sales through platforms like Facebook, Instagram, LinkedIn, and Twitter.'
+                        title: 'Custom Web Development',
+                        text: 'Tailored website solutions built around your business requirements, functionality, and objectives.'
                 },
                     {
                         number: '04',
-                        title: 'Performance Marketing',
-                        text: 'Performance marketing services focus on achieving measurable results such as clicks, leads, and sales through data-driven digital advertising strategies.'
+                        title: 'Responsive DesignWebsites optimized for desktops, tablets, and mobile devices to ensure a consistent user experience.',
+                        text: ''
                     },
                     {
                         number: '05',
-                        title: 'Growth Partner',
-                        text: 'Growth partner services in digital marketing focus on helping businesses achieve long-term, scalable success through data-driven strategies and personalized support.'
+                        title: 'Website Maintenance',
+                        text: 'Ongoing support, updates, performance improvements, and security management to keep your website running smoothly.'
                     },
-                    {
-                        number: '06',
-                        title: 'E-Commerce Marketing',
-                        text: 'E-commerce marketing services help online businesses attract customers, increase sales, and build strong digital brands. These services include SEO, social media marketing, email campaigns, paid advertising, and conversion optimization.'
-                    },
+                    // {
+                    //     number: '06',
+                    //     title: '',
+                    //     text: ''
+                    // },
                 ]}
             />
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
-            <HowDoWeWork />
+            <ServiceHowDoWeWork 
+                subtitle="DISCOVER. STRATEGIZE. BUILD. ELEVATE."
+                title="HOW DO WE WORK."
+                processSteps={[
+                    {
+                        id: "01",
+                        title: "Discover & Understand",
+                        desc: "Understanding your business goals, audience, and digital requirements.",
+                        imgUrl: image1
+                    },
+                    {
+                        id: "02",
+                        title: "Plan & Design",
+                        desc: "Creating user-focused designs that align with your brand.",
+                        imgUrl: image2
+                    },
+                    {
+                        id: "03",
+                        title: "Develop & Launch",
+                        desc: "Building responsive websites that deliver seamless experiences.",
+                        imgUrl: image3
+                    },
+                    {
+                        id: "04",
+                        title: "Optimize & Grow",
+                        desc: "Enhancing performance to support long-term business growth.",
+                        imgUrl: image1
+                    }
+                ]}
+            />
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
             <ThreeServices />
+
+            <AboutCTA />
 
         </>
     );

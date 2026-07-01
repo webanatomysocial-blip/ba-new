@@ -43,7 +43,24 @@ const services = [
     tags: ["Strategy", "Creatives", "Analytics & Optimization"],
     video: "/videos/services/Business.mp4",
     link: "/services/business-development"
-  } 
+  } , 
+  {
+    id: "05",
+    title: "Logistics",
+    desc: "Streamlining supply chains and optimizing delivery networks for efficiency and speed.",
+    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
+    video: "/videos/services/Business.mp4",
+    link: "/services/logistics"
+  },
+  {
+    id: "06",
+    title: "Branding Service",
+    desc: "Streamlining supply chains and optimizing delivery networks for efficiency and speed.",
+    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
+    video: "/videos/services/Business.mp4",
+    link: "/services/branding-service"
+  },
+
 ];
 
 const OurServices = () => {

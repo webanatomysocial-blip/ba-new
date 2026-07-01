@@ -75,10 +75,58 @@
   transition: color 0.15s ease;
 }
 
-.gradient-char {
+/* .gradient-char {
   background: linear-gradient(0deg,
       #512594 48.90730574324324%,
       #ffffff 91.05433558558559%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #808080;
+} */
+
+.gradient-line-0 {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eee9ff 40%,
+    #b792ef 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #808080;
+}
+
+/* Line 2 - lighter lavender */
+.gradient-line-1 {
+  background: linear-gradient(
+    180deg,
+    #c6a8f4 0%,
+    #9b6ce4 55%,
+    #6a2fc7 100% 
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #808080;
+}
+
+/* Line 3 - mid purple */
+.gradient-line-2 {
+  background: linear-gradient(
+    180deg,
+    #6a2fc7 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #808080;
+}
+
+/* Line 4 - deep purple */
+.gradient-line-3 {
+  background: linear-gradient(
+    180deg,
+    #6a2fc7 0%,
+    #4f169f 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: #808080;

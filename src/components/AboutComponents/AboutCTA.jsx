@@ -7,7 +7,7 @@ import BlueButton from '../BlueButton';
 import WhiteButton from '../WhiteButton';
 
 export default function AboutCTA() {
-  return (
+  return ( 
     <section className="about-cta-section">
       <div className='get-in-touch' id='contact'>
         <span className="clients-bullet" style={{ color: 'white'}}>

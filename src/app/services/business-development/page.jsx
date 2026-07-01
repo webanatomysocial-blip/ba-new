@@ -3,18 +3,23 @@ import DMBannerImage from "@/assets/images/servicesImages/digital-marketing/bann
 import WhatWeDoImage from "@/assets/images/servicesImages/digital-marketing/what-we-do.avif";
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
-import HowDoWeWork from "@/components/HomeComponents/HowDoWeWork";
 import ThreeServices from '@/serviceInnerPages/ThreeServices';
+import AboutCTA from '@/components/AboutComponents/AboutCTA';
+import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";
+
+import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
+import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
+import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
 
 export default function DigitalMarketingPage() {
     return (
         <>
             <DMBanner
-                title="DIGITAL MARKETING."
-                // subPara={<>
-                //     We combine data, creativity, and strategy to help your business reach the right<br />audience — and keep them engaged.
-                // </>}
+                title="BUSINESS DEVELOPMENT CONSULTANT"
+                subPara={<>
+                    Business consulting helps companies improve efficiency, solve challenges, and achieve goals.<br/>Consultants provide expert strategies, insights, and solutions to boost performance, growth,<br/>and profitability in today’s competitive business environment.
+                </>}
                 bannerImage={DMBannerImage}
             />
 
@@ -24,7 +29,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Digital marketing promotes brands online using SEO,<br />social media, email, and ads to boost visibility, engagement,<br />and business growth.
+                    Business Consulting gives you clear guidance to solve challenges<br/>and improve operations. It strengthens decision-making and aligns<br/>your business with the right growth path. With expert support, you<br/>build stronger and scale smarter.
                 </>}
             />
 
@@ -32,50 +37,81 @@ export default function DigitalMarketingPage() {
 
             <ServicesOffered
                 subtitle='SERVICES OFFERED'
-                para={<>
-                    Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
-                </>}
+                // para={<>
+                //     Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
+                // </>}
                 services= {[
                     {
                         number: '01',
-                        title: 'Google SEO',
-                        text: 'Google SEO services are designed to improve your website’s visibility and ranking on search engine results.Boost your online presence with optimized content, effective keywords to rank higher on Google.'
+                        title: 'Strategic Planning',
+                        text: 'Our Strategic Planning services help organizations define a clear direction for growth and success. We collaborate with businesses to identify goals, analyze market conditions, and design effective strategies that align with their vision.'
                     },
                     {
                         number: '02',
-                        title: 'SEO',
-                        text: 'SEO services help businesses improve their online visibility and attract more organic traffic through strategic keyword research, on-page and off-page optimization, and quality content creation.'
+                        title: 'Process Improvement',
+                        text: 'Our Process Improvement service focuses on enhancing efficiency and reducing operational costs across all business functions. We analyze existing workflows, identify bottlenecks, and implement effective strategies to boost productivity.'
                     },
                     {
                         number: '03',
-                        title: 'Social Media Marketing',
-                        text: 'Social media marketing services help businesses build brand awareness, engage audiences, and drive sales through platforms like Facebook, Instagram, LinkedIn, and Twitter.'
+                        title: 'Market Research',
+                        text: 'Our Market Research service provides valuable insights to help organizations make informed decisions and stay competitive. We study market trends, consumer behavior, and competitor strategies to identify new opportunities and potential challenges.'
                 },
                     {
                         number: '04',
-                        title: 'Performance Marketing',
-                        text: 'Performance marketing services focus on achieving measurable results such as clicks, leads, and sales through data-driven digital advertising strategies.'
+                        title: 'Risk Consulting',
+                        text: 'Our Risk Consulting service helps organizations manage uncertainty and make confident financial decisions. We assess potential risks, evaluate financial performance, and design strategies that ensure stability and long-term growth.'
                     },
                     {
                         number: '05',
-                        title: 'Growth Partner',
-                        text: 'Growth partner services in digital marketing focus on helping businesses achieve long-term, scalable success through data-driven strategies and personalized support.'
+                        title: 'Business Transformation',
+                        text: 'Our Business Transformation service empowers organizations to adapt, innovate, and thrive in a rapidly changing market. We guide businesses through digital transformation, operational restructuring, and performance enhancement to achieve long-term success.'
                     },
-                    {
-                        number: '06',
-                        title: 'E-Commerce Marketing',
-                        text: 'E-commerce marketing services help online businesses attract customers, increase sales, and build strong digital brands. These services include SEO, social media marketing, email campaigns, paid advertising, and conversion optimization.'
-                    },
+                    // {
+                    //     number: '06',
+                    //     title: '',
+                    //     text: ''
+                    // },
                 ]}
             />
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
-            <HowDoWeWork />
+            <ServiceHowDoWeWork 
+                subtitle="DISCOVER. STRATEGIZE. BUILD. ELEVATE."
+                title="HOW DO WE WORK."
+                processSteps={[
+                    {
+                        id: "01",
+                        title: "Discover & Diagnose",
+                        desc: "Identifying opportunities that shape your business future.",
+                        imgUrl: image1
+                    },
+                    {
+                        id: "02",
+                        title: "Strategize & Design",
+                        desc: "Designing solutions aligned with your business goals.",
+                        imgUrl: image2
+                    },
+                    {
+                        id: "03",
+                        title: "Implement & Transform",
+                        desc: "Delivering strategies that create lasting impact.",
+                        imgUrl: image3
+                    },
+                    {
+                        id: "04",
+                        title: "Evaluate & Evolve",
+                        desc: "Refining performance for long-term business growth.",
+                        imgUrl: image1
+                    }
+                ]}
+            />
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
             <ThreeServices />
+
+            <AboutCTA />
 
         </>
     );

@@ -4,6 +4,7 @@ import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/pearl.avif';
 import Overview from '@/caseStudyComponents/InnerPageOverview'
+import Details from '@/caseStudyComponents/Details';
 
 export default function InnerPage() {
     return (
@@ -40,6 +41,8 @@ export default function InnerPage() {
                 howWeHelped2="Alongside the website, we implemented ongoing SEO strategies to improve local search visibility and managed social media activities to strengthen brand awareness and patient engagement. This integrated approach continues to support the practice's digital growth."
                 results="Pearl Dental Surgery now benefits from a stronger digital presence that aligns with its reputation and patient-first approach. Through ongoing SEO and social media efforts, the practice continues to improve visibility, engage with its audience, and support long-term growth."
             />
+
+            <Details />
         </div>
     )
 }
