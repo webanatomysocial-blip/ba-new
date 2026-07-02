@@ -1,10 +1,11 @@
 import DMBanner from "@/serviceInnerPages/DMBanner";
-import DMBannerImage from "@/assets/images/servicesImages/inner-service/digital-marketing/digital-marketing.jpg";
-import WhatWeDoImage from "@/assets/images/servicesImages/inner-service/digital-marketing/dm-what-we-do.jpg";
+import DMBannerImage from "@/assets/images/servicesImages/inner-service/digital-marketing/dm-what-we-do.jpg";
+import WhatWeDoImage from "@/assets/images/servicesImages/inner-service/digital-marketing/digital-marketing.jpg";
+
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
 import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";
-import ThreeServices from '@/serviceInnerPages/ThreeServices';
+import ThreeServices from '@/serviceInnerPages/ThreeServices'; 
 import AboutCTA from "@/components/AboutComponents/AboutCTA";
 
 import image1 from "@/assets/images/HomeImages/howdowework/1.avif";

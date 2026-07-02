@@ -45,6 +45,8 @@
 
   border-radius: 10px;
 
+  position: relative;
+
   img {
     width: 100%;
     height: 100%;
@@ -55,3 +57,43 @@
   }
 
 }
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .digital-marketing {
+    padding: 40px 16px;
+    gap: 28px;
+  }
+
+  .case-studies-inner-page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .head-text {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  .case-studies-inner-page-header p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .inner-page-banner-image {
+    position: relative;
+    height: 280px;
+    border-radius: 8px;
+  }
+
+  .digital-marketing-content {
+    padding: 16px;
+    align-items: flex-end;
+  }
+}
+

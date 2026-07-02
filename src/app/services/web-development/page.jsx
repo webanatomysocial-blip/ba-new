@@ -1,6 +1,7 @@
 import DMBanner from "@/serviceInnerPages/DMBanner";
-import DMBannerImage from "@/assets/images/servicesImages/digital-marketing/banner.avif";
-import WhatWeDoImage from "@/assets/images/servicesImages/digital-marketing/what-we-do.avif";
+import DMBannerImage from "@/assets/images/servicesImages/inner-service/web-dev/web-dev-banner.jpeg";
+import WhatWeDoImage from "@/assets/images/servicesImages/inner-service/web-dev/web-dev-what-we-do.jpeg";
+
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
 import ThreeServices from '@/serviceInnerPages/ThreeServices';

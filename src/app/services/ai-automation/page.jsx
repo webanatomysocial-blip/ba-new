@@ -1,6 +1,7 @@
 import DMBanner from "@/serviceInnerPages/DMBanner";
-import DMBannerImage from "@/assets/images/servicesImages/digital-marketing/banner.avif";
-import WhatWeDoImage from "@/assets/images/servicesImages/digital-marketing/what-we-do.avif";
+import DMBannerImage from "@/assets/images/servicesImages/inner-service/ai-auto/ai-auto-banner.jpeg";
+import WhatWeDoImage from "@/assets/images/servicesImages/inner-service/ai-auto/ai-what-we-do.jpeg";
+
 import WhatWeDo from "@/serviceInnerPages/WhatWeDo";
 import ServicesOffered from '@/serviceInnerPages/ServicesOffered'
 import ServiceHowDoWeWork from "@/serviceInnerPages/ServiceHowDoWeWork";

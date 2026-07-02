@@ -25,7 +25,8 @@ export default function ServiceHowDoWeWork({ subtitle, title, processSteps }) {
         mm.add("(min-width: 769px)", () => {
             const getScrollAmount = () => {
                 let trackWidth = track.scrollWidth;
-                return -(trackWidth - window.innerWidth + 150); 
+                // Exact calculation to align the end of the track with the viewport, eliminating the gap
+                return -(trackWidth - window.innerWidth); 
             };
 
             const tween = gsap.to(track, {

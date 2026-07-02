@@ -8,8 +8,9 @@ import { FaSquare } from 'react-icons/fa';
 
 import kaa from '@/assets/images/caseStudies/kaa.avif';
 import pearl from '@/assets/images/caseStudies/pearl.avif';
-import prugens from '@/assets/images/caseStudies/prugens.avif';
 import cognitude from '@/assets/images/caseStudies/cognitude.jpg';
+import dfnp from '@/assets/images/caseStudies/inner-case-study/inner-1.jpeg';
+import soniva from '@/assets/images/caseStudies/inner-case-study/inner-2.jpeg';
 
 
 const projects = [
@@ -36,7 +37,7 @@ const projects = [
     total: "05",
     title: "Cognitude",
     year: "2024",
-    services: ["Website Design", "Website Development", "UX/UI Design","Digital Experience Design"],
+    services: ["Website Design", "Website Development", "UX/UI Design", "Digital Experience Design"],
     image: cognitude,
     desc: "Designing a digital experience that showcases innovation across neuroscience, artificial intelligence, and human-centred research."
   },
@@ -45,8 +46,8 @@ const projects = [
     total: "05",
     title: "Soniva Dental",
     year: "2024",
-    services: ["Branding", "Website Development", "Website Design","SEO","Social Media Marketing"],
-    image: cognitude,
+    services: ["Branding", "Website Development", "Website Design", "SEO", "Social Media Marketing"],
+    image: soniva,
     desc: "Redefining the visual identity and online presence for Soniva Dental."
   },
   {
@@ -54,8 +55,8 @@ const projects = [
     total: "05",
     title: "Dentistry For Nervous Patients",
     year: "2025",
-    services: ["Website Design", "Website Development", "UX/UI Design","Digital Experience Design"],
-    image: cognitude,
+    services: ["Website Design", "Website Development", "UX/UI Design", "Digital Experience Design"],
+    image: dfnp,
     desc: "Designing a calming digital experience that helps nervous patients feel reassured and supported."
   },
 
