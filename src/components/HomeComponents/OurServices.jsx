@@ -19,7 +19,7 @@ const services = [
     tags: ["User Flows", "Wireframes", "High-Fidelity"],
     video: "/videos/services/digitalMarketing.mp4",
     link: "/services/digital-marketing"
-  }, 
+  },
   {
     id: "02",
     title: "Web Development",
@@ -43,20 +43,20 @@ const services = [
     tags: ["Strategy", "Creatives", "Analytics & Optimization"],
     video: "/videos/services/Business.mp4",
     link: "/services/business-development"
-  } , 
+  },
   {
     id: "05",
     title: "Logistics",
-    desc: "Streamlining supply chains and optimizing delivery networks for efficiency and speed.",
-    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
+    desc: "Reliable logistics solutions to streamline sourcing, shipping, and global supply chains with efficiency.",
+    tags: ["Global Sourcing", "Shipping", "Supply Chain"],
     video: "/videos/services/Business.mp4",
     link: "/services/logistics"
   },
   {
     id: "06",
     title: "Branding Service",
-    desc: "Streamlining supply chains and optimizing delivery networks for efficiency and speed.",
-    tags: ["Strategy", "Creatives", "Analytics & Optimization"],
+    desc: "Creative branding solutions that build memorable identities, strengthen recognition, and drive business growth.",
+    tags: ["Identity", "Strategy", "Design"],
     video: "/videos/services/Business.mp4",
     link: "/services/branding-service"
   },
@@ -108,7 +108,7 @@ const OurServices = () => {
       ctx.revert();
     };
   }, []);
- 
+
   return (
     <div className="our-services-container" ref={containerRef}>
       <div className="services-cards-wrapper">
@@ -117,7 +117,7 @@ const OurServices = () => {
             key={index}
             className="service-card-container"
             ref={addToRefs}
-            style={{ 
+            style={{
               zIndex: index + 10,
               top: `calc(15vh + ${index * 15}px)`
             }}
@@ -135,7 +135,7 @@ const OurServices = () => {
                     ))}
                   </h3>
                   <p className="sc-desc">{service.desc}</p>
-                  
+
                   <div className="sc-tags">
                     {service.tags.map((tag, i) => (
                       <span key={i} className="sc-tag">{tag}</span>
