@@ -12,7 +12,7 @@ const servicesData = [
     { num: '03', letter: 'BC', title: 'Business Development Consultant' },
     { num: '04', letter: 'D', title: 'Digital Marketing' },
     { num: '05', letter: 'L', title: 'Logistics' },
-    { num: '06', letter: 'WD', title: 'Web Development' },
+    { num: '06', letter: 'W', title: 'Web Development' },
 ];
 
 export default function ServicesHomeBoxes() {
