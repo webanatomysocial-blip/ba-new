@@ -261,7 +261,7 @@ export default function Footer() {
                   aria-label="YouTube"
                   target="_blank"
                   rel="noopener noreferrer"
-                  
+
                 >
                   <FaYoutube size={18} />
                 </a>
@@ -318,9 +318,11 @@ export default function Footer() {
       {/* Mobile Footer Content (completely clean, static, no canvas) */}
       <div className="footer-mobile-content">
         <div className="footer-mobile-top">
-          <h2 className="footer-mobile-title">
-            GROW YOUR <br /> BUSINESS WITH <br />
-            <span className="footer-gradient">SMART DIGITAL SOLUTIONS.</span>
+          <h2 className="footer-mobile-title footer-gradient">
+            GROW YOUR <br />
+            BUSINESS WITH <br />
+            SMART DIGITAL <br />
+            SOLUTIONS.
           </h2>
 
           <div className="footer-mobile-links">

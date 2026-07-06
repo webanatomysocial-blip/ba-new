@@ -176,7 +176,7 @@ export default function Header() {
             © 2026 BUSINESS ANATOMY. ALL RIGHTS RESERVED.
           </span>
           <span className="overlay-footer-design">
-            DESIGNED BY WEB ANATOMY
+            DESIGNED BY WEB ANATOMY/
           </span>
         </div>
       </div>

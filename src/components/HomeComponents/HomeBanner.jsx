@@ -28,7 +28,7 @@ export default function HomeBanner() {
         <div className="hero">
             <div className="topHero">
                 <span className='sub-heading-white'>Welcome To Business Anatomy</span>
-                <h1 className='head-text-white'>
+                <h1 className='head-text-white hero-banner-heading'>
                     Building *&nbsp;
                     <span className='animatedWord' key={animKey}>
                         {currentWord.split('').map((letter, i) => (

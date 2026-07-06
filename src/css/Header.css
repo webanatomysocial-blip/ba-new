@@ -270,6 +270,7 @@
 }/* Menu Footer styling matching the screenshot */
 .overlay-footer {
   position: absolute;
+  
   bottom: 40px;
   left: 0;
   width: 100%;

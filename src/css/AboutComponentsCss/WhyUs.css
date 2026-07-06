@@ -18,21 +18,90 @@
 }
 
 .why-us-card {
-  background: linear-gradient(50deg, #8b63ff 0%, #b99dff 42%, #f4efff 100%);
+  background: linear-gradient(135deg, #a849d3, #883dcb, #8555a7, #e9bcff, #9e49df, #9d4edd, #6b12ab, #f5eaff);
+  background-size: 400% 400%;
+  animation: cardGradientMove 8s ease infinite;
   border-radius: 28px;
-  padding: 24px;
-  height: 50vh;
+  padding: 0;
+  height: 60vh;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
 }
 
-.card-details{
+/* Stagger the gradient animation per card */
+.why-us-card:nth-child(1) { animation-delay: 0s; }
+.why-us-card:nth-child(2) { animation-delay: -1.3s; }
+.why-us-card:nth-child(3) { animation-delay: -2.6s; }
+.why-us-card:nth-child(4) { animation-delay: -4s; }
+.why-us-card:nth-child(5) { animation-delay: -5.3s; }
+.why-us-card:nth-child(6) { animation-delay: -6.6s; }
+
+@keyframes cardGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure card content sits above */
+.why-us-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon styling */
+.why-us-card .icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: white;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+  margin: 24px 0 0 24px;
+}
+
+.why-us-card .icon svg {
+  width: 22px;
+  height: 22px;
+  
+}
+
+.why-us-card .icon svg path {
+  fill: rgb(77, 34, 149);
+}
+
+/* White gradient overlay at bottom for text */
+.card-details {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  padding: 40px 24px 28px 24px;
+  margin-top: auto;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.6) 75%, rgba(255,255,255,0) 100%);
+}
+
+.why-us-card .card-title {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.why-us-card .card-description {
+  color: #4a4a4a;
+  line-height: 1.5;
 }
 
 
@@ -69,8 +138,8 @@
 
   .why-us-card {
     height: auto;
-    min-height: 240px;
-    padding: 24px;
+    min-height: 380px;
+    padding: 0;
     border-radius: 20px;
   }
 
