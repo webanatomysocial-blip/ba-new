@@ -11,8 +11,8 @@ export default function DentistryForNervousPatientsPage() {
         <div>
             <KaaBanner
                 title="DENTISTRY FOR NERVOUS PATIENTS"
-                subtitle='AVAILABLE FOR PROJECTS'
-                subPara='Strategy-led design that converts visitors into clients.'
+                // subtitle='AVAILABLE FOR PROJECTS'
+                // subPara='Strategy-led design that converts visitors into clients.'
                 image={bannerBg}
             />
 
@@ -38,7 +38,7 @@ export default function DentistryForNervousPatientsPage() {
                 results="The new website successfully reflects the practice's compassionate approach to patient care. By prioritising calmness, accessibility, and trust, the digital experience helps nervous patients feel more comfortable before they even step into the clinic"
             />
 
-            <Details />
+            <Details websiteUrl="https://dentistryfornervouspatients.co.uk/" hideImage1 hideImage3 />
         </div>
     )
 }

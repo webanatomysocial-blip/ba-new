@@ -4,15 +4,15 @@ import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/cognitude.jpg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
-import Details from '@/caseStudyComponents/Details'
+
 
 export default function InnerPage() {
     return (
         <div>
             <KaaBanner
                 title="COGNITUDE"
-                subtitle='AVAILABLE FOR PROJECTS'
-                subPara='Strategy-led design that converts visitors into clients.'
+                // subtitle='AVAILABLE FOR PROJECTS'
+                // subPara='Strategy-led design that converts visitors into clients.'
                 image={bannerBg}
             />
 
@@ -40,9 +40,8 @@ export default function InnerPage() {
                 howWeHelped1="We designed and developed a modern website that showcases Cognitude's services, research areas, and collaborative initiatives through a clear and engaging user experience. The platform was structured to improve navigation, highlight key offerings, and strengthen the brand's digital presence."
                 howWeHelped2="Our approach focused on creating a balance between innovation, functionality, and visual storytelling to reflect Cognitude's unique identity."
                 results="The new website provides Cognitude with a distinctive digital presence that effectively communicates its services, expertise, and vision. The platform supports collaboration opportunities while strengthening the organisation's position within neuroscience and AI innovation."
+                websiteUrl="https://www.cognitude.in/"
             />
-
-            <Details />
         </div>
     )
 }

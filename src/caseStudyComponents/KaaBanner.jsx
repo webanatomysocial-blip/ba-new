@@ -9,10 +9,10 @@ export default function KaaBanner({title, subtitle, subPara, image}) {
   return (
     <div className='case-studies-inner-page'>
         <div className="case-studies-inner-page-header">
-            <p className="clients-bullet">
+            {/* <p className="clients-bullet">
                 <FaSquare size={10} style={{ marginRight: '10px' }} />
                 {subtitle}
-            </p>
+            </p> */}
             <h1 className="head-text">{title}</h1>
             <p>{subPara}</p>
         </div>

@@ -3,22 +3,23 @@
 import React from "react";
 import "@/caseStudiesCss/InnerPageOverview.css";
 import { FaSquare } from "react-icons/fa";
+import BlueButton from "@/components/BlueButton";
 
-export default function Overview({ aboutProject, sector, year, scope = [""], technology = [""], goals1, goals2, goals3, howWeHelped1, howWeHelped2, results }) {
+export default function Overview({ aboutProject, sector, year, scope = [""], technology = [""], goals1, goals2, goals3, howWeHelped1, howWeHelped2, results, websiteUrl }) {
   return (
     <section className="inner-page-overview">
       <div className="overview-container">
 
         {/* Left Column */}
         <div className="overview-left">
-          <p className="clients-bullet">
+          {/* <p className="clients-bullet">
             <FaSquare size={10} style={{ marginRight: '10px' }} />
             INFORMATION
-          </p>
+          </p> */}
           <h2 className="overview-title">The Overview</h2>
-          <p className="overview-subtitle">
+          {/* <p className="overview-subtitle">
             Got something in mind? Let's<br />clear it up before we start.
-          </p>
+          </p> */}
         </div>
 
         {/* Right Column */}
@@ -108,6 +109,18 @@ export default function Overview({ aboutProject, sector, year, scope = [""], tec
 
         </div>
       </div>
+
+      {websiteUrl && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+          <BlueButton
+            text={'View Website'}
+            href={websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={true}
+          />
+        </div>
+      )}
     </section>
   );
 }

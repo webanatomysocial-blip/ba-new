@@ -19,6 +19,7 @@ export default function GetInTouch() {
 
             <BlueButton
                 text="Get In Touch"
+                href="/contact-us"
                 icon={true}
             />
         </div>

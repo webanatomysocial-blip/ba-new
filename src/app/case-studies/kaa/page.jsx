@@ -11,9 +11,9 @@ export default function InnerPage() {
     return (
         <div>
             <KaaBanner
-                title="KAA DENTAL"
-                subtitle='AVAILABLE FOR PROJECTS'
-                subPara='Strategy-led design that converts visitors into clients.'
+                title="KAA DENTALS"
+                // subtitle='AVAILABLE FOR PROJECTS'
+                // subPara='Strategy-led design that converts visitors into clients.'
                 image={bannerBg}
             />
 
@@ -45,7 +45,7 @@ export default function InnerPage() {
                 results='KAA Dental now benefits from a consistent brand identity, a professional digital presence, and an integrated marketing strategy. The combination of branding, website development, SEO, and advertising has created a strong foundation for sustainable growth and patient engagement.'
             />
 
-            <Details />
+            <Details websiteUrl="https://kaadentals.co.uk/" hideImage2 hideImage3 />
         </div>
     )
 }

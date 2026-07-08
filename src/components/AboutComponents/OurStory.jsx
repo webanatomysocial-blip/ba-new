@@ -2,6 +2,7 @@
 import React from 'react'
 import '@/css/AboutComponentsCss/OurStory.css'
 import Image from 'next/image';
+import Link from 'next/link';
 import leftImage from '@/assets/images/about-page/ourstory/left-image.avif';
 import rightImage from '@/assets/images/about-page/ourstory/right-image.avif';
 import client1 from '@/assets/images/about-page/ourstory/clientimg-1.avif';
@@ -45,12 +46,12 @@ export default function OurStory() {
                   Over 5 years, we grew from a regional contractor into a full-scale construction force delivering commercial towers, residential developments, infrastructure projects, and everything in between.
                 </p>
 
-                <button className="our-story-button">
+                <Link href="/contact-us" className="our-story-button">
                   <span className='button-text-wrapper'>
                     <span className='text top'>Start a Project</span>
                     <span className='text bottom'>Start a Project</span>
                   </span>
-                </button>
+                </Link>
 
               </div>
               <div className="our-story-card">
