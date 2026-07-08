@@ -17,7 +17,7 @@ export default function AIAutomationPage() {
             <DMBanner
                 title="BRANDING SERVICE"
                 subPara={<>
-                    Our Branding Services help businesses create a memorable identity. We ensure<br/>consistency across logos, visuals, strategy, and messaging, enhancing recognition,<br/>building trust, and connecting effectively with your audience.
+                    Branding shapes how your business is seen and remembered. It defines your visual identity<br />and builds trust through consistent communication. Strong branding helps you stand out with clarity<br />and confidence.
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -28,7 +28,7 @@ export default function AIAutomationPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Branding shapes how your business is seen and remembered.<br/>It defines your visual identity and builds trust through consistent<br/>communication. Strong branding helps you stand out with clarity and<br/>confidence.
+                    Our Branding Services help businesses create a<br />memorable identity. We ensure consistency across logos, <br /> visuals, strategy, and messaging, enhancing recognition, <br /> building trust, and connecting effectively with your audience.
                 </>}
             />
 
