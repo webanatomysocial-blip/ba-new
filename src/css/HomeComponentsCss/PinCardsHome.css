@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 45px;
     width: 25%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -98,7 +99,7 @@
 }
 
 .pc-title {
-    font-size: min(4vw, 64px) !important;
+    font-size: min(3.5vw, 64px) !important;
     word-break: break-word;
     line-height: 1.1 !important;
 }

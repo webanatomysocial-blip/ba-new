@@ -21,7 +21,7 @@ const projects = [
     year: "2024",
     services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing", "Paid advertising"],
     image: kaa,
-    desc: "KAA Dental represents a full-service partnership where strategy, design, marketing, and performance work together to support measurable growth."
+    desc: "KAA Dentals represents a full-service partnership where strategy, design, marketing, and performance work together to support measurable growth."
   },
   {
     id: "02",

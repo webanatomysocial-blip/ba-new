@@ -29,7 +29,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Business Consulting gives you clear guidance to solve challenges<br/>and improve operations. It strengthens decision-making and aligns<br/>your business with the right growth path. With expert support, you<br/>build stronger and scale smarter.
+                    We work closely with businesses to identify opportunities,<br />solve operational challenges, and develop strategies that support<br />sustainable growth. Our consulting services are tailored to help<br />you make smarter business decisions.
                 </>}
             />
 

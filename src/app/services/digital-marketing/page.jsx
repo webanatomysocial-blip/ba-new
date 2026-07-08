@@ -30,7 +30,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Digital marketing promotes brands online using SEO,<br />social media, email, and ads to boost visibility, engagement,<br />and business growth.
+                    We help businesses build a stronger online presence through<br />data-driven digital marketing strategies. From increasing visibility<br />to generating quality leads, we create campaigns that deliver<br />measurable business growth.
                 </>}
             />
 

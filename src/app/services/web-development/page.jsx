@@ -19,7 +19,11 @@ export default function DigitalMarketingPage() {
             <DMBanner
                 title="WEBSITE DEVELOPMENT."
                 subPara={<>
-                    We create modern, responsive, and user-focused websites that help businesses establish a strong digital<br/>presence. Our websites are designed to engage visitors, build trust, and support long-term business growth.
+                    Website development is the process of creating digital
+                    platforms that represent your business online. <br />A well-designed
+                    website combines functionality, performance, and user experience to
+                    help businesses<br />attract customers and achieve their goals.
+
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -30,7 +34,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Website development is the process of creating digital<br/>platforms that represent your business online. A well-designed<br/>website combines functionality, performance, and user experience to<br/>help businesses attract customers and achieve their goals.
+                    We create modern, responsive, and user-focused websites<br/>that help businesses establish a strong digital presence. Our<br/>websites are designed to engage visitors, build trust, and support<br/>long-term business growth.
                 </>}
             />
 
@@ -59,8 +63,8 @@ export default function DigitalMarketingPage() {
                 },
                     {
                         number: '04',
-                        title: 'Responsive DesignWebsites optimized for desktops, tablets, and mobile devices to ensure a consistent user experience.',
-                        text: ''
+                        title: 'Responsive Design',
+                        text: 'Websites optimized for desktops, tablets, and mobile devices to ensure a consistent user experience.'
                     },
                     {
                         number: '05',

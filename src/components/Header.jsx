@@ -38,6 +38,9 @@ export default function Header() {
   const currentBg = hoveredIndex !== null ? bgColors[hoveredIndex] : defaultBg;
 
   useEffect(() => {
+
+
+    
     if (!lenis) {
       // Fallback native scroll if lenis is not ready
       let lastScrollY = window.scrollY;
@@ -173,7 +176,7 @@ export default function Header() {
         {/* Footer exactly matching screenshot layout */}
         <div className="overlay-footer">
           <span className="overlay-footer-text">
-            © 2026 BUSINESS ANATOMY. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
           </span>
           <span className="overlay-footer-design">
             DESIGNED BY WEB ANATOMY/

@@ -17,18 +17,18 @@ export default function AIAutomationPage() {
             <DMBanner
                 title="LOGISTICS."
                 subPara={<>
-                    Our Logistics Services provide efficient transportation, warehousing, and supply chain<br/>solutions. We ensure timely delivery, streamlined operations, and cost-effective<br/>performance to help businesses run smoothly and enhance customer satisfaction.
+                    Logistics ensures your products are sourced, handled, and delivered efficiently.<br/>It streamlines movement from supplier to destination with reliability. Smooth logistics<br/>keeps your business running without interruptions.
                 </>}
-                bannerImage={DMBannerImage}
+                bannerImage={WhatWeDoImage}
             />
 
             <hr style={{ border: 'none', borderTop: '1px solid #333', margin: '0 20px' }} />
 
             <WhatWeDo
-                whatWeDoImage={WhatWeDoImage}
+                whatWeDoImage={DMBannerImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Logistics ensures your products are sourced, handled,<br/>and delivered efficiently. It streamlines movement from<br/>supplier to destination with reliability. Smooth logistics<br/>keeps your business running without interruptions.
+                    Our Logistics Services provide efficient transportation,<br />warehousing, and supply chain solutions. We ensure timely<br />delivery, streamlined operations, and cost-effective performance<br />to help businesses run smoothly and enhance customer satisfaction.
                 </>}
             />
 

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/fav.png" />
       </head>
-      <body className={geist.className}>
+      <body className={geist.className} suppressHydrationWarning>
         <LenisProvider>
           <Header />
           {children}
