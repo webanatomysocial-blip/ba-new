@@ -62,71 +62,71 @@ const projects = [
 
 export default function PinCardsHome() {
   const containerRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
 
   useEffect(() => {
-    if (typeof window === 'undefined' || window.innerWidth <= 768) return;
+    // Reset refs on each effect run
+    cardsRef.current = [];
 
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    const container = containerRef.current;
-    if (!container) return;
+    // Collect .pin-card-wrapper elements via DOM query (inside the shell divs)
+    const pinCards = containerRef.current
+      ? Array.from(containerRef.current.querySelectorAll('.pin-card-wrapper'))
+      : cardsRef.current;
 
-    const cards = Array.from(container.querySelectorAll('.pin-card-wrapper'));
     const triggers = [];
 
-    cards.forEach((card, index) => {
-      if (index >= cards.length - 1) return; // last card doesn't need this
+    pinCards.forEach((eachCard, index) => {
+      if (index < pinCards.length - 1) {
+        // pin: true — GSAP inserts its spacer inside .pin-card-gsap-shell,
+        // which is a stable React-owned node, not a direct sibling React manages.
+        const t1 = ScrollTrigger.create({
+          trigger: eachCard,
+          start: "top 50px",
+          endTrigger: pinCards[pinCards.length - 1],
+          end: "top 50px",
+          pin: true,
+          pinSpacing: false,
+        });
+        triggers.push(t1);
 
-      const nextCard = cards[index + 1];
-      if (!nextCard) return;
-
-      // ScrollTrigger only reads scroll position and calls onUpdate.
-      // No pin, no DOM mutations — CSS sticky handles the stacking.
-      const t = ScrollTrigger.create({
-        trigger: nextCard,
-        start: "top bottom",
-        end: "top 50px",
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const inner = card.querySelector('.pin-card-inner');
-          if (!inner) return;
-
-          gsap.set(inner, {
-            scale: 1 - progress * 0.1,
-            rotation: index % 2 === 0 ? progress * 3 : -progress * 3,
-            rotationX: progress * 20,
-            transformOrigin: "center center",
-          });
-
-          const overlay = inner.querySelector(".pin-card-overlay");
-          if (overlay) gsap.set(overlay, { opacity: progress * 0.5 });
-        },
-        onLeave: (self) => {
-          // Snap to final state when fully scrolled past
-          const inner = card.querySelector('.pin-card-inner');
-          if (!inner) return;
-          gsap.set(inner, { scale: 0.9, rotationX: 20 });
-          const overlay = inner.querySelector(".pin-card-overlay");
-          if (overlay) gsap.set(overlay, { opacity: 0.5 });
-        },
-        onEnterBack: (self) => {
-          // Reset when scrolling back up
-          const inner = card.querySelector('.pin-card-inner');
-          if (!inner) return;
-          gsap.set(inner, { scale: 1, rotation: 0, rotationX: 0 });
-          const overlay = inner.querySelector(".pin-card-overlay");
-          if (overlay) gsap.set(overlay, { opacity: 0 });
-        }
-      });
-
-      triggers.push(t);
+        const t2 = ScrollTrigger.create({
+          trigger: pinCards[index + 1],
+          start: "top bottom",
+          end: "top 50px",
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const inner = eachCard.querySelector('.pin-card-inner');
+            if (inner) {
+              gsap.set(inner, {
+                scale: 1 - progress * 0.25,
+                rotation: index % 2 === 0 ? progress * 5 : -progress * 5,
+                rotationX: progress * 40,
+              });
+              const overlay = inner.querySelector(".pin-card-overlay");
+              if (overlay) gsap.set(overlay, { opacity: progress * 0.4 });
+            }
+          },
+        });
+        triggers.push(t2);
+      }
     });
 
-    requestAnimationFrame(() => ScrollTrigger.refresh());
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
 
     return () => {
-      // Kill only the triggers we created — no ctx.revert() touching the DOM
       triggers.forEach((t) => t.kill());
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 
@@ -140,20 +140,21 @@ export default function PinCardsHome() {
         <h2 className="head-text-white"><span>CASE</span> <span>STUDIES</span></h2>
       </div>
 
-      <div className="pin-cards-stack">
-        {projects.map((project, i) => (
+      {projects.map((project, i) => (
+        // Outer div is a stable React node; GSAP pins the inner .pin-card-wrapper
+        // so GSAP's spacer sibling never conflicts with React's child list.
+        <div key={project.id} className="pin-card-gsap-shell">
           <div
-            key={project.id}
             className="pin-card-wrapper"
-            style={{ zIndex: i + 10, top: `${50 + i * 10}px` }}
+            style={{ zIndex: i + 10 }}
           >
             <div className="pin-card-inner">
-              {/* Blurred Background */}
+              {/* Blurred Background inherits image */}
               <div
                 className="pin-card-bg"
                 style={{ backgroundImage: `url(${project.image.src})` }}
               />
-              {/* Dark Overlay — animated by GSAP set() only */}
+              {/* Dark Overlay animated by GSAP */}
               <div className="pin-card-overlay" />
 
               {/* Foreground Content */}
@@ -189,8 +190,8 @@ export default function PinCardsHome() {
               </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   );
 }
