@@ -13,7 +13,7 @@
     padding-bottom: 200px;
 }
 
-.overview-header {
+.how-do-we-work-header, .service-how-do-we-work-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -196,7 +196,7 @@
         padding: 60px 20px;
     }
 
-    .overview-header {
+    .how-do-we-work-header, .service-how-do-we-work-header {
         flex-direction: column;
         gap: 15px;
         padding: 25px 0px;

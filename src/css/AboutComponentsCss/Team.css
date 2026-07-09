@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 
-.overview-header {
+.team-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -125,7 +125,7 @@
     padding: 60px 20px;
   }
 
-  .overview-header {
+  .team-header {
     padding: 36px 0;
     flex-direction: column;
     gap: 16px;

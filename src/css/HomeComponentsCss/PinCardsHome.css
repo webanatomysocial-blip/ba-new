@@ -11,6 +11,17 @@
     width: 100%;
 }
 
+.pin-cards-home-header{
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #222222;
+  border-top: none;
+  margin: 0px 0px 50px 0px;
+  padding: 50px;
+}
+
 .pin-card-wrapper {
     position: relative;
     width: 100%;
@@ -160,6 +171,12 @@
 
     .pin-cards-container {
         padding: 60px 20px;
+    }
+
+    .pin-cards-home-header {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 24px;
     }
 
     .pin-card-wrapper {

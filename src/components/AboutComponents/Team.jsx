@@ -22,7 +22,7 @@ const teamMembers = [
 export default function Team() {
   return (
     <section className="team">
-      <div className="overview-header">
+      <div className="team-header">
         <p className="clients-bullet">
           <FaSquare size={10} style={{ marginRight: '10px' }} />
           DESIGNERS

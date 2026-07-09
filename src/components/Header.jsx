@@ -179,7 +179,7 @@ export default function Header() {
             © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
           </span>
           <span className="overlay-footer-design">
-            DESIGNED BY WEB ANATOMY/
+            DESIGNED BY WEB ANATOMY
           </span>
         </div>
       </div>

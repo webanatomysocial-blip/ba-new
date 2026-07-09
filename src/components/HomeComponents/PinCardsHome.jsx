@@ -132,7 +132,7 @@ export default function PinCardsHome() {
 
   return (
     <section className="pin-cards-container" ref={containerRef}>
-      <div className="overview-header">
+      <div className="pin-cards-home-header">
         <span className="clients-bullet">
           <FaSquare size={10} style={{ marginRight: '10px' }} />
           REAL RESULTS. REAL GROWTH.

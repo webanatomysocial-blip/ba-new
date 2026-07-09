@@ -2,7 +2,8 @@
 import KaaBanner from '@/caseStudyComponents/KaaBanner'
 import React from 'react'
 
-import bannerBg from '@/assets/images/caseStudies/cognitude.jpg'
+// import bannerBg from '@/assets/images/caseStudies/cognitude.jpg'
+import bannerBg from '@/assets/images/caseStudies/inner-case-study/inner-1.jpeg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 import Details from '@/caseStudyComponents/Details';
 

@@ -49,7 +49,7 @@ const services = [
     title: "Logistics",
     desc: "Reliable logistics solutions to streamline sourcing, shipping, and global supply chains with efficiency.",
     tags: ["Global Sourcing", "Shipping", "Supply Chain"],
-    video: "/videos/services/Business.mp4",
+    video: "/videos/services/Logistics.mp4",
     link: "/services/logistics"
   },
   {
@@ -57,7 +57,7 @@ const services = [
     title: "Branding Service",
     desc: "Creative branding solutions that build memorable identities, strengthen recognition, and drive business growth.",
     tags: ["Identity", "Strategy", "Design"],
-    video: "/videos/services/Business.mp4",
+    video: "/videos/services/branding.mp4",
     link: "/services/branding-service"
   },
 

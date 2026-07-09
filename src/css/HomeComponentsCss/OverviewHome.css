@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.overview-header {
+.overview-home-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -75,9 +75,9 @@
 
 
 @media (max-width: 768px) {
-  .overview-header {
+  .overview-home-header {
     flex-direction: column;
-    padding: 60px 0px;
+    padding: 60px 20px;
     gap: 24px;
   }
 

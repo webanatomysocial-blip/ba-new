@@ -54,7 +54,7 @@
 
 .header-logo {
   height: auto;
-  width: 170px;
+  width: 200px;
   display: block;
   /* filter: contrast(2) invert(1); */
 }
@@ -299,7 +299,7 @@
   }
 
   .header-logo {
-    width: 120px;
+    width: 150px;
   }
 
   .menu-toggle {

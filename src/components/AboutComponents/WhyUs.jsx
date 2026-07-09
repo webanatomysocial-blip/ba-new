@@ -71,7 +71,7 @@ export default function WhyUs() {
 
   return (
     <section className="why-us-section">
-      <div className="overview-header">
+      <div className="why-us-header">
         <span className="clients-bullet">
           <FaSquare size={10} style={{ marginRight: '10px' }} />
           Extraordinary Creativity for Digital Success

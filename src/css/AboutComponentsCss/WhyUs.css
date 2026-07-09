@@ -105,7 +105,7 @@
 }
 
 
-.overview-header {
+.why-us-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,7 +123,7 @@
     padding: 60px 20px;
   }
 
-  .overview-header {
+  .why-us-header {
     padding: 36px 20px;
     flex-direction: column;
     align-items: start;

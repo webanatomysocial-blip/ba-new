@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../css/HomeComponentsCss/GredientScrollText.css";
 
 import logo1 from '../../assets/images/HomeImages/secondsectionlogos/logo1.png';
-import logo2 from '../../assets/images/HomeImages/secondsectionlogos/logo2.png';
 import logo3 from '../../assets/images/HomeImages/secondsectionlogos/logo3.png';
 import logo4 from '../../assets/images/HomeImages/secondsectionlogos/logo4.png';
 import logo5 from '../../assets/images/HomeImages/secondsectionlogos/logo5.png';

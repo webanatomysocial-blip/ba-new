@@ -17,7 +17,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    brief: "",
+    brief: [], // Changed to array for multiple selection
     source: "",
     projectDetails: "",
   });
@@ -28,6 +28,18 @@ export default function Contact() {
 
   const handleRadio = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: "" }));
+  };
+
+  const handleCheckbox = (field, value) => {
+    setFormData((prev) => {
+      const currentValues = prev[field] || [];
+      if (currentValues.includes(value)) {
+        return { ...prev, [field]: currentValues.filter((v) => v !== value) };
+      } else {
+        return { ...prev, [field]: [...currentValues, value] };
+      }
+    });
     setErrors((prev) => ({ ...prev, [field]: "" }));
   };
 
@@ -45,7 +57,7 @@ export default function Contact() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Please enter a valid email.";
     }
-    if (!formData.brief) newErrors.brief = "Please select a service.";
+    if (!formData.brief || formData.brief.length === 0) newErrors.brief = "Please select at least one service.";
     if (!formData.source) newErrors.source = "Please tell us how you found us.";
     if (!formData.projectDetails.trim())
       newErrors.projectDetails = "Project details are required.";
@@ -66,7 +78,7 @@ export default function Contact() {
       const body = new FormData();
       body.append("name", formData.name);
       body.append("email", formData.email);
-      body.append("brief", formData.brief);
+      body.append("brief", formData.brief.join(", "));
       body.append("source", formData.source);
       body.append("projectDetails", formData.projectDetails);
 
@@ -80,7 +92,7 @@ export default function Contact() {
       if (data.success) {
         setStatus("success");
         setMessage("Thank you! We'll be in touch soon.");
-        setFormData({ name: "", email: "", brief: "", source: "", projectDetails: "" });
+        setFormData({ name: "", email: "", brief: [], source: "", projectDetails: "" });
         setErrors({});
       } else {
         setStatus("error");
@@ -137,11 +149,11 @@ export default function Contact() {
             {briefOptions.map((option) => (
               <div
                 key={option}
-                className={`cf-radio-item ${formData.brief === option ? "selected" : ""}`}
-                onClick={() => handleRadio("brief", option)}
+                className={`cf-radio-item ${formData.brief.includes(option) ? "selected" : ""}`}
+                onClick={() => handleCheckbox("brief", option)}
               >
-                <div className="cf-radio-circle">
-                  <div className="cf-radio-dot" />
+                <div className="cf-radio-circle" style={{ borderRadius: '4px' }}>
+                  <div className="cf-radio-dot" style={{ borderRadius: '2px' }} />
                 </div>
                 <span className="cf-radio-label">{option}</span>
               </div>

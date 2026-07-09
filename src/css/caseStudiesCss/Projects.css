@@ -5,7 +5,7 @@
   font-family: var(--font-geist), sans-serif;
 }
 
-.overview-header {
+.projects-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -121,7 +121,7 @@
     margin-bottom: 30px;
   }
 
-  .overview-header {
+  .projects-header {
     padding: 36px 0;
     flex-direction: column;
     gap: 16px;  

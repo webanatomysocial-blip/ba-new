@@ -24,7 +24,7 @@ export default function OverviewHome() {
 
   return (
     <section className="overview-section">
-      <div className="overview-header">
+      <div className="overview-home-header">
         <span className="clients-bullet">
           <FaSquare size={10} style={{ marginRight: '10px' }} />
           BUILD WITH STRUCTURE. SCALE WITH CONFIDENCE.
