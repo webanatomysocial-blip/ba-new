@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/ServicesHomeBoxes.css";
 import WhiteButton from '../WhiteButton';
-
 const servicesData = [
     { num: '01', letter: 'AI', title: 'AI Automation' },
     { num: '02', letter: 'B', title: 'Branding' },
@@ -105,7 +104,7 @@ export default function ServicesHomeBoxes() {
                 ))}
 
                 <div className="servies-button">
-                    <WhiteButton text="Explore Our Services" href="/services" />
+                        <WhiteButton text="Explore Our Services" href="/services" />
                 </div>
             </div>
         </section>
