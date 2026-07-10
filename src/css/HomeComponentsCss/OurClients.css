@@ -30,8 +30,8 @@
 
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* exactly 5 per row */
-    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    grid-template-columns: repeat(7, 1fr); /* exactly 7 in one row */
+    grid-template-rows: auto;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     padding: 30px 75px;
@@ -47,14 +47,9 @@
     padding: 32px 24px;
 }
 
-/* Remove right border from every 5th item */
-.client-item:nth-child(5n) {
+/* Remove right border from last item (single row) */
+.client-item:last-child {
     border-right: none;
-}
-
-/* Remove bottom border from last row (items 6-10) */
-.client-item:nth-child(n+6) {
-    border-bottom: none;
 }
 
 .client-item img {
@@ -111,8 +106,12 @@
     }
 
     /* remove desktop border logic */
-    .client-item:nth-child(5n),
-    .client-item:nth-child(n+6) {
+    .client-item:last-child {
         border: none;
+    }
+
+    /* only 6 logos shown on mobile */
+    .client-item:nth-child(7) {
+        display: none;
     }
 }

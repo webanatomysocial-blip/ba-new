@@ -55,8 +55,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-
-
 /* .purple-gradient-text {
   background: linear-gradient(
     180deg,
@@ -114,7 +112,7 @@
 
 .footer-link {
   font-size: 15px;
-  color: #999999;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s ease;
@@ -123,7 +121,16 @@
 }
 
 .footer-link:hover {
-  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #f5f2ff 0%,
+    #e4dbfa 15%,
+    #c6a8f4 55%,
+    #9b6ce4 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Right Column - Interactions */
@@ -209,7 +216,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
   pointer-events: auto; /* Enable social button clicks */
 }
 
@@ -254,7 +263,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Sits completely behind the content grids */
+  z-index: 20; /* Sits above the content grids */
   margin-top: 0;
   border-top: none;
   cursor: grab;
@@ -272,7 +281,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 20;
   pointer-events: auto; /* Fully interactable canvas element */
   touch-action: pan-y;
 }
@@ -289,7 +298,7 @@
   padding: 0 5%;
   opacity: 1;
   transition: opacity 0.5s ease;
-  z-index: 2;
+  z-index: 20;
   pointer-events: none;
 }
 

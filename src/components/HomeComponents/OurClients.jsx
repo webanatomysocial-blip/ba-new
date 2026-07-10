@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { FaSquare } from 'react-icons/fa';
 import '../../css/HomeComponentsCss/OurClients.css';
 import client1 from '@/assets/images/HomeImages/secondsectionlogos/logo1.png';
@@ -16,31 +16,28 @@ import client10 from '@/assets/images/HomeImages/secondsectionlogos/logo10.png';
 import client12 from '@/assets/images/HomeImages/secondsectionlogos/logo12.png';
 import client13 from '@/assets/images/HomeImages/secondsectionlogos/logo13.png';
 import client14 from '@/assets/images/HomeImages/secondsectionlogos/logo14.png';
-import client15 from '@/assets/images/HomeImages/secondsectionlogos/logo15.png';
+// logo15.png is a duplicate of logo14.png — excluded to avoid the wipe animation repeating the same logo
 
 export default function OurClients() {
-    // 10 items — rendered as 5 per row × 2 rows via CSS grid
+    // 7 unique logos in a single row
     const clientImages = [
-        { id: 1,  src: client1 },
-        { id: 2,  src: client11 },
-        { id: 3,  src: client3 },
-        { id: 4,  src: client4 },
-        { id: 5,  src: client5 },
-        { id: 6,  src: client6 },
-        { id: 7,  src: client7 },
-        { id: 8,  src: client8 },
-        { id: 9,  src: client9 },
-        { id: 10, src: client10 },
+        { id: 1, src: client1 },
+        { id: 2, src: client11 },
+        { id: 3, src: client3 },
+        { id: 4, src: client4 },
+        { id: 5, src: client5 },
+        { id: 6, src: client6 },
+        { id: 7, src: client7 },
     ];
 
     const imgRefs = useRef([]);
 
-    // Wipe/swap animation
-    useEffect(() => {
+    // Wipe/swap animation — remaining logos are used as the swap pool
+    useLayoutEffect(() => {
         const poolOfLogos = [
-            client1, client11, client3, client4, client5, 
+            client1, client11, client3, client4, client5,
             client6, client7, client8, client9, client10,
-            client12, client13, client14, client15
+            client12, client13, client14
         ].map(c => c.src || c);
 
         const currentSrcs = clientImages.map(c => c.src.src || c.src);

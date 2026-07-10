@@ -4,6 +4,7 @@ import ServicesHomeBoxes from "@/components/HomeComponents/ServicesHomeBoxes";
 import HomeBanner from "@/components/HomeComponents/HomeBanner";
 import PinCardsHome from "@/components/HomeComponents/PinCardsHome";
 import HowDoWeWork from "@/components/HomeComponents/HowDoWeWork";
+import HomeVideoSection from "@/components/HomeComponents/HomeVideoSection";
 import ZoomImages from "@/components/HomeComponents/ZoomImages";
 import RealResults from "@/components/HomeComponents/RealResults";
 import OurClients from "@/components/HomeComponents/OurClients";
@@ -27,17 +28,8 @@ export default function Home() {
     <PinCardsHome />
     <HowDoWeWork />
     {/* <ZoomImages /> */}
-    <div className="home-video-wrapper" style={{ width: "100%", height: "auto" }}>
-      <video 
-        src="/videos/dummy-video.mp4" 
-        autoPlay 
-        muted 
-        loop 
-        playsInline 
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-    </div>
-    
+    <HomeVideoSection />
+
         <OurClients />
     {/* <RealResults />
     <Testimonials /> */}

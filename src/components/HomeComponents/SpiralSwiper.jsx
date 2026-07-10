@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import '../../css/HomeComponentsCss/SpiralSwiper.css'; 
+import React, { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
+import '../../css/HomeComponentsCss/SpiralSwiper.css';
 
 import swiper1 from '@/assets/images/HomeImages/spiralSwiper/swiper1.jpg'
 import swiper2 from '@/assets/images/HomeImages/spiralSwiper/swiper2.jpg'
@@ -60,7 +61,7 @@ export default function SpiralSwiper() {
         isScrolling: false
     });
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const wrapper = wrapperRef.current;
         if (!wrapper) return;
 
@@ -107,7 +108,7 @@ export default function SpiralSwiper() {
     }, []);
 
     // Drag Interaction Handlers
-    useEffect(() => {
+    useLayoutEffect(() => {
         const outer = outerRef.current;
         if (!outer) return;
 
@@ -166,9 +167,12 @@ export default function SpiralSwiper() {
         };
     }, []);
 
-    // Scroll‑linked rotation effect (delta based)
-    useEffect(() => {
-        const handleScroll = () => {
+    // Scroll‑linked rotation effect (delta based, throttled to one write per frame)
+    useLayoutEffect(() => {
+        let scrollRafId = null;
+
+        const applyScrollRotation = () => {
+            scrollRafId = null;
             if (state.current.isDragging) return;
             const currentY = window.scrollY;
             const delta = currentY - scrollPrevY.current;
@@ -184,13 +188,23 @@ export default function SpiralSwiper() {
                 wrapperRef.current.style.transform = `rotateY(${state.current.wrapperRotation.toFixed(4)}deg)`;
             }
         };
+
+        const handleScroll = () => {
+            // Coalesce rapid-fire scroll events (Lenis/gsap ticker) into one write per frame
+            if (scrollRafId !== null) return;
+            scrollRafId = requestAnimationFrame(applyScrollRotation);
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (scrollRafId !== null) cancelAnimationFrame(scrollRafId);
+        };
     }, []);
 
 
     // Trigger one‑time 180° rotation when section becomes visible
-    useEffect(() => {
+    useLayoutEffect(() => {
         const outer = outerRef.current;
         if (!outer) return;
         const observer = new IntersectionObserver((entries) => {
@@ -219,7 +233,13 @@ export default function SpiralSwiper() {
                             className="spiral-slide"
                             style={{ transform: `rotateY(${angle}deg)` }}
                         >
-                            <img src={src.src || src} alt={`Artwork ${i + 1}`} draggable={false} loading="lazy" />
+                            <Image
+                                src={src}
+                                alt={`Artwork ${i + 1}`}
+                                fill
+                                draggable={false}
+                                sizes="(max-width: 768px) 150px, 330px"
+                            />
                         </div>
                     );
                 })}

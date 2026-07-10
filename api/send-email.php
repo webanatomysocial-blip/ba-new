@@ -103,6 +103,8 @@ try {
 
     $mail->setFrom($smtpFrom, $smtpFromNm);
     $mail->addAddress($toEmail);
+    $mail->addAddress('srujan@mosol9.com');
+    $mail->addAddress('Moumita@Thewebanatomy.com');
     $mail->addReplyTo($email, $name);
 
     $mail->isHTML(true);

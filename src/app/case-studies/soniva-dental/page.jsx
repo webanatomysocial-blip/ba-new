@@ -5,6 +5,7 @@ import React from 'react'
 import soniva from '@/assets/images/caseStudies/soniva.jpg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 import Details from '@/caseStudyComponents/Details';
+import OtherCaseStudies from '@/caseStudyComponents/OtherCaseStudies'
 
 export default function InnerPage() {
     return (
@@ -45,6 +46,8 @@ export default function InnerPage() {
             />
 
             <Details websiteUrl="https://sonivadental.com/" hideImage1 hideImage2 />
+
+            <OtherCaseStudies currentSlug="soniva-dental" />
         </div>
     )
 }

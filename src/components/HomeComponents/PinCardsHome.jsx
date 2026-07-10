@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/css/HomeComponentsCss/PinCardsHome.css";
 import { FaSquare } from 'react-icons/fa';
+import WhiteButton from "@/components/WhiteButton";
 
 import kaa from '@/assets/images/caseStudies/kaa.avif';
 import pearl from '@/assets/images/caseStudies/pearl.avif';
@@ -20,6 +21,7 @@ const projects = [
     year: "2024",
     services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing", "Paid advertising"],
     image: kaa,
+    href: "/case-studies/kaa",
     desc: "KAA Dentals represents a full-service partnership where strategy, design, marketing, and performance work together to support measurable growth."
   },
   {
@@ -29,6 +31,7 @@ const projects = [
     year: "2024",
     services: ["Brand strategy", "Website Development", "SEO", "Social Media Marketing"],
     image: pearl,
+    href: "/case-studies/pearl",
     desc: "Strengthening a trusted dental practice through website development, search visibility, and ongoing digital marketing."
   },
   {
@@ -38,6 +41,7 @@ const projects = [
     year: "2024",
     services: ["Website Design", "Website Development", "UX/UI Design", "Digital Experience Design"],
     image: cognitude,
+    href: "/case-studies/cognitude",
     desc: "Designing a digital experience that showcases innovation across neuroscience, artificial intelligence, and human-centred research."
   },
   {
@@ -47,6 +51,7 @@ const projects = [
     year: "2024",
     services: ["Branding", "Website Development", "Website Design", "SEO", "Social Media Marketing"],
     image: soniva,
+    href: "/case-studies/soniva-dental",
     desc: "Redefining the visual identity and online presence for Soniva Dental."
   },
   {
@@ -56,6 +61,7 @@ const projects = [
     year: "2025",
     services: ["Website Design", "Website Development", "UX/UI Design", "Digital Experience Design"],
     image: dfnp,
+    href: "/case-studies/dentistry-for-nervous-patients",
     desc: "Designing a calming digital experience that helps nervous patients feel reassured and supported."
   },
 ];
@@ -165,6 +171,9 @@ export default function PinCardsHome() {
                   <div className="pc-left-bottom">
                     <span className="pc-count">{project.id} / {project.total}</span>
                     <h2 className="head-text-white pc-title">{project.title}</h2>
+                  </div>
+                  <div className="pc-view-more">
+                    <WhiteButton text="View More" href={project.href} icon={true} />
                   </div>
                 </div>
 

@@ -8,7 +8,7 @@ import SpiralSwiper from './SpiralSwiper';
 export default function LetBaSpark() {
     return (
         <section className="let-ba-spark-section">
-            y<h2 className="let-ba-spark-title">
+            <h2 className="let-ba-spark-title">
                 LET <span style={{ color: '#512594' }}>BA </span>
                     SPARK YOUR<br/>
                     NEXT BIG MOVE.

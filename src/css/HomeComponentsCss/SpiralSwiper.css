@@ -3,7 +3,7 @@
     height: 400px; /* Constrain height instead of full viewport for in-page flow */
     position: relative;
     transform-style: preserve-3d;
-    touch-action: none;
+    touch-action: pan-y;
     perspective: 1200px;
     display: flex;
     align-items: center;
@@ -40,6 +40,7 @@
         0 0 0 1px rgba(0, 0, 0, 0.04);
     cursor: grab;
     backface-visibility: visible;
+    will-change: transform;
 }
 
 .spiral-slide:active {

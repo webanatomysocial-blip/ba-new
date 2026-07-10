@@ -5,6 +5,7 @@ import React from 'react'
 import bannerBg from '@/assets/images/caseStudies/kaa.avif'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 import Details from '@/caseStudyComponents/Details';
+import OtherCaseStudies from '@/caseStudyComponents/OtherCaseStudies'
 
 
 export default function InnerPage() {
@@ -46,6 +47,8 @@ export default function InnerPage() {
             />
 
             <Details websiteUrl="https://kaadentals.co.uk/" hideImage2 hideImage3 />
+
+            <OtherCaseStudies currentSlug="kaa" />
         </div>
     )
 }

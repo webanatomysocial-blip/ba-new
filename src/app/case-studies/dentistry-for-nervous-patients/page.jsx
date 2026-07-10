@@ -6,6 +6,7 @@ import React from 'react'
 import bannerBg from '@/assets/images/caseStudies/inner-case-study/inner-1.jpeg'
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 import Details from '@/caseStudyComponents/Details';
+import OtherCaseStudies from '@/caseStudyComponents/OtherCaseStudies'
 
 export default function DentistryForNervousPatientsPage() {
     return (
@@ -40,6 +41,8 @@ export default function DentistryForNervousPatientsPage() {
             />
 
             <Details websiteUrl="https://dentistryfornervouspatients.co.uk/" hideImage1 hideImage3 />
+
+            <OtherCaseStudies currentSlug="dentistry-for-nervous-patients" />
         </div>
     )
 }

@@ -28,11 +28,11 @@ export default function Header() {
   ];
 
   const bgColors = [
-    "rgba(60, 24, 116, 1)",   // HOME (deep violet)
+    "#ffdd00",                // HOME (yellow)
     "rgba(20, 25, 51, 1)",    // ABOUT (deep navy)
     "rgba(11, 42, 51, 1)",    // SERVICES (deep dark teal)
-    "rgba(11, 40, 23, 1)",    // CASE STUDIES (deep pine green)
-    "rgba(51, 12, 24, 1)"     // CONTACT (deep maroon)
+    "rgba(51, 12, 24, 1)",    // CASE STUDIES (deep maroon)
+    "rgba(11, 40, 23, 1)"     // CONTACT (deep pine green)
   ];
   const defaultBg = "rgba(81, 37, 148, 1)";
   const currentBg = hoveredIndex !== null ? bgColors[hoveredIndex] : defaultBg;
