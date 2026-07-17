@@ -18,7 +18,7 @@ export default function AIAutomationPage() {
             <DMBanner
                 title="AI AUTOMATION."
                 subPara={<>
-                    AI Automation uses intelligent technologies to automate repetitive tasks, improve<br />decision-making, and streamline business operations. It helps businesses work faster,<br />smarter, and more efficiently while allowing teams to focus on higher-value activities.
+                    AI Automation uses intelligent technologies to automate repetitive tasks, improve <br className="desktop-br" /> decision-making, and streamline business operations. It helps businesses work faster, <br className="desktop-br" /> smarter, and more efficiently while allowing teams to focus on higher-value activities.
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -29,7 +29,7 @@ export default function AIAutomationPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Our AI Automation services help businesses streamline operations,<br />automate repetitive tasks, and improve efficiency through intelligent<br/>solutions. We create smarter workflows that save time, reduce costs,<br/>and support business growth
+                    Our AI Automation services help businesses streamline operations, <br className="desktop-br" /> automate repetitive tasks, and improve efficiency through intelligent <br className="desktop-br" /> solutions. We create smarter workflows that save time, reduce costs, <br className="desktop-br" /> and support business growth
                 </>}
             />
 

@@ -4,11 +4,17 @@ import { LenisContext } from './LenisContext';
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from 'next/navigation';
 
 function LenisProvider({ children }) {
   const [lenis, setLenis] = useState(null);
+  const pathname = usePathname();
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     const newLenis = new Lenis({
       duration: 1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -8 * t)),
@@ -22,6 +28,7 @@ function LenisProvider({ children }) {
     });
 
     setLenis(newLenis);
+    window.lenis = newLenis; // Attach to window for global access if needed
 
     // Sync Lenis with GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
@@ -39,8 +46,17 @@ function LenisProvider({ children }) {
       gsap.ticker.remove(update);
       newLenis.destroy();
       setLenis(null);
+      if (window.lenis === newLenis) {
+        delete window.lenis;
+      }
     };
   }, []);
+
+  useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+  }, [pathname, lenis]);
 
   return (
     <LenisContext.Provider value={lenis}>

@@ -30,7 +30,7 @@
 .image-two,
 .image-three {
     margin: 20px;
-    height: 70vh;
+    height: 78vh;
     width: calc(100% - 40px);
     border: 5px solid rgb(43, 43, 43);
     border-radius: 10px;

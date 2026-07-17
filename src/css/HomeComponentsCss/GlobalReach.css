@@ -1,7 +1,6 @@
 .global-reach-section {
   background-color: var(--white);
   width: 100%;
-  height: 100dvh;
   padding: 40px 0;
   position: relative;
   overflow: hidden;
@@ -57,6 +56,9 @@
 }
 
 .map-container {
+  /* Container height is driven by the image — no fixed aspect-ratio.
+     Pins are absolute inside this container so they always track
+     the real rendered image bounds regardless of screen width. */
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -64,11 +66,10 @@
 }
 
 .world-map-img {
-  width: 100%;
-  max-height: calc(100dvh - 200px); /* Prevents overflow */
-  object-fit: contain;
   display: block;
-  opacity: 0.8; /* Slight opacity for the dotted map */
+  width: 100%;
+  height: auto;   /* preserves the SVG's natural proportions */
+  opacity: 0.8;
 }
 
 /* Location Pins */
@@ -108,26 +109,27 @@
   position: relative;
 }
 
-/* Positions matching geographic locations */
-.pin-india {
-  top: 50%;
-  left: 63%;
+/* Positions matching geographic locations on the 1296×816 SVG.
+   The dot (bottom of the group) lands at these coordinates because
+   transform: translate(-50%, -100%) shifts the group up by its full height. */
+.pin-london {
+  top: 28%;
+  left: 46%;
 }
 
-.pin-london {
-  top: 30%;
-  left: 50%;
+.pin-india {
+  top: 48%;
+  left: 65%;
 }
 
 .pin-south-africa {
   top: 74%;
-  left: 53%;
+  left: 51%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .global-reach-section {
-    height: auto;
     padding: 60px 0;
   }
 
@@ -145,12 +147,12 @@
   }
 
   .map-container {
-    padding: 0 20px;
+    padding: 0;
   }
 
   .world-map-img {
-    max-height: none;
     width: 100%;
+    height: auto;
   }
 
   .pin-pill {
@@ -173,19 +175,19 @@
     height: 8px;
   }
 
-  /* Reposition pins for mobile */
+  /* Reposition pins for mobile — same geography, image proportions are preserved */
   .pin-london {
-    top: 30%;
-    left: 48%;
+    top: 28%;
+    left: 46%;
   }
 
   .pin-india {
-    top: 50%;
-    left: 67%;
+    top: 48%;
+    left: 65%;
   }
 
   .pin-south-africa {
-    top: 72%;
-    left: 54%;
+    top: 74%;
+    left: 51%;
   }
 }

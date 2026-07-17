@@ -17,7 +17,7 @@ export default function AIAutomationPage() {
             <DMBanner
                 title="LOGISTICS."
                 subPara={<>
-                    Logistics ensures your products are sourced, handled, and delivered efficiently.<br/>It streamlines movement from supplier to destination with reliability. Smooth logistics<br/>keeps your business running without interruptions.
+                    Logistics ensures your products are sourced, handled, and delivered efficiently. <br className="desktop-br" /> It streamlines movement from supplier to destination with reliability. Smooth logistics <br className="desktop-br" /> keeps your business running without interruptions.
                 </>}
                 bannerImage={WhatWeDoImage}
             />
@@ -28,7 +28,7 @@ export default function AIAutomationPage() {
                 whatWeDoImage={DMBannerImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    Our Logistics Services provide efficient transportation,<br />warehousing, and supply chain solutions. We ensure timely<br />delivery, streamlined operations, and cost-effective performance<br />to help businesses run smoothly and enhance customer satisfaction.
+                    Our Logistics Services provide efficient transportation, <br className="desktop-br" /> warehousing, and supply chain solutions. We ensure timely <br className="desktop-br" /> delivery, streamlined operations, and cost-effective performance <br className="desktop-br" /> to help businesses run smoothly and enhance customer satisfaction.
                 </>}
             />
 

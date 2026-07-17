@@ -19,7 +19,7 @@ export default function DigitalMarketingPage() {
             <DMBanner
                 title="DIGITAL MARKETING."
                 subPara={<>
-                    Digital marketing promotes brands online using SEO, social media, mail,<br />and ads to boost visibility, engagement, and business growth.
+                    Digital marketing promotes brands online using SEO, social media, mail, <br className="desktop-br" /> and ads to boost visibility, engagement, and business growth.
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -30,7 +30,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    We help businesses build a stronger online presence through<br />data-driven digital marketing strategies. From increasing visibility<br />to generating quality leads, we create campaigns that deliver<br />measurable business growth.
+                    We help businesses build a stronger online presence through <br className="desktop-br" /> data-driven digital marketing strategies. From increasing visibility <br className="desktop-br" /> to generating quality leads, we create campaigns that deliver <br className="desktop-br" /> measurable business growth.
                 </>}
             />
 
@@ -39,7 +39,7 @@ export default function DigitalMarketingPage() {
             <ServicesOffered
                 subtitle='SERVICES OFFERED'
                 para={<>
-                    Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
+                    Digital Marketing helps your business grow online through <br className="desktop-br" /> strategic social, search and advertising channels. It boosts <br className="desktop-br" /> visibility, strengthens engagement and drives consistent <br className="desktop-br" /> results. Your brand becomes easier to find and faster to trust.
                 </>}
                 services={[
                     {

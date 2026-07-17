@@ -13,7 +13,7 @@ export default function ServicesPage() {
     return (
         <>
             <Banner 
-                topHeading={<> Our <br /> Services. </>}       
+                topHeading={<> Our  <br className="desktop-br" />  Services. </>}       
                 background={bannerimage} 
             />
             {/* <AllServices /> */}

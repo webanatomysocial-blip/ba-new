@@ -20,9 +20,9 @@ export default function DigitalMarketingPage() {
                 title="WEBSITE DEVELOPMENT."
                 subPara={<>
                     Website development is the process of creating digital
-                    platforms that represent your business online. <br />A well-designed
+                    platforms that represent your business online.  <br className="desktop-br" /> A well-designed
                     website combines functionality, performance, and user experience to
-                    help businesses<br />attract customers and achieve their goals.
+                    help businesses <br className="desktop-br" /> attract customers and achieve their goals.
 
                 </>}
                 bannerImage={DMBannerImage}
@@ -34,7 +34,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    We create modern, responsive, and user-focused websites<br/>that help businesses establish a strong digital presence. Our<br/>websites are designed to engage visitors, build trust, and support<br/>long-term business growth.
+                    We create modern, responsive, and user-focused websites <br className="desktop-br" /> that help businesses establish a strong digital presence. Our <br className="desktop-br" /> websites are designed to engage visitors, build trust, and support <br className="desktop-br" /> long-term business growth.
                 </>}
             />
 
@@ -43,7 +43,7 @@ export default function DigitalMarketingPage() {
             <ServicesOffered
                 subtitle='SERVICES OFFERED'
                 // para={<>
-                //     Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
+                //     Digital Marketing helps your business grow online through <br className="desktop-br" /> strategic social, search and advertising channels. It boosts <br className="desktop-br" /> visibility, strengthens engagement and drives consistent <br className="desktop-br" /> results. Your brand becomes easier to find and faster to trust.
                 // </>}
                 services= {[
                     {

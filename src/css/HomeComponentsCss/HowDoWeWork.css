@@ -19,7 +19,7 @@
   align-items: flex-start;
   border: 1px solid #222222;
   border-top: none;
-  margin: 0px 0px 50px 20px;
+  margin: 0px 0px 50px 0px;
   padding: 50px;
 }
 
@@ -199,7 +199,7 @@
     .how-do-we-work-header, .service-how-do-we-work-header {
         flex-direction: column;
         gap: 15px;
-        padding: 25px 0px;
+        padding: 25px;
     }
 
     .how-do-we-work-process-wrapper {

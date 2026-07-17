@@ -6,7 +6,7 @@ import '@/caseStudiesCss/Details.css'
 import BlueButton from '@/components/BlueButton'
 
 import recognizedImage from '@/assets/images/caseStudies/inner-case-study/recognized.avif'
-import innerImg1 from '@/assets/images/caseStudies/inner-case-study/inner-1.jpeg'
+import sonivaInner from '@/assets/images/caseStudies/inner-case-study/soniva-inner.jpeg'
 import innerImg2 from '@/assets/images/caseStudies/inner-case-study/inner-2.jpeg'
 
 export default function Details({ websiteUrl, hideImage1, hideImage2, hideImage3 }) {
@@ -21,16 +21,14 @@ export default function Details({ websiteUrl, hideImage1, hideImage2, hideImage3
                 {/* <p>Strategy-led design that converts visitors into clients.</p> */}
             </div>
             <div className="details-images">
-                {!hideImage1 && (
+                {/* {!hideImage1 && (
                   <div className="image-one">
                       <img src={recognizedImage.src} alt="recognizedImage" />
                   </div>
-                )}
-                {!hideImage2 && (
-                  <div className="image-two">
-                      <img src={innerImg1.src} alt="innerImg1" />
-                  </div>
-                )}
+                )} */}
+                  {/* <div className="image-two">
+                      <img src={sonivaInner.src} alt="sonivaInner" />
+                  </div> */}
                 {!hideImage3 && (
                   <div className="image-three">
                       <img src={innerImg2.src} alt="innerImg2" />

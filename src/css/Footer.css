@@ -266,8 +266,7 @@
   z-index: 20; /* Sits above the content grids */
   margin-top: 0;
   border-top: none;
-  cursor: grab;
-  pointer-events: auto; /* Fully grabable empty space */
+  pointer-events: none; /* Allow clicks to pass through to links below */
   touch-action: pan-y;
 }
 
@@ -282,7 +281,7 @@
   width: 100%;
   height: 100%;
   z-index: 20;
-  pointer-events: auto; /* Fully interactable canvas element */
+  pointer-events: none; /* Allow clicks to pass through */
   touch-action: pan-y;
 }
 

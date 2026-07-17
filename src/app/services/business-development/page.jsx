@@ -18,7 +18,7 @@ export default function DigitalMarketingPage() {
             <DMBanner
                 title="BUSINESS DEVELOPMENT CONSULTANT"
                 subPara={<>
-                    Business consulting helps companies improve efficiency, solve challenges, and achieve goals.<br/>Consultants provide expert strategies, insights, and solutions to boost performance, growth,<br/>and profitability in today’s competitive business environment.
+                    Business consulting helps companies improve efficiency, solve challenges, and achieve goals. <br className="desktop-br" /> Consultants provide expert strategies, insights, and solutions to boost performance, growth, <br className="desktop-br" /> and profitability in today’s competitive business environment.
                 </>}
                 bannerImage={DMBannerImage}
             />
@@ -29,7 +29,7 @@ export default function DigitalMarketingPage() {
                 whatWeDoImage={WhatWeDoImage}
                 subtitle='WHAT WE DO'
                 subPara={<>
-                    We work closely with businesses to identify opportunities,<br />solve operational challenges, and develop strategies that support<br />sustainable growth. Our consulting services are tailored to help<br />you make smarter business decisions.
+                    We work closely with businesses to identify opportunities, <br className="desktop-br" /> solve operational challenges, and develop strategies that support <br className="desktop-br" /> sustainable growth. Our consulting services are tailored to help <br className="desktop-br" /> you make smarter business decisions.
                 </>}
             />
 
@@ -38,7 +38,7 @@ export default function DigitalMarketingPage() {
             <ServicesOffered
                 subtitle='SERVICES OFFERED'
                 // para={<>
-                //     Digital Marketing helps your business grow online through<br />strategic social, search and advertising channels. It boosts<br />visibility, strengthens engagement and drives consistent<br />results. Your brand becomes easier to find and faster to trust.
+                //     Digital Marketing helps your business grow online through <br className="desktop-br" /> strategic social, search and advertising channels. It boosts <br className="desktop-br" /> visibility, strengthens engagement and drives consistent <br className="desktop-br" /> results. Your brand becomes easier to find and faster to trust.
                 // </>}
                 services= {[
                     {

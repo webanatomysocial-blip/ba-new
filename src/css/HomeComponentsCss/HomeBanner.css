@@ -135,7 +135,9 @@
 
 .video {
     width: 450px;
-    height: 280px;
+    height: 28
+    
+    0px;
 }
 
 .video video {
@@ -150,7 +152,8 @@
     display: inline-flex;
     overflow: hidden;
     vertical-align: bottom;
-    color: #efbf04;
+    /* color: #efbf04; */
+    color: white;
 }
 
 .letter {

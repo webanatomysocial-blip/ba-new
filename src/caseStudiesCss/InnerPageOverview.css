@@ -39,6 +39,7 @@
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: #ffffff;
+  text-align: start;
 }
 
 .overview-subtitle {
@@ -55,7 +56,7 @@
   border-radius: 10px;
 }
 
-.overview-card {
+.inner-page-overview-card {
   background-color: #131313; /* Premium dark grey card background */
   border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle outline */
   border-radius: 12px;
@@ -71,7 +72,7 @@
   grid-template-columns: repeat(2,1fr);
 }
 
-.overview-card:hover {
+.inner-page-overview-card:hover {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -150,7 +151,7 @@
     grid-column: span 1;
   }
   
-  .overview-card {
+  .inner-page-overview-card {
     padding: 24px;
   }
   

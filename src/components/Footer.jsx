@@ -45,7 +45,7 @@ export default function Footer() {
 
     // Dynamically load matter-js to guarantee zero SSR issues
     const Matter = require("matter-js");
-    const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint } = Matter;
+    const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint, Query, Events } = Matter;
 
     const container = containerRef.current;
     const canvasContainer = canvasContainerRef.current;
@@ -119,8 +119,9 @@ export default function Footer() {
       return body;
     });
 
-    // Create interactive Mouse Constraint bound directly to the canvas
-    const mouse = Mouse.create(render.canvas);
+    // Create interactive Mouse Constraint bound to the footer wrapper so dragging works
+    const footerElement = container.closest('.site-footer');
+    const mouse = Mouse.create(footerElement);
 
     const mouseConstraint = MouseConstraint.create(engine, {
       mouse,
@@ -160,6 +161,33 @@ export default function Footer() {
       mouse.element.addEventListener("touchend", mouse.mouseup, { passive: false });
     }
 
+    const handleMouseDown = (e) => {
+      const rect = footerElement.getBoundingClientRect();
+      const mousePoint = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+      const bodiesUnderMouse = Query.point(wordBodies, mousePoint);
+      if (bodiesUnderMouse.length > 0) {
+        e.preventDefault(); // Prevents text selection AND prevents links from navigating if clicked
+      }
+    };
+
+    const handleMouseMove = (e) => {
+      const rect = footerElement.getBoundingClientRect();
+      const mousePoint = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+      const bodiesUnderMouse = Query.point(wordBodies, mousePoint);
+      if (bodiesUnderMouse.length > 0) {
+        footerElement.style.cursor = mouseConstraint.body ? 'grabbing' : 'pointer';
+      } else {
+        footerElement.style.cursor = '';
+      }
+    };
+
+    Events.on(mouseConstraint, 'startdrag', () => {
+      footerElement.style.cursor = 'grabbing';
+    });
+
+    footerElement.addEventListener("mousedown", handleMouseDown);
+    footerElement.addEventListener("mousemove", handleMouseMove);
+
     // Add boundaries, mouse grab constraints, and clover bodies to the physics engine (no ceiling)
     World.add(engine.world, [
       floor,
@@ -197,6 +225,8 @@ export default function Footer() {
 
     // Cleanup Matter-JS on destroy
     return () => {
+      footerElement.removeEventListener("mousedown", handleMouseDown);
+      footerElement.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(loopId);
       Render.stop(render);

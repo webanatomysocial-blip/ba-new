@@ -89,9 +89,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 40px 24px 28px 24px;
+  padding: 100px 24px 28px 24px;
   margin-top: auto;
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.6) 75%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 35%, rgba(255, 255, 255, 0) 100%);
 }
 
 .why-us-card .card-title {
