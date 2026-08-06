@@ -29,7 +29,7 @@ body {
   color: var(--white);
   min-height: 100%;
   margin: 0px !important;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 h1,

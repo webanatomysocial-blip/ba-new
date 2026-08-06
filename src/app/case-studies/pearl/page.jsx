@@ -3,6 +3,8 @@ import KaaBanner from '@/caseStudyComponents/KaaBanner'
 import React from 'react'
 
 import bannerBg from '@/assets/images/caseStudies/pearl.avif';
+import pearlMobile from '@/assets/images/caseStudies/inner-case-study/pearl-mobile.jpeg';
+import pearlMockup from '@/assets/images/caseStudies/inner-case-study/pearl mockup.jpeg';
 import Overview from '@/caseStudyComponents/InnerPageOverview'
 import Details from '@/caseStudyComponents/Details';
 import OtherCaseStudies from '@/caseStudyComponents/OtherCaseStudies'
@@ -42,10 +44,9 @@ export default function InnerPage() {
                 howWeHelped1="We designed and developed a patient-focused website that provides a seamless user experience and clearly communicates the practice's services and values. The website was built to improve accessibility, engagement, and enquiry generation."
                 howWeHelped2="Alongside the website, we implemented ongoing SEO strategies to improve local search visibility and managed social media activities to strengthen brand awareness and patient engagement. This integrated approach continues to support the practice's digital growth."
                 results="Pearl Dental Surgery now benefits from a stronger digital presence that aligns with its reputation and patient-first approach. Through ongoing SEO and social media efforts, the practice continues to improve visibility, engage with its audience, and support long-term growth."
-                websiteUrl="https://www.pearldentalsurgeries.com/"
             />
 
-            {/* <Details  hideImage2 hideImage3 /> */}
+            <Details websiteUrl="https://www.pearldentalsurgeries.com/" image3Src={pearlMobile} image2Src={pearlMockup} hideImage1 />
 
             <OtherCaseStudies currentSlug="pearl" />
         </div>

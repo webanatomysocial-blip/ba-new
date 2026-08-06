@@ -46,7 +46,7 @@ export default function InnerPage() {
                 results='KAA Dental now benefits from a consistent brand identity, a professional digital presence, and an integrated marketing strategy. The combination of branding, website development, SEO, and advertising has created a strong foundation for sustainable growth and patient engagement.'
             />
 
-            <Details websiteUrl="https://kaadentals.co.uk/" hideImage2 hideImage3 />
+            <Details websiteUrl="https://kaadentals.co.uk/" image3Src={bannerBg} hideImage2 />
 
             <OtherCaseStudies currentSlug="kaa" />
         </div>

@@ -45,7 +45,7 @@ export default function InnerPage() {
                 results="The new digital ecosystem provides Soniva Dental with a stronger online presence that aligns with its growing network of clinics and comprehensive dental services. The combination of branding, website development, SEO, and social media has created a solid foundation for long-term digital growth."
             />
 
-            <Details websiteUrl="https://sonivadental.com/" hideImage1 hideImage2 />
+            <Details websiteUrl="https://sonivadental.com/" hideImage1 />
 
             <OtherCaseStudies currentSlug="soniva-dental" />
         </div>

@@ -22,7 +22,8 @@ const allProjects = [
 ];
 
 export default function OtherCaseStudies({ currentSlug }) {
-    const otherProjects = allProjects.filter(p => p.slug !== currentSlug).slice(0, 3);
+    // last entries in allProjects = most recent case studies, show those first
+    const otherProjects = allProjects.filter(p => p.slug !== currentSlug).slice(-3).reverse();
 
     return (
         <section className='projects'>

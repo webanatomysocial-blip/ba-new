@@ -35,6 +35,25 @@
   height: 320px;
 }
 
+.projects-container.three-col .project-card-content {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.projects-container.three-col .project-info {
+  width: 100%;
+}
+
+.projects-container.three-col .project-info p {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.projects-container.three-col .arrow {
+  flex-shrink: 0;
+}
+
 .project-card {
   border-radius: 20px;
 }
