@@ -66,6 +66,8 @@ export default function Mission() {
               src={displayed.image?.src || displayed.image || ""}
               alt={displayed.label}
               className="mission-vision-image"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

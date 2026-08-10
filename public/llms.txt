@@ -1,0 +1,14 @@
+# Business Anatomy
+
+> Business Anatomy is a digital agency that builds and elevates brands through
+> strategy, design, and innovation — digital marketing, web development,
+> branding, and business growth consulting.
+
+## Pages
+
+- [Home](https://businessanatomy.co.uk/): Overview of services and approach.
+- [About](https://businessanatomy.co.uk/about): Company story, mission, and team.
+- [Services](https://businessanatomy.co.uk/services): Digital marketing, web development, AI automation, business development, logistics, and branding services.
+- [Case Studies](https://businessanatomy.co.uk/case-studies): Client project outcomes.
+- [Blog](https://businessanatomy.co.uk/blog): Articles and insights.
+- [Contact](https://businessanatomy.co.uk/contact-us): Get in touch.

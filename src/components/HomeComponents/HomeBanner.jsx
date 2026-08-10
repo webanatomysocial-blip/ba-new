@@ -22,6 +22,18 @@ export default function HomeBanner() {
 
     const currentWord = words[wordIndex]
 
+    const [canPlayVideo, setCanPlayVideo] = useState(false)
+
+    useEffect(() => {
+        if (document.readyState === 'complete') {
+            setCanPlayVideo(true)
+            return
+        }
+        const onLoad = () => setCanPlayVideo(true)
+        window.addEventListener('load', onLoad)
+        return () => window.removeEventListener('load', onLoad)
+    }, [])
+
   return (
     <div className='hero_container'>
        
@@ -51,9 +63,11 @@ export default function HomeBanner() {
                     <p className='ratingText'>500+ Verified Reviews</p>
                 </div>
                 <div className="video">
-                    <video autoPlay muted loop>
-                        <source src="/videos/homeBanner/banner.mp4" type="video/mp4" />
-                    </video>
+                    {canPlayVideo && (
+                        <video autoPlay muted loop playsInline>
+                            <source src="/videos/homeBanner/banner.mp4" type="video/mp4" />
+                        </video>
+                    )}
                 </div>
             </div>
         </div>

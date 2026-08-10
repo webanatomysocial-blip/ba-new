@@ -12,6 +12,11 @@ import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
 import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
 
+export const metadata = {
+  title: "Business Development Consultant",
+  description: "Business development consulting from Business Anatomy — strategy, creatives, and analytics-driven growth.",
+};
+
 export default function DigitalMarketingPage() {
     return (
         <>

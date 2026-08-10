@@ -13,6 +13,11 @@ import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
 import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
 
+export const metadata = {
+  title: "Digital Marketing",
+  description: "Digital marketing services from Business Anatomy — campaigns, SEO, and digital positioning that convert.",
+};
+
 export default function DigitalMarketingPage() {
     return (
         <>

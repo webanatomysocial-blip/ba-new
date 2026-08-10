@@ -27,9 +27,9 @@ export default function ProjectCarousel() {
   return (
     <div className="project-carousel-container">
       <div className="faq-top">
-        <img className={`carousal-img pos-${positions[0]}`} src={img1.src} alt="Carousal 1" />
-        <img className={`carousal-img pos-${positions[1]}`} src={img2.src} alt="Carousal 2" />
-        <img className={`carousal-img pos-${positions[2]}`} src={img3.src} alt="Carousal 3" />
+        <img className={`carousal-img pos-${positions[0]}`} src={img1.src} alt="Carousal 1" loading="lazy" decoding="async" />
+        <img className={`carousal-img pos-${positions[1]}`} src={img2.src} alt="Carousal 2" loading="lazy" decoding="async" />
+        <img className={`carousal-img pos-${positions[2]}`} src={img3.src} alt="Carousal 3" loading="lazy" decoding="async" />
       </div>
     </div>
   );

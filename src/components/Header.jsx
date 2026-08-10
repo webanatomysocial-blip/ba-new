@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 // import logo from "@/assets/images/logo.svg";
-import ba_new_logo from '@/assets/images/ba_new_logo.png'
+import ba_new_logo from '@/assets/images/ba_new_logo.webp'
 import "@/css/Header.css";
 import { LenisContext } from "./LenisContext";
 

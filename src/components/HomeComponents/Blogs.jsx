@@ -76,7 +76,7 @@ export default function Blogs() {
                 {blogsData.slice(0, 3).map((blog) => (
                     <Link href={`/blog?id=${blog.id}`} key={blog.id} className="blog-card" style={{ textDecoration: 'none' }}>
                         <div className="blog-image-wrapper">
-                            <img src={blog.image.src || blog.image} alt={blog.title} />
+                            <img src={blog.image.src || blog.image} alt={blog.title} loading="lazy" decoding="async" />
                             {/* 4 black overlay strips — stacked top to bottom */}
 
                             {typeof window !== "undefined" && window.innerWidth > 768 &&

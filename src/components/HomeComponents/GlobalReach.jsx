@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from 'react';
 import '../../css/HomeComponentsCss/GlobalReach.css';
-import mapImg from '../../assets/images/globalmap/map.svg';
+import mapImg from '../../assets/images/globalmap/map.webp';
 import india from '../../assets/images/HomeImages/globalReachImages/india.png';
 import southAfrica from '../../assets/images/HomeImages/globalReachImages/south_africa.png';
 import uk from '../../assets/images/HomeImages/globalReachImages/london.png';
@@ -23,7 +23,7 @@ export default function GlobalReach() {
 
       <div className="map-container">
         {/* Render Map SVG */}
-        <img src={mapImg.src || mapImg} alt="World Map" className="world-map-img" draggable="false" />
+        <img src={mapImg.src || mapImg} alt="World Map" className="world-map-img" draggable="false" loading="lazy" decoding="async" />
 
         {/* London Pin */}
         <div className="location-pin-group pin-london">

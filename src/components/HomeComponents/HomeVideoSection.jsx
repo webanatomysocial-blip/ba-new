@@ -1,13 +1,31 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import "../../css/HomeComponentsCss/HomeVideoSection.css";
 
 export default function HomeVideoSection() {
     const videoRef = useRef(null);
+    const wrapperRef = useRef(null);
     const [isMuted, setIsMuted] = useState(true);
     const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
     const [showCursor, setShowCursor] = useState(false);
+    const [shouldLoad, setShouldLoad] = useState(false);
+
+    useEffect(() => {
+        const el = wrapperRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShouldLoad(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
     const toggleMute = () => {
         const video = videoRef.current;
@@ -24,22 +42,25 @@ export default function HomeVideoSection() {
 
     return (
         <div
+            ref={wrapperRef}
             className="home-video-wrapper"
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setShowCursor(true)}
             onMouseLeave={() => setShowCursor(false)}
             onClick={toggleMute}
         >
-            <video
-                ref={videoRef}
-                src="/videos/dummy-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="home-video"
-            />
+            {shouldLoad && (
+                <video
+                    ref={videoRef}
+                    src="/videos/homevideo.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="home-video"
+                />
+            )}
             <div
                 className={`video-custom-cursor ${showCursor ? "visible" : ""}`}
                 style={{ left: cursorPos.x, top: cursorPos.y }}

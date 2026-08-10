@@ -93,6 +93,8 @@ export default function OurClients() {
                             ref={el => imgRefs.current[i] = el}
                             src={client.src.src || client.src}
                             alt={`client ${client.id}`}
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
                 ))}

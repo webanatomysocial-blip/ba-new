@@ -27,17 +27,17 @@ export default function Details({ websiteUrl, hideImage1, hideImage2, hideImage3
             <div className="details-images">
                 {!hideImage1 && (
                   <div className="image-one">
-                      <img src={img1.src || img1} alt="recognizedImage" />
+                      <img src={img1.src || img1} alt="recognizedImage" loading="lazy" decoding="async" />
                   </div>
                 )}
                 {!hideImage3 && (
                   <div className="image-three">
-                      <img src={img3.src || img3} alt="innerImg2" />
+                      <img src={img3.src || img3} alt="innerImg2" loading="lazy" decoding="async" />
                   </div>
                 )}
                 {!hideImage2 && (
                   <div className="image-two">
-                      <img src={img2.src || img2} alt="sonivaInner" />
+                      <img src={img2.src || img2} alt="sonivaInner" loading="lazy" decoding="async" />
                   </div>
                 )}
                 <BlueButton

@@ -1,5 +1,3 @@
-"use client";
-
 import localFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,6 +12,16 @@ const geist = localFont({
   display: "swap",
 });
 
+export const metadata = {
+  title: {
+    default: "Business Anatomy | Digital Marketing, Branding & Web Development Agency",
+    template: "%s | Business Anatomy",
+  },
+  description:
+    "Business Anatomy builds and elevates digital brands through strategy, design, and innovation — digital marketing, web development, branding, and business growth consulting.",
+  metadataBase: new URL("https://businessanatomy.co.uk"),
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={geist.variable}>
@@ -23,7 +31,7 @@ export default function RootLayout({ children }) {
       <body className={geist.className} suppressHydrationWarning>
         <LenisProvider>
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
         </LenisProvider>
       </body>

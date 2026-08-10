@@ -33,6 +33,17 @@ const logosList = [logo1, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo1
 const GredientScrollText = () => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [canPlayVideo, setCanPlayVideo] = useState(false);
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setCanPlayVideo(true);
+      return;
+    }
+    const onLoad = () => setCanPlayVideo(true);
+    window.addEventListener("load", onLoad);
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -170,14 +181,16 @@ const GredientScrollText = () => {
     <div className="scroll-text-parent">
       {/* Sticky Text Reveal Section */}
       <section className="Text-Section" ref={sectionRef}>
-        <video
-          className="bg-video"
-          src="/videos/textScrollSectionHome/secondSection.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+        {canPlayVideo && (
+          <video
+            className="bg-video"
+            src="/videos/textScrollSectionHome/secondSection.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        )}
         <div className="sticky-wrapper">
           <div className="text-container">
 

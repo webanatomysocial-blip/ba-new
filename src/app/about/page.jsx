@@ -8,7 +8,7 @@ import AboutCTA from "@/components/AboutComponents/AboutCTA";
 import bannerimage from '@/assets/images/about-page/banner/aboutUsBanner.png';
 
 export const metadata = {
-  title: "About Us | BA",
+  title: "About Us",
   description: "Learn more about our mission, vision, and team at BA.",
 };
 

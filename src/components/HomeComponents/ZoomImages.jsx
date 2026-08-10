@@ -63,7 +63,7 @@ export default function ZoomImages() {
         <div ref={wrapperRef} className="zoom-wrapper">
             <div className="zoom-sticky">
 
-                <img src={bg1.src || bg1} alt="background" className="zoom-bg-static" />
+                <img src={bg1.src || bg1} alt="background" className="zoom-bg-static" loading="lazy" decoding="async" />
 
                 {ZOOM_IMGS.map((srcObj, i) => {
                     const src = srcObj.src || srcObj;
@@ -79,6 +79,8 @@ export default function ZoomImages() {
                                 src={src}
                                 alt={`zoom layer ${i + 2}`}
                                 className="zoom-image"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     )

@@ -104,7 +104,7 @@ const DynamicBlog = ({
               </p>
             </div>
             <div className="pod-hero-img-container">
-              <img src={image?.src || image} alt={title} />
+              <img src={image?.src || image} alt={title} loading="lazy" decoding="async" />
             </div>
           </div>
 

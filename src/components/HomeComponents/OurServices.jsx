@@ -66,6 +66,7 @@ const services = [
 const OurServices = () => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
+  const [shouldLoadVideos, setShouldLoadVideos] = React.useState(false);
   // Clear refs on each render to avoid duplicates in strict mode
   cardsRef.current = [];
 
@@ -75,6 +76,21 @@ const OurServices = () => {
     }
   };
 
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadVideos(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -150,14 +166,17 @@ const OurServices = () => {
 
               <div className="sc-media-col">
                 <div className="sc-video-wrapper">
-                  <video
-                    src={service.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="sc-video"
-                  />
+                  {shouldLoadVideos && (
+                    <video
+                      src={service.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="none"
+                      className="sc-video"
+                    />
+                  )}
                 </div>
               </div>
             </div>

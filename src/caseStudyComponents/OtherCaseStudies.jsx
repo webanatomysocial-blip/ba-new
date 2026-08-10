@@ -44,7 +44,7 @@ export default function OtherCaseStudies({ currentSlug }) {
                         style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                         <div style={{ overflow: 'hidden', borderRadius: '20px' }}>
-                            <img className='project-main-img' src={proj.img.src} alt={proj.title} />
+                            <img className='project-main-img' src={proj.img.src} alt={proj.title} loading="lazy" decoding="async" />
                         </div>
 
                         <div className="project-card-content">

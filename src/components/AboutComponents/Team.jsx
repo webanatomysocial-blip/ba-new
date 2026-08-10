@@ -33,7 +33,7 @@ export default function Team() {
       <div className="team-grid">
         {teamMembers.map((member, index) => (
           <article key={index} className="team-card">
-            <img src={member.image?.src || member.image || ""} alt={member.name} className="team-card-image" />
+            <img src={member.image?.src || member.image || ""} alt={member.name} className="team-card-image" loading="lazy" decoding="async" />
 
             <div className="team-card-overlay">
               <div className="team-card-info">

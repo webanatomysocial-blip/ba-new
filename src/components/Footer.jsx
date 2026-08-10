@@ -414,7 +414,7 @@ export default function Footer() {
             © {new Date().getFullYear()} BUSINESS ANATOMY. ALL RIGHTS RESERVED.
           </span>
           <span className="footer-bottom-design">
-            DESIGNED AND DEVELOPED BY <a href="https://webanatomy.in" style={{ color: "#FFFFFF", textDecoration: "none", fontWeight: "600" }} target="_blank"></a> WEB ANATOMY
+            DESIGNED AND DEVELOPED BY <a href="https://webanatomy.in" style={{ color: "#FFFFFF", textDecoration: "none", fontWeight: "600" }} target="_blank" rel="noopener noreferrer">WEB ANATOMY</a>
           </span>
         </div>
       </div>

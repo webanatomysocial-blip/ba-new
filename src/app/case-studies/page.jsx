@@ -4,7 +4,7 @@ import CSFaq from "@/components/caseStudies/CSFaq";
 import bannerimage from '@/assets/images/about-page/banner/aboutUsBanner.png';
 
 export const metadata = {
-  title: "Case Studies | BA",
+  title: "Case Studies",
   description: "Explore our successful projects and case studies.",
 };
 

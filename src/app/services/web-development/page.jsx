@@ -13,6 +13,11 @@ import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
 import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
 
+export const metadata = {
+  title: "Web Development",
+  description: "Web development services from Business Anatomy — high-performance, storytelling-driven websites.",
+};
+
 export default function DigitalMarketingPage() {
     return (
         <>

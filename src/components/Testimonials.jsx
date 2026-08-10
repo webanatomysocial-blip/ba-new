@@ -42,7 +42,7 @@ export default function Testimonials() {
             <div className="video-grid">
                 {testimonialVideos.map((testimonial) => (
                     <div key={testimonial.id} className="video-item">
-                        <video controls>
+                        <video controls preload="none">
                             <source src={testimonial.videoSrc} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>

@@ -5,7 +5,7 @@ import bannerimage from '@/assets/images/servicesImages/servicesBanner.png';
 import OurServices from "@/components/HomeComponents/OurServices";
 
 export const metadata = {
-  title: "Services | BA",
+  title: "Services",
   description: "Explore our creative and construction services.",
 };
 

@@ -4,7 +4,7 @@ import bannerimage from '@/assets/images/about-page/banner/aboutUsBanner.png';
 import AboutCTA from "@/components/AboutComponents/AboutCTA";
 
 export const metadata = {
-    title: "Contact Us | BA",
+    title: "Contact Us",
     description: "Get in touch with the Business Anatomy team.",
 };
 

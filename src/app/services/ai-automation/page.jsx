@@ -12,6 +12,11 @@ import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
 import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
 import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
+export const metadata = {
+  title: "AI Automation",
+  description: "AI automation services from Business Anatomy — streamline workflows and scale operations.",
+};
+
 export default function AIAutomationPage() {
     return (
         <>

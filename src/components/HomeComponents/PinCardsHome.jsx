@@ -178,7 +178,7 @@ export default function PinCardsHome() {
                 </div>
 
                 <div className="pc-center">
-                  <img src={project.image.src} alt={project.title} className="pc-center-image" />
+                  <img src={project.image.src} alt={project.title} className="pc-center-image" loading="lazy" decoding="async" />
                 </div>
 
                 <div className="pc-right">

@@ -11,6 +11,11 @@ import image1 from "@/assets/images/HomeImages/howdowework/1.avif";
 import image2 from "@/assets/images/HomeImages/howdowework/2.avif";
 import image3 from "@/assets/images/HomeImages/howdowework/3.avif";
 
+export const metadata = {
+  title: "Branding Services",
+  description: "Branding services from Business Anatomy — identity, strategy, and design that build recognition.",
+};
+
 export default function AIAutomationPage() {
     return (
         <>
