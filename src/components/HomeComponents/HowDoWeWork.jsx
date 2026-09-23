@@ -36,10 +36,11 @@ export default function HowDoWeWork() {
                 x: getScrollAmount,
                 ease: "none",
                 scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
+                    trigger: track.parentElement, // pin only the cards wrapper; header scrolls away
+                    start: "center center",
                     end: () => `+=${Math.abs(getScrollAmount())}`,
                     pin: true,
+                    pinSpacing: true, // parent is flex, GSAP defaults this to false
                     scrub: 1,
                     invalidateOnRefresh: true,
                 }
