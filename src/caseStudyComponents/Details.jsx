@@ -25,21 +25,23 @@ export default function Details({ websiteUrl, hideImage1, hideImage2, hideImage3
                 {/* <p>Strategy-led design that converts visitors into clients.</p> */}
             </div>
             <div className="details-images">
-                {!hideImage1 && (
-                  <div className="image-one">
-                      <img src={img1.src || img1} alt="recognizedImage" loading="lazy" decoding="async" />
-                  </div>
-                )}
-                {!hideImage3 && (
-                  <div className="image-three">
-                      <img src={img3.src || img3} alt="innerImg2" loading="lazy" decoding="async" />
-                  </div>
-                )}
-                {!hideImage2 && (
-                  <div className="image-two">
-                      <img src={img2.src || img2} alt="sonivaInner" loading="lazy" decoding="async" />
-                  </div>
-                )}
+                <div className="details-images-row">
+                    {!hideImage1 && (
+                      <div className="image-one">
+                          <img src={img1.src || img1} alt="recognizedImage" loading="lazy" decoding="async" />
+                      </div>
+                    )}
+                    {!hideImage3 && (
+                      <div className="image-three">
+                          <img src={img3.src || img3} alt="innerImg2" loading="lazy" decoding="async" />
+                      </div>
+                    )}
+                    {!hideImage2 && (
+                      <div className="image-two">
+                          <img src={img2.src || img2} alt="sonivaInner" loading="lazy" decoding="async" />
+                      </div>
+                    )}
+                </div>
                 <BlueButton
                     text={'View Website'}
                     href={websiteUrl}
